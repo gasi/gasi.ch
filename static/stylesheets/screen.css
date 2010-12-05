@@ -1,7 +1,8 @@
 body {
     background-color: #fff;
     font: normal normal normal .9em/1.55em Georgia, "Times New Roman", Times, serif;
-    margin: 20px 20px 40px 20px;
+    margin: 1em 2em;
+    padding: 0;
 }
 
 a, a:link, a:visited, a:active {
@@ -61,23 +62,29 @@ ul {
 }
 
 li p {
-    margin: 0.15em 0;
+    margin: .15em 0;
 }
 
 address {
     background-color: #fafafa;
     border-bottom: 2px solid #eee;
     border-top: 2px solid #eee;    
-    margin: 10px -20px 10px -40px;
-    padding: 12px 8px 12px 40px;
+    margin: .4em -1.2em .8em -4em;
+    padding: .8em 1.2em .8em 4em;
+}
+
+#container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 #header {
-    border-bottom: 3px solid #eee;
     clear: both;
     float: left;
     width: 100%;
-    padding-left: 18px;
+    padding-left: 1.2em;
 }
 
 #header h1 {
@@ -92,13 +99,15 @@ address {
     border-left: 2px solid #eee;
     clear: none;
     float: left;
-    padding: 8px 18px;
-    width: 260px;
+    padding: .5em 1.2em;
+    width: 18em;
+    height: 100%;
 }
 
 .photos-column {
-    padding: 12px;
-    width: 240px;
+    height: 100%;
+    padding: 1.2em 0;
+    text-align: center;
 }
 
 #footer {
