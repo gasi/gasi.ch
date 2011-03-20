@@ -73,20 +73,20 @@ function computeLevels( width : uint, height : uint,
   var maxLevel : uint = getMaximumLevel( width, height )
   var columns : uint
   var rows : uint
-        
+
   for( var level : int = maxLevel; level >= 0; level-- )
   {
     // compute number of rows & columns
     columns = Math.ceil( width / tileSize )
     rows = Math.ceil( height / tileSize )
-            
+
     trace( "level " + level + " is " + width + " x " + height
            + " (" + columns + " columns, " + rows + " rows)" )
-                                         
+
     // compute dimensions of next level
     width  = Math.ceil( width / 2 )
     height = Math.ceil( height / 2 )
-            
+
     // for bit-shift fans =)
 //  width  = ( width + 1 ) >> 1
 //  height = ( height + 1 ) >> 1
@@ -175,7 +175,7 @@ function getTilePosition( column : uint, row : uint ) : Point
   var offsetX : uint = ( column == 0 ) ? 0 : tileOverlap
   var offsetY : uint = ( row    == 0 ) ? 0 : tileOverlap
 
-  position.x = ( column * tileSize ) - offsetX 
+  position.x = ( column * tileSize ) - offsetX
   position.y = ( row    * tileSize ) - offsetY
 
   return position

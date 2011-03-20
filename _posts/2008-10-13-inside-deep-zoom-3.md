@@ -11,7 +11,7 @@ As the previous articles and the title of this one already hinted it, I did impl
 <h2>Deep Zoom in Flash</h2>
 What you are about to see, is one set of original Deep Zoom images (fresh out of Deep Zoom Composer) that runs both inside Flash as well as Silverlight. Going into all the implementation details and the implications of this will probably warrant another blog post. However, I think it&#x27;s interesting to note that with the work I did, we now have a working solution for creating the same kind of experiences Deep Zoom enables on Microsoft Silverlight, but instead running on Adobe Flash.
 
-What does this mean? First, the reach you get with Flash is massively bigger than what you get with Silverlight. Think about it, when Silverlight 2 ships tomorrow it&#x27;s market share starts at basically zero. Considering that Flash player 9 has something close to 98% market penetration, this is a big deal. 
+What does this mean? First, the reach you get with Flash is massively bigger than what you get with Silverlight. Think about it, when Silverlight 2 ships tomorrow it&#x27;s market share starts at basically zero. Considering that Flash player 9 has something close to 98% market penetration, this is a big deal.
 
 <em>On a side note, if I wouldn&#x27;t be kept busy with all these ETH projects, Deep Zoom would have been out for weeks before the official launch of Silverlight 2 on a platform that is mature and has an order of magnitude higher reach.</em>
 
@@ -41,7 +41,7 @@ Second, unlike Deep Zoom in Silverlight, Deep Zoom in Flash doesn&#x27;t crash F
 </blockquote>
 
 <h2>Addendum</h2>
-The Flash viewer for viewing Deep Zoom images is still work in progress and therefore you might experience certain jerkiness when navigating around. It is based on a codebase I wrote from the ground up. So far in this blog, I&#x27;ve not only written about things I experimented with but usually also released the source code that goes along with it. This should not be an exception, however, the code is not ready for public consumption and therefore I kindly ask you to keep an eye on this blog for future announcements. 
+The Flash viewer for viewing Deep Zoom images is still work in progress and therefore you might experience certain jerkiness when navigating around. It is based on a codebase I wrote from the ground up. So far in this blog, I&#x27;ve not only written about things I experimented with but usually also released the source code that goes along with it. This should not be an exception, however, the code is not ready for public consumption and therefore I kindly ask you to keep an eye on this blog for future announcements.
 
 Although I agree mostly with the statement that <a href="http://theflashblog.com/?p=351">Silverlight Deep Zoom is Nothing New for Flash</a> (one could go one step further by saying <em>Silverlight Deep Zoom is Nothing New</em>), I must give credits to the Seadragon team for their innovative &amp; engaging implementation that revived the interest in zooming as a very powerful concept.
 
@@ -61,7 +61,7 @@ Adobe touts the Flash Player as leading example for a <em>cross-platform</em> de
 
 As long as we don&#x27;t have multi-touch screens available everywhere, the mouse wheel or <em>scrolling</em> is one of the most powerful input gestures for Zoomable User Interfaces.
 
-It&#x27;s 2008 and the Flash Player still does not allow you to natively listen for mouse wheel events on the Macintosh. Adobe, please fix this <a href="http://www.imdb.com/title/tt0151804/quotes#qt0386876"><em>glitch</em></a>. 
+It&#x27;s 2008 and the Flash Player still does not allow you to natively listen for mouse wheel events on the Macintosh. Adobe, please fix this <a href="http://www.imdb.com/title/tt0151804/quotes#qt0386876"><em>glitch</em></a>.
 </blockquote>
 
 <blockquote class="info">

@@ -82,14 +82,14 @@ list.every(wrap(even))
 <code>Array.some</code> works along the lines of <code>every</code> but returns true as soon as one of the elements passes the supplied test.
 
 <blockquote class="info">
-<h2>Example: Anybody Odd?</h2>    
+<h2>Example: Anybody Odd?</h2>
 In the following example, we check if any (meaning: one or more) of the elements in <code>list</code> is odd:
 {% highlight as %}
 var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 {% endhighlight %}
 
 Our test function:
-{% highlight as %}    
+{% highlight as %}
 function odd(x:int):Boolean
 {
     return !even(x)
@@ -97,7 +97,7 @@ function odd(x:int):Boolean
 {% endhighlight %}
 
 The test:
-{% highlight as %}    
+{% highlight as %}
 list.some(wrap(odd))
 
 //? true
@@ -108,7 +108,7 @@ list.some(wrap(odd))
 <code>Array.filter</code> is really handy. Pass it a test function and it returns you an <code>Array</code> with all the elements that passed the test.
 
 <blockquote class="info">
-<h2>Example: Who&#x27;s Even, Who&#x27;s Odd?</h2>    
+<h2>Example: Who&#x27;s Even, Who&#x27;s Odd?</h2>
 Get all even elements in <code>list</code>:
 {% highlight as %}
 var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -163,7 +163,7 @@ In this example I purposely didn&#x27;t use my carefully crafted <code>wrap</cod
 We&#x27;ve already met <code>map</code> in the <a href="http://gasi.ch/blog/functional-actionscript-part-1/#map">first part</a> on <em>Functional ActionScript</em> but I allow myself to introduce her here once again. <code>Array.map</code> takes a function, applies it to all elements in an <code>Array</code> and returns an <code>Array</code> with all modified elements.
 
 <blockquote class="info">
-<h2>Example: We&#x27;re Square</h2>    
+<h2>Example: We&#x27;re Square</h2>
 Square all elements in <code>list</code>:
 {% highlight as %}
 var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]

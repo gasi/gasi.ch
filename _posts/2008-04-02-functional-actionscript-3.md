@@ -35,7 +35,7 @@ void qsort(int a[], int lo, int hi) {
     p = a[hi];
 
     do {
-      while ((l < h) && (a[l] <= p)) 
+      while ((l < h) && (a[l] <= p))
           l = l+1;
       while ((h > l) && (a[h] >= p))
           h = h-1;
@@ -81,7 +81,7 @@ First, <code>qsort</code> is called with a non-empty list (since the empty list 
 </pre>
 
 Read it as follows: <em>Take all <code>y</code>, where <code>y</code> is an element of <code>xs</code> (the tail or the rest of the list) and <code>y</code> is smaller (mathematically: less than) than the pivot <code>x</code>.</em>
-    
+
 Just look at this as QuickSort's <em>partitioning</em>. The code above actually could be rewritten like this:
 <pre lang="haskell">
 (filter (< x) xs)
@@ -119,7 +119,7 @@ function quickSort( list : Array ) : Array
   if( list.length == 0 )
   {
     // return the empty array if we can't split it more
-    return []       
+    return []
   }
   else
   {
@@ -127,7 +127,7 @@ function quickSort( list : Array ) : Array
     var pivot : Number = list[ 0 ]
 
     // slice of the pivot and keep them as rest
-    var rest : Array = list.slice( 1 ) 
+    var rest : Array = list.slice( 1 )
 
     return(
       // sort all numbers&hellip;
@@ -137,17 +137,17 @@ function quickSort( list : Array ) : Array
                 wrap( lessOrEqualThan( pivot ) )
               )
            )
-           // &hellip;concatenate them with the pivot&hellip;              
+           // &hellip;concatenate them with the pivot&hellip;
            .concat(
                 [ pivot ]
               )
            // &hellip;and concatenate all of the previous&hellip;
            .concat(
-      // &hellip;with all sorted numbers&hellip;               
-      quickSort(     
+      // &hellip;with all sorted numbers&hellip;
+      quickSort(
         // &hellip;that are greater than pivot.
         rest.filter(
-                  wrap( greaterThan( pivot ) ) 
+                  wrap( greaterThan( pivot ) )
                 )
            )
           )

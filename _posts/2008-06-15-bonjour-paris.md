@@ -25,7 +25,7 @@ I arrived at <em>Paris L&#x27;Est</em> where Franklin picked me up. We took the 
 </ul>
 
 &hellip;and possibly a life-saver: a French-German dictionary.
- 
+
 <h2>Rue Bagnolet</h2>
 Franklin presented me some options where I could stay during the summer. The most beautiful and closest to the office was an apartment at the student residence <em><a href="http://www.estudines.com/residence-logement-etudiant-paris-13-176.html">Les Estudines Clos Saint Germain</a></em>. Basically, I have a spacious room with a desk, a dining table, a comfortable bed, a little kitchen and a bathroom at the entry. The apartment is located in a very charming part of Paris &mdash; <em>XX<sup>e</sup> arrondissement</em> &mdash; the 20<sup>th</sup> arrondissement. There&#x27;s a lot of life in the streets, to the office it&#x27;s a five minute walk &mdash; <em>I love to sleep in</em> &mdash; and there are two <em>m&eacute;tro</em> stations nearby, <strong>Mara&icirc;chers</strong> and <strong>Alexandre Dumas.</strong>
 

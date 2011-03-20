@@ -20,7 +20,7 @@ This idea behind it shows a great deal of understanding from Ruben. I assume tha
 Feel free to take look at <a href="http://www.rubenswieringa.com/code/as3/flex/ArrayTool/source/">Ruben's code</a>. Later, I will show you how to take his good idea, take it even one step further and how all of this relates to Functional Programming.
 
 <h2>Functions Are Your Friends</h2>
-This semester, I am taking a course called <a href="http://www.infsec.ethz.ch/education/ss08/fmfp">Formal Methods &amp; Functional Programming</a>. As part of the course we are learning a programming language called <a href="http://haskell.org/">Haskell</a>. Haskell belongs to the family of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming languages</a>. Besides the fact that it has no assignments in the traditional sense and everything revolves around lists and functions, there's even more to find out in this very enlightening <a href="http://haskell.org/haskellwiki/Introduction">introduction to Haskell</a>. 
+This semester, I am taking a course called <a href="http://www.infsec.ethz.ch/education/ss08/fmfp">Formal Methods &amp; Functional Programming</a>. As part of the course we are learning a programming language called <a href="http://haskell.org/">Haskell</a>. Haskell belongs to the family of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming languages</a>. Besides the fact that it has no assignments in the traditional sense and everything revolves around lists and functions, there's even more to find out in this very enlightening <a href="http://haskell.org/haskellwiki/Introduction">introduction to Haskell</a>.
 
 Now I will show you what concepts we can take from Haskell (or any other functional programming language for that matter) and apply them in ActionScript. Strange enough, many people are not aware that ActionScript allows us to program in a functionial way to a certain extent. We can do that because functions are first-class citizens in ActionScript and you will see what this means at the end of this article.
 
@@ -36,7 +36,7 @@ Something like this&hellip;
 
   for( var i : int = 0; i < list.length; i++ )
   {
-      list[ i ] = list[ i ] * 2    
+      list[ i ] = list[ i ] * 2
   }
 
   // list = [ 2,4,6,8,10,12,14,16,18 ]
@@ -71,7 +71,7 @@ list = list.map(
 list = list.map( triple )
 
 function triple( x : int, index : int, array : Array ) : int
-{ 
+{
   return x * 3
 }
   // list = [ 3,6,9,12,15,18,21,24,27 ]
@@ -86,7 +86,7 @@ The operation we apply to an element of the <code>Array</code> is defined in alm
 <ul>
     <li><em>Code&nbsp;Example&nbsp;1</em>, line 5 vs. <em>Code&nbsp;Example&nbsp;2</em>, line 6</li>
     <li><em>Code&nbsp;Example&nbsp;1</em>, line 11 vs. <em>Code&nbsp;Example&nbsp;2</em>, line 15</li>
-</ul>    
+</ul>
 
 However, what did we gain by the functional approach?
 Well, we got rid of the loop that looked exactly the same in the first example (line 3 &amp; 9) &mdash; great! But what&#x27;s more important, I believe, is the greater expressiveness of the functional code. For instance, take the following code snippet:
@@ -100,7 +100,7 @@ You can read it out loud and actually understand what it&#x27;s doing. This is a
 <h2>Friend Number One: Map</h2>
 With this example, I've just introduced you to our first friend from Functional Programming: <code>map</code>. The function <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#map()">Array.map</a></code> is the functional abstraction of the concept of a loop over an <code>Array</code> that modifies its elements. Give <code>map</code> a function and it will apply it to all the elements of an <code>Array</code>. In the next part of this series I will introduce you to even more friends by presenting a more systematic overview of ActionScripts functional <acronym title="Application Programming Interface">APIs</acronym>.
 </blockquote >
-    
+
 <h2>Step 2</h2>
 Alright, now we have abstracted the notion of applying an operation to all the elements of an <code>Array</code> with the <code>map</code> function. At the beginning, I told you that I will show you how we could take the idea behind Ruben&#x27;s <a href="http://www.rubenswieringa.com/code/as3/flex/ArrayTool/source/">ArrayTool</a> and take it to the next step. Well, this was the first step but the example above is still missing one thing which is a way to define the value we want the operation to work with.
 
@@ -114,7 +114,7 @@ Our first realization will be that we cannot add another argument to <code>multi
 <pre lang="actionscript">
 function multiplyBy( x : int, index : int,
                  array : Array, multiplicator : Number ) : int
-{ 
+{
     return x * multiplicator
 }
 </pre>
@@ -153,7 +153,7 @@ I suggest we have a look at the code first and discuss it afterwards&hellip;
 The following example shows a way to make our code from <em>Step&nbsp;1</em> even more generic&hellip;
 <pre lang="actionscript" line="1">
 var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
- 
+
 list = list.map( multiplyBy( 2 ) )
 // list = [ 2,4,6,8,10,12,14,16,18 ]
 
