@@ -6,31 +6,34 @@ Welcome to the second part of my series on <em>Functional ActionScript</em>. <a 
 
 <h2>Foreplay</h2>
 If you take a look at the <a href="http://livedocs.adobe.com/flex/3/langref/Array.html">documentation</a> of the following methods that we will discuss later (<code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#every()">every</a></code>, <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#some()">some</a></code>, <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#filter()">filter</a></code>, <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#forEach()">forEach</a></code>, and <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#map()">map</a></code>) you will notice that they all take a callback that, apart from the return type maybe, has a signature that looks like this:
-<pre lang="actionscript">
-function callback( item : *, index : int, array : Array ) : *
-</pre>
+{% highlight as %}
+function callback(item:*, index:int, array:Array):*
+{% endhighlight %}
 
 <a name="wrap">
 Being pragmatic, I rarely have use for the last two arguments, <code>index</code> and <code>array</code>. Therefore, I wrote myself a little wrapper function that looks like this:
-<pre lang="actionscript">
-function wrap( f : Function ) : Function
+
+{% highlight as %}
+function wrap(f:Function):Function
 {
-  return(
-    function( x : *, index : int, array : Array ) : *
-    {
-      return f( x )
-    }
-  )
+    return(
+      function(x:*, index:int, array:Array):*
+      {
+          return f(x)
+      }
+    )
 }
-</pre>
+{% endhighlight %}
 
 Basically, it takes a simple function like:
-<pre lang="actionscript">
-function even( x : int ) : Boolean
+
+{% highlight as %}
+function even(x:int):Boolean
 {
-  return x % 2 == 0
+    return x % 2 == 0
 }
-</pre>
+{% endhighlight %}
+
 &hellip;and returns a function which conforms to the callback signature shown above. Another great example for the power of <a href="http://gasi.ch/blog/functional-actionscript-part-1/#higher-order-functions">higher-order functions</a>.
 
 
@@ -40,9 +43,9 @@ After having been introduced to friend number one, namely <code>map</code>, in <
 <blockquote class="info">
 <h2>trace</h2>
 I will use the following convention to denote trace output:
-<pre lang="actionscript">
+{% highlight as %}
 //?
-</pre>
+{% endhighlight %}
 </blockquote>
 
 <h2>Friend Number Two: every</h2>
@@ -52,26 +55,25 @@ If you want to check if all the elements of an <code>Array</code> satisfy a cert
 <blockquote class="info">
 <h2>Example: Everybody Even?</h2>
 For example, let&#x27;s see if all integer in <code>list</code> are even:
-<pre lang="actionscript">
-var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-</pre>
+{% highlight as %}
+var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+{% endhighlight %}
 
 
 First, we take the <code>even</code> function from above which takes an <code>int</code>, tests if it&#x27;s even and returns the corresponding <code>Boolean</code>:
-<pre lang="actionscript">
-function even( x : int ) : Boolean
+{% highlight as %}
+function even(x:int):Boolean
 {
-  return x % 2 == 0
+    return x % 2 == 0
 }
-</pre>
-
+{% endhighlight %}
 
 Then, wrap <code>even</code> with <code>wrap</code> &mdash; <em>doh!</em> &mdash; drop it into <code>Array.every</code> and see what happens:
-<pre lang="actionscript">
-list.every( wrap( even ) )
+{% highlight as %}
+list.every(wrap(even))
 
 //? false
-</pre>
+{% endhighlight %}
 </blockquote>
 
 
@@ -80,48 +82,48 @@ list.every( wrap( even ) )
 <code>Array.some</code> works along the lines of <code>every</code> but returns true as soon as one of the elements passes the supplied test.
 
 <blockquote class="info">
-<h2>Example: Anybody Odd?</h2>	
+<h2>Example: Anybody Odd?</h2>    
 In the following example, we check if any (meaning: one or more) of the elements in <code>list</code> is odd:
-<pre lang="actionscript">
-var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-</pre>
+{% highlight as %}
+var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+{% endhighlight %}
 
 Our test function:
-<pre lang="actionscript">	
-function odd( x : int ) : Boolean
+{% highlight as %}    
+function odd(x:int):Boolean
 {
-  return !even( x )
+    return !even(x)
 }
-</pre>
+{% endhighlight %}
 
 The test:
-<pre lang="actionscript">	
-list.some( wrap( odd ) )
+{% highlight as %}    
+list.some(wrap(odd))
 
 //? true
-</pre>
+{% endhighlight %}
 </blockquote>
 
 <h2>Friend Number Four: filter</h2>
 <code>Array.filter</code> is really handy. Pass it a test function and it returns you an <code>Array</code> with all the elements that passed the test.
 
 <blockquote class="info">
-<h2>Example: Who&#x27;s Even, Who&#x27;s Odd?</h2>	
+<h2>Example: Who&#x27;s Even, Who&#x27;s Odd?</h2>    
 Get all even elements in <code>list</code>:
-<pre lang="actionscript">
-var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+{% highlight as %}
+var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    list.filter( wrap( even ) )
+    list.filter(wrap(even))
 
 //? 2,4,6,8
-</pre>
+{% endhighlight %}
 
 &hellip;and all odd elements:
-<pre lang="actionscript">
-    list.filter( wrap( odd ) )
+{% highlight as %}
+    list.filter(wrap(odd))
 
 //? 1,3,5,7,9
-</pre>
+{% endhighlight %}
 </blockquote>
 
 <h2>Friend Number Five: forEach</h2>
@@ -130,17 +132,17 @@ var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 <blockquote class="info">
 <h2>Example: Hello</h2>
 Let&#x27;s say <em>hello</em> to all elements in <code>list</code>:
-<pre lang="actionscript" line="1">
-var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+{% highlight as %}
+var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-function sayHello( element : *,
-                   index : int,
-                   array : Array ) : void
+function sayHello(element:*,
+                  index:int,
+                  array:Array):void
 {
-	trace( "Hello, Number", element )
+    trace("Hello, Number", element)
 }
 
-list.forEach( sayHello )
+list.forEach(sayHello)
 
 //? Hello, Number 1
 //? Hello, Number 2
@@ -151,7 +153,7 @@ list.forEach( sayHello )
 //? Hello, Number 7
 //? Hello, Number 8
 //? Hello, Number 9
-</pre>
+{% endhighlight %}
 
 In this example I purposely didn&#x27;t use my carefully crafted <code>wrap</code> function from above to show you how ugly the callback function can end up (line 3&ndash;6).
 </blockquote>
@@ -161,34 +163,34 @@ In this example I purposely didn&#x27;t use my carefully crafted <code>wrap</cod
 We&#x27;ve already met <code>map</code> in the <a href="http://gasi.ch/blog/functional-actionscript-part-1/#map">first part</a> on <em>Functional ActionScript</em> but I allow myself to introduce her here once again. <code>Array.map</code> takes a function, applies it to all elements in an <code>Array</code> and returns an <code>Array</code> with all modified elements.
 
 <blockquote class="info">
-<h2>Example: We&#x27;re Square</h2>	
+<h2>Example: We&#x27;re Square</h2>    
 Square all elements in <code>list</code>:
-<pre lang="actionscript">
-var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+{% highlight as %}
+var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-function square( x : Number ) : Number
+function square(x:Number):Number
 {
-  return x * x
+    return x * x
 }
 
-list.map( wrap( square ) )
+list.map(wrap(square))
 
 //? 1,4,9,16,25,36,49,64,81
-</pre>
+{% endhighlight %}
 
 &hellip;or take the square root of all elements:
-<pre lang="actionscript">
-function squareRoot( x : int ) : Number
+{% highlight as %}
+function squareRoot(x:int):Number
 {
-  return Math.sqrt( x )
+    return Math.sqrt(x)
 }
 
-list.map( wrap( squareRoot ) )
+list.map(wrap(squareRoot))
 
 //? 1,1.4142135623730951,1.7320508075688772,2,
 //? 2.23606797749979,2.449489742783178,
 //? 2.6457513110645907,2.8284271247461903,3
-</pre>
+{% endhighlight %}
 </blockquote>
 
 <h2>Friends Forever</h2>
@@ -197,21 +199,22 @@ When I&#x27;m talking about friends, I actually mean <em>friends</em>. Not only 
 <blockquote class="info">
 <h2>Example: Rendez-Vous</h2>
 Let&#x27;s look at this real-world scenario: If any of the elements in <code>list</code> is odd, you want to pick out the even elements, square them and then say hello to them. No sooner said than done:
-<pre lang="actionscript" line="1">
-var list : Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+<!-- line="1" -->
+{% highlight as %}
+var list:Array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-if( list.some( wrap( odd ) ) )
+if(list.some(wrap(odd)))
 {
-  list.filter( wrap( even ) )
-        .map( wrap( square ) )
-          .forEach( sayHello )
+    list.filter(wrap(even))
+        .map(wrap(square))
+        .forEach(sayHello)
 }
 
 //? Hello, Number 4
 //? Hello, Number 16
 //? Hello, Number 36
 //? Hello, Number 64
-</pre>
+{% endhighlight %}
 Isn't the expressivess of this code just beautiful?
 
 <em>Finding a more useless example is left as an exercise to the reader.</em>
