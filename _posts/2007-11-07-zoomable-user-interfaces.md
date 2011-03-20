@@ -23,17 +23,17 @@ To get an idea of how the zooming might look in the future, check out this <a hr
 Another subtle but interesting difference you may notice between the <a href="http://gasi.ch/photos/" title="tandem">two</a> <a href="http://gasi.ch/projects/tandem" title="tandem">versions</a> of tandem is that I got rid of the paging navigation. I felt proud to have realized its shortcomings myself until I found out that I was obviously <a href="http://www.humanized.com/weblog/2006/04/25/no_more_more_pages/" title="No More Pages â€” Humanized">not the first one</a> to do so. But let&#x27;s talk about this another time&hellip;
 <h3>Inspiration</h3>
 <ul>
-	<li><a href="http://video.google.com/videoplay?docid=-6856727143023456694">Away with Applications: The Death of the Desktop</a>
+    <li><a href="http://video.google.com/videoplay?docid=-6856727143023456694">Away with Applications: The Death of the Desktop</a>
 Aza Raskin&#x27;s talk at Google.</li>
-	<li><a href="http://rchi.raskincenter.org/demos/zoomdemo.swf" title="Raskin Center Zoom Demo">Raskin Center Zoom Demo</a>
+    <li><a href="http://rchi.raskincenter.org/demos/zoomdemo.swf" title="Raskin Center Zoom Demo">Raskin Center Zoom Demo</a>
 The demo from Aza&#x27;s talk. Warning: 8 megabyte Flash file!</li>
-	<li><a href="http://www.ted.com/index.php/talks/view/id/129" title="Blaise Aguera y Arcas: Jaw-dropping Photosynth demo">Microsoft SeaDragon &amp; Photosynth Demo @ TED</a></li>
-	<li><a href="http://www.airtightinteractive.com/projects/postcardviewer/example/">Airtight Interactive: Postcard Viewer
+    <li><a href="http://www.ted.com/index.php/talks/view/id/129" title="Blaise Aguera y Arcas: Jaw-dropping Photosynth demo">Microsoft SeaDragon &amp; Photosynth Demo @ TED</a></li>
+    <li><a href="http://www.airtightinteractive.com/projects/postcardviewer/example/">Airtight Interactive: Postcard Viewer
 </a></li>
 </ul>
 <h3>Further Reading</h3>
 <ul>
-	<li><a href="http://www.cs.umd.edu/hcil/piccolo/learn/Toolkit_Design_2004.pdf">Toolkit Design for Interactive Structured Graphics</a>
+    <li><a href="http://www.cs.umd.edu/hcil/piccolo/learn/Toolkit_Design_2004.pdf">Toolkit Design for Interactive Structured Graphics</a>
 Bederson, B. B., Grosjean, J., &amp; Meyer, J. (2004).
 IEEE Transactions on Software Engineering, 30 (8), pp. 535-546.</li>
 </ul>

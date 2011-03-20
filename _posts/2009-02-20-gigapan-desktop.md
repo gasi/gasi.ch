@@ -8,10 +8,10 @@ Ever wanted to check out those <em>super-high-resolution</em> images from <a hre
 <h2>GigaPan Desktop</h2>
 <a href="http://openzoom.org/go/gigapan" title="GigaPan Desktop by Daniel Gasienica"><img src="http://farm4.static.flickr.com/3454/3294731601_887f8aa409.jpg" width="500" height="324" alt="GigaPan Desktop" /></a><h3>Keyboard Shortcuts</h3>
 <ul>
-	<li><strong>F</strong>: <em>Toggle Fullscreen</em></li>
-	<li><strong>H</strong>: <em>Show All</em></li>
-	<li><strong>W, S, A, D</strong> or <strong>arrow keys</strong>: <em>Pan</em></li>
-	<li><strong>I, O</strong> or <strong>+, â€“</strong>: <em>Zoom</em></li>
+    <li><strong>F</strong>: <em>Toggle Fullscreen</em></li>
+    <li><strong>H</strong>: <em>Show All</em></li>
+    <li><strong>W, S, A, D</strong> or <strong>arrow keys</strong>: <em>Pan</em></li>
+    <li><strong>I, O</strong> or <strong>+, â€“</strong>: <em>Zoom</em></li>
 </ul>
 <h3>Download &amp; Source</h3>
 <a href="http://openzoom.org/go/gigapan">Download</a> | <a href="http://code.google.com/p/open-zoom/source/browse/openzoom/gigapan-desktop/trunk/?r=358">View Source</a>

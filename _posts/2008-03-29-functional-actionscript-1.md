@@ -7,7 +7,7 @@ One of the things I love about studying Computer Science is all the different la
 The inspiration for this series comes from two sources, namely&hellip;
 <ol>
        <li><a href="http://www.rubenswieringa.com/blog/arraytool">An old blog post</a> by <a href="http://www.rubenswieringa.com/">Ruben Swieringa</a></li>
-	<li>The course <a href="http://www.infsec.ethz.ch/education/ss08/fmfp">Formal Methods &amp; Functional Programming</a></li>
+    <li>The course <a href="http://www.infsec.ethz.ch/education/ss08/fmfp">Formal Methods &amp; Functional Programming</a></li>
 </ol>
 
 
@@ -36,7 +36,7 @@ Something like this&hellip;
 
   for( var i : int = 0; i < list.length; i++ )
   {
-  	list[ i ] = list[ i ] * 2	
+      list[ i ] = list[ i ] * 2    
   }
 
   // list = [ 2,4,6,8,10,12,14,16,18 ]
@@ -45,7 +45,7 @@ Something like this&hellip;
 <pre lang="actionscript" line="9">
   for( i = 0; i < list.length; i++ )
   {
-  	list[ i ] = list[ i ] * 3
+      list[ i ] = list[ i ] * 3
   }
 
   // list = [ 3,6,9,12,15,18,21,24,27 ]
@@ -84,9 +84,9 @@ First, what has stayed the same in both examples?
 The operation we apply to an element of the <code>Array</code> is defined in almost the same way in both approaches:
 
 <ul>
-	<li><em>Code&nbsp;Example&nbsp;1</em>, line 5 vs. <em>Code&nbsp;Example&nbsp;2</em>, line 6</li>
-	<li><em>Code&nbsp;Example&nbsp;1</em>, line 11 vs. <em>Code&nbsp;Example&nbsp;2</em>, line 15</li>
-</ul>	
+    <li><em>Code&nbsp;Example&nbsp;1</em>, line 5 vs. <em>Code&nbsp;Example&nbsp;2</em>, line 6</li>
+    <li><em>Code&nbsp;Example&nbsp;1</em>, line 11 vs. <em>Code&nbsp;Example&nbsp;2</em>, line 15</li>
+</ul>    
 
 However, what did we gain by the functional approach?
 Well, we got rid of the loop that looked exactly the same in the first example (line 3 &amp; 9) &mdash; great! But what&#x27;s more important, I believe, is the greater expressiveness of the functional code. For instance, take the following code snippet:
@@ -100,7 +100,7 @@ You can read it out loud and actually understand what it&#x27;s doing. This is a
 <h2>Friend Number One: Map</h2>
 With this example, I've just introduced you to our first friend from Functional Programming: <code>map</code>. The function <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#map()">Array.map</a></code> is the functional abstraction of the concept of a loop over an <code>Array</code> that modifies its elements. Give <code>map</code> a function and it will apply it to all the elements of an <code>Array</code>. In the next part of this series I will introduce you to even more friends by presenting a more systematic overview of ActionScripts functional <acronym title="Application Programming Interface">APIs</acronym>.
 </blockquote >
-	
+    
 <h2>Step 2</h2>
 Alright, now we have abstracted the notion of applying an operation to all the elements of an <code>Array</code> with the <code>map</code> function. At the beginning, I told you that I will show you how we could take the idea behind Ruben&#x27;s <a href="http://www.rubenswieringa.com/code/as3/flex/ArrayTool/source/">ArrayTool</a> and take it to the next step. Well, this was the first step but the example above is still missing one thing which is a way to define the value we want the operation to work with.
 
@@ -128,9 +128,9 @@ function callback( item : *, index : int, array : Array) : void;
 The bad news is that, if we try nevertheless, Flash will complain&hellip;
 <pre class="error">
 ArgumentError: Error #1063: Argument count mismatch on Examples/$construct/multiplyBy(). Expected 4, got 3.
-	at Array$/_map()
-	at Array/http://adobe.com/AS3/2006/builtin::map()
-	at &hellip;]
+    at Array$/_map()
+    at Array/http://adobe.com/AS3/2006/builtin::map()
+    at &hellip;]
 </pre>
 
 &hellip;the good news is that there is a very elegant way (or in some sense, another friend) to solve our problem called <a href="http://en.wikipedia.org/wiki/Higher-order_function">Higher-Order Functions</a>.
@@ -141,7 +141,7 @@ Wikipedia says&hellip;
 <h2>Higher-Order Functions</h2>
 <p>In mathematics and computer science, higher-order functions or functionals are functions which do at least one of the following:</p>
 <ul>
-	<li>take one or more functions as an input</li>
+    <li>take one or more functions as an input</li>
     <li>output a function</li>
 </ul>
 </blockquote>
@@ -184,8 +184,8 @@ If you look at <em>Code&nbsp;Example&nbsp;3</em>, this is exactly what I meant b
 
 <h3>Further Reading</h3>
 <ul>
-	<li><a href="http://haskell.org/">Haskell</a></li>
-	<li>Wikipedia: <a href="http://en.wikipedia.org/wiki/Functional_programming">Functional Programming</a></li>
-	<li>Joel on Software: <a href="http://www.joelonsoftware.com/items/2006/08/01.html">Can Your Programming Language Do This?</a></li>
-	<li>John Hughes: <a href="http://www.math.chalmers.se/~rjmh/Papers/whyfp.pdf">Why Functional Programming Matters (PDF)</a></li>
+    <li><a href="http://haskell.org/">Haskell</a></li>
+    <li>Wikipedia: <a href="http://en.wikipedia.org/wiki/Functional_programming">Functional Programming</a></li>
+    <li>Joel on Software: <a href="http://www.joelonsoftware.com/items/2006/08/01.html">Can Your Programming Language Do This?</a></li>
+    <li>John Hughes: <a href="http://www.math.chalmers.se/~rjmh/Papers/whyfp.pdf">Why Functional Programming Matters (PDF)</a></li>
 <ul>

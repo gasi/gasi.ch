@@ -1,4 +1,14 @@
 ---
+categories:
+- ActionScript
+- code
+- Flash
+- Flickr
+- Open Source
+- source
+- tandem
+- Zoomable User Interface
+- ZUI
 layout: post
 title: Hello, tandem.
 ---

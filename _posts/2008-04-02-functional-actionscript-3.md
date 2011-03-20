@@ -81,7 +81,7 @@ First, <code>qsort</code> is called with a non-empty list (since the empty list 
 </pre>
 
 Read it as follows: <em>Take all <code>y</code>, where <code>y</code> is an element of <code>xs</code> (the tail or the rest of the list) and <code>y</code> is smaller (mathematically: less than) than the pivot <code>x</code>.</em>
-	
+    
 Just look at this as QuickSort's <em>partitioning</em>. The code above actually could be rewritten like this:
 <pre lang="haskell">
 (filter (< x) xs)
@@ -202,17 +202,17 @@ Like I said at the beginning, this was the last part of my series on <em>Functio
 
 <h2>Further Reading</h2>
 <ul>
-	<li>Haskell.org: <a href="http://www.haskell.org/haskellwiki/Introduction">Introduction to Haskell</a></li>
-	<li>Wikipedia: <a href="http://en.wikipedia.org/wiki/Functional_programming">Functional Programming</a></li>
-	<li>The Effect Generator: <a href="http://effectgenerator.com/blog/?p=6">ActionScript for Functional Programmers</a></li>
-	<li>~eokyere: <a href="http://eokyere.blogspot.com/2007/09/higher-order-actionscript.html">higher order actionscript</a></li>
-	<li>Iconara: <a href="http://blog.iconara.net/2008/03/30/separating-event-handling-from-event-filtering/">Separating event handling from event filtering</a></li>
-	<li>Francis Cheng: <a href="http://blogs.adobe.com/fcheng/2008/01/proper_tail_calls_a_definition.html">Proper Tail Calls, a definition</a></li>
+    <li>Haskell.org: <a href="http://www.haskell.org/haskellwiki/Introduction">Introduction to Haskell</a></li>
+    <li>Wikipedia: <a href="http://en.wikipedia.org/wiki/Functional_programming">Functional Programming</a></li>
+    <li>The Effect Generator: <a href="http://effectgenerator.com/blog/?p=6">ActionScript for Functional Programmers</a></li>
+    <li>~eokyere: <a href="http://eokyere.blogspot.com/2007/09/higher-order-actionscript.html">higher order actionscript</a></li>
+    <li>Iconara: <a href="http://blog.iconara.net/2008/03/30/separating-event-handling-from-event-filtering/">Separating event handling from event filtering</a></li>
+    <li>Francis Cheng: <a href="http://blogs.adobe.com/fcheng/2008/01/proper_tail_calls_a_definition.html">Proper Tail Calls, a definition</a></li>
 </ul>
 
 
 <h3>References</h3>
 <ul>
-	<li>Wikipedia (German): <a href="http://de.wikipedia.org/wiki/Haskell_(Programmiersprache)#QuickSort">QuickSort Haskell Example</a></li>
-	<li>Haskell.org: <a href="http://haskell.org/haskellwiki/Introduction#Quicksort_in_C">QuickSort C Example</a></li>
+    <li>Wikipedia (German): <a href="http://de.wikipedia.org/wiki/Haskell_(Programmiersprache)#QuickSort">QuickSort Haskell Example</a></li>
+    <li>Haskell.org: <a href="http://haskell.org/haskellwiki/Introduction#Quicksort_in_C">QuickSort C Example</a></li>
 </ul>

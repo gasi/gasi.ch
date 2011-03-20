@@ -90,28 +90,28 @@ The following is actually a description of the Deep Zoom image we've looked at p
 <image xmlns="http://ns.openzoom.org/openzoom/2008">
   <pyramid width="131072" height="131072" type="image/jpeg"
            tileWidth="256" tileHeight="256" tileOverlap="0" origin="topLeft">
-	<level width="1" height="1" columns="1" rows="1">
-	  <uri template="bruges_files/0/{column}_{row}.jpg"/>
-	</level>
-	<level width="2" height="2" columns="1" rows="1">
-	  <uri template="bruges_files/1/{column}_{row}.jpg"/>
-	</level>
+    <level width="1" height="1" columns="1" rows="1">
+      <uri template="bruges_files/0/{column}_{row}.jpg"/>
+    </level>
+    <level width="2" height="2" columns="1" rows="1">
+      <uri template="bruges_files/1/{column}_{row}.jpg"/>
+    </level>
        &hellip;
-	<level width="242" height="162" columns="1" rows="1">
-	  <uri template="bruges_files/8/{column}_{row}.jpg"/>
-	</level>
-	<level width="484" height="324" columns="2" rows="2">
-	  <uri template="bruges_files/9/{column}_{row}.jpg"/>
-	</level>
-	<level width="968" height="648" columns="4" rows="3">
-	  <uri template="bruges_files/10/{column}_{row}.jpg"/>
-	</level>
-	<level width="1936" height="1296" columns="8" rows="6">
-	  <uri template="bruges_files/11/{column}_{row}.jpg"/>
-	</level>
-	<level width="3872" height="2592" columns="16" rows="11">
-	  <uri template="bruges_files/12/{column}_{row}.jpg"/>
-	</level>
+    <level width="242" height="162" columns="1" rows="1">
+      <uri template="bruges_files/8/{column}_{row}.jpg"/>
+    </level>
+    <level width="484" height="324" columns="2" rows="2">
+      <uri template="bruges_files/9/{column}_{row}.jpg"/>
+    </level>
+    <level width="968" height="648" columns="4" rows="3">
+      <uri template="bruges_files/10/{column}_{row}.jpg"/>
+    </level>
+    <level width="1936" height="1296" columns="8" rows="6">
+      <uri template="bruges_files/11/{column}_{row}.jpg"/>
+    </level>
+    <level width="3872" height="2592" columns="16" rows="11">
+      <uri template="bruges_files/12/{column}_{row}.jpg"/>
+    </level>
   </pyramid>
 </image>
 </pre>
@@ -204,8 +204,8 @@ But you might ask: <em>What about JPEG 2000?</em> Indeed, there are some possibl
 <ul>
         <li>Wikipedia: <a href="http://en.wikipedia.org/wiki/JPEG_2000">JPEG 2000</a></li>
         <li>Wikipedia: <a href="http://en.wikipedia.org/wiki/HD_Photo">HD Photo</a></li>
-	<li><a href="http://blogs.msdn.com/billcrow/archive/2006/10/20/msu-evaluates-windows-media-photo-vs-jpeg-2000.aspx">HD Photo (formerly Windows Media Photo) vs JPEG 2000</a></li>
-	<li><a href="http://blogs.msdn.com/billcrow/archive/2006/11/20/photosynth.aspx">Photosynth</a> <em>&mdash;<a href="http://twitter.com/billcrow/">Bill Crow</a> gives us an excellent behind the scenes of an early preview of Photosynth and how it leverages HD&nbsp;Photo.</em></li>
+        <li><a href="http://blogs.msdn.com/billcrow/archive/2006/10/20/msu-evaluates-windows-media-photo-vs-jpeg-2000.aspx">HD Photo (formerly Windows Media Photo) vs JPEG 2000</a></li>
+        <li><a href="http://blogs.msdn.com/billcrow/archive/2006/11/20/photosynth.aspx">Photosynth</a> <em>&mdash;<a href="http://twitter.com/billcrow/">Bill Crow</a> gives us an excellent behind the scenes of an early preview of Photosynth and how it leverages HD&nbsp;Photo.</em></li>
         <li>Microsoft MSDN: <a href="http://msdn.microsoft.com/en-us/library/cc645077(VS.95).aspx">Deep Zoom File Format Overview</a></li>
         <li><a href="http://dragonosticism.wordpress.com/2008/12/11/deepzoomtoolsdll/">Dragonosticism: DeepZoomTools.dll</a> <em>&mdash; Develop your own tools for creating Deep Zoom images.</em></li>
         <li><a href="http://blog.kapilt.com/2008/11/30/sharing-large-images-openlayers-gsiv-modestmaps-deepzoom-and-python/">Viewing Large Images - OpenLayers, GSIV, ModestMaps, DeepZoom, and Python</a> <em>&mdash; Create Deep Zoom Images on Windows, Mac and Linux with <a href="http://www.python.org/">Python</a> and <a href="http://www.pythonware.com/products/pil/">PIL</a>.</em></li>

@@ -94,9 +94,9 @@ I hope this helps you as much as it did help me.
 
 <h3>Further Reading</h3>
 <ul>
-	<li>Senocular.com: <a href="http://www.senocular.com/flash/tutorials/transformmatrix/" title="Understanding the Transformation Matrix in Flash">Understanding the Transformation Matrix in Flash</a></li>
-	<li>ActionScript Documentation: <code><a href="http://livedocs.adobe.com/labs/flex3/langref/flash/geom/Matrix.html">Matrix</a></code> class</li>
-	<li>Piccolo: <a href="http://www.cs.umd.edu/hcil/jazz/learn/graphics.shtml#transformations">Geometric Transformations</a></li>
-	<li>Piccolo: <a href="http://www.cs.umd.edu/hcil/piccolo/download/index.shtml">Download Source</a></li>
-	<li>Lawrence Kesteloot: <a href="http://www.teamten.com/lawrence/graphics/homogeneous/">Homogeneous Coordinates</a></li>
+    <li>Senocular.com: <a href="http://www.senocular.com/flash/tutorials/transformmatrix/" title="Understanding the Transformation Matrix in Flash">Understanding the Transformation Matrix in Flash</a></li>
+    <li>ActionScript Documentation: <code><a href="http://livedocs.adobe.com/labs/flex3/langref/flash/geom/Matrix.html">Matrix</a></code> class</li>
+    <li>Piccolo: <a href="http://www.cs.umd.edu/hcil/jazz/learn/graphics.shtml#transformations">Geometric Transformations</a></li>
+    <li>Piccolo: <a href="http://www.cs.umd.edu/hcil/piccolo/download/index.shtml">Download Source</a></li>
+    <li>Lawrence Kesteloot: <a href="http://www.teamten.com/lawrence/graphics/homogeneous/">Homogeneous Coordinates</a></li>
 </ul>

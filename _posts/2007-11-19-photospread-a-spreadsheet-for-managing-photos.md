@@ -14,8 +14,8 @@ From the official description:
 <blockquote class="info">&laquo;PhotoSpread is a spreadsheet system for organizing and analyzing photo
 collections. It extends the current spreadsheet paradigm in two ways:
 <ul>
-	<li>PhotoSpread accommodates sets of objects (e.g., photos) annotated with tags (attribute-value pairs). Formulas can manipulate object sets and refer to tags.</li>
-	<li>Photos can be reorganized (tags and location changed) by drag-and-drop operations on the spreadsheet.</li>
+    <li>PhotoSpread accommodates sets of objects (e.g., photos) annotated with tags (attribute-value pairs). Formulas can manipulate object sets and refer to tags.</li>
+    <li>Photos can be reorganized (tags and location changed) by drag-and-drop operations on the spreadsheet.</li>
 </ul>
 The PhotoSpread design was driven by the needs of field biologists who have large collections of annotated photos. In the talk I will describe the PhotoSpread functionality and the design choices made. I will also describe some of the other data management tools we have developed with field biologists.&raquo;</blockquote>
 <img src="http://farm3.static.flickr.com/2093/2059596840_b343381859.jpg" title="PhotoSpread Screenshot" alt="PhotoSpread Screenshot" height="283" width="500" />
