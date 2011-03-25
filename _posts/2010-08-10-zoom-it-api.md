@@ -24,7 +24,7 @@ Silverlight), [Seadragon&nbsp;Mobile][seadragon-mobile] (iOS) and [OpenZoom]
 Finally, this could bring true *image streaming*, very much like audio & video
 streaming, to the web. Personally, I wish that the [Zoom.it service][zoomit-api]
 will do the same for high-resolution image sharing as [YouTube][yt-rick-roll]
-did for video sharing, even if it's on a smaller scale.  
+did for video sharing, even if it's on a smaller scale.<br/>
 Similarly, it could potentially establish itself as a [platform][tc-yt-platform],
 bringing some of [the benefits I've talked about previously][imsir] to every
 author on the web, namely the power & simplicity of publishing the highest
@@ -33,7 +33,7 @@ quality image you've got, irrespective of file size or target device.
 > ## Web APIs: A Brief Introduction
 
 > If you'd like to learn more about this topic, check out the brownbag presentation
-> I gave at Seadragon last year:  
+> I gave at Seadragon last year:<br/>
 > [Web APIs, Mashups & REST (PDF)][web-apis]
 
 
