@@ -115,8 +115,7 @@ div.entry p.alert{padding:1.125em 1.125em 1.125em 2em;border-bottom:2px solid #c
 div.entry ul li{list-style-position:outside;list-style:square;list-style-image:url(images/square.png);}
 div.entry ul,div.entry ol{margin-bottom:1.125em;line-height:1.5em;}
 div.entry ol li{list-style-position:outside;list-style:decimal;}
-div.entry blockquote{background-color:#EEE;padding:0.1em 1em 0;margin:0.2em -1em 0.2em -1em;}
-div.entry blockquote.info{padding:0.8em 1.2em 0.8em 1.2em;margin:0.2em -1.2em 2em -1.2em;}
+div.entry blockquote{background-color:#eee;padding:0.8em 1.2em 0.8em 1.2em;margin:0.2em -1.2em 2em -1.2em;}
 div.entry blockquote.flash{background-color:#FFD600;color:#000;padding:0.8em 1.2em 0.8em 1.2em;margin:0.2em -1.2em 2em -1.2em;}
 div.entry blockquote.flash a{font-weight:bold;}
 div.entry blockquote.error{background-color:#C00;color:#FFF;padding:0.8em 1.2em 0.8em 1.2em;margin:0.2em -1.2em 2em -1.2em;}
@@ -133,5 +132,5 @@ pre.error{color:#f00;}
 .code{background-color:#FFF;margin:0;padding:0;width:100%;}
 .wp_syntax{margin-bottom:0.25em;margin-top:-1em;}
 #dsq-content .dsq-comment-message{font-size:16px;line-height:1.5em;}
-input.dsq-trackback-url {width: 100%;}
-a.dsq-brlink {display:none;}
+input.dsq-trackback-url{width:100%;}
+a.dsq-brlink{display:none;}
