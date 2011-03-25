@@ -54,8 +54,11 @@ I'd like to point out that the <a href="http://openzoom.org/zoomit-as3-sdk/">Zoo
 <blockquote class="flash">
 <h2>Zoom.it ActionScript 3 SDK</h2>
 <a href="http://openzoom.org/zoomit-as3-sdk/download/latest/zip">Download Zoom.it ActionScript 3 SDK 0.8 (32KB)</a>
+<br/>
 <a style="font-weight:normal" href="http://github.com/openzoom/zoomit-as3-sdk">Browse Source</a>
+<br/>
 <a style="font-weight:normal" href="http://docs.openzoom.org/zoomit-as3-sdk/">Read Documentation &amp; Examples</a>
+<br/>
 <strong>License:</strong> <a style="font-weight:normal" href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a>
 </blockquote>
 
