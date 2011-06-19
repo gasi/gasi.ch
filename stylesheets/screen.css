@@ -19,6 +19,9 @@ hr.entry{margin:0.6em 0 0.6em;}
 #h5right{width:4em;float:right;text-align:right;}
 #main-container{width:59.375em;margin:0 auto;padding:0 0 3em 0;position:relative;}
 br.clear{clear:both;display:block;height:1.125em;}
+ins{font-style:italic;text-decoration:none;}
+ins:before{content:'[';}
+ins:after{content:']';}
 body{font-size:100%;/* for IE */
 font-family:Georgia,serif;color:#333;border-top:0.5em solid #3465A4;}
 html>body{font-size:16px;}
