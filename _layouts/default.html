@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
     <title>{{ page.title }} &ndash; RTFM / Daniel Gasienica</title>
+
     <meta name="author" content="Daniel Gasienica" />
-    <meta name="description" content="Personal blog of Daniel Gasienica."/>
-    <meta name="generator" content="Jekyll" />
+    <meta name="description" content="Daniel Gasienica’s personal blog."/>
+
+    <meta name="generator" content="Jekyll"/>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" media="screen"/>
 
     <!-- Atom feed -->
-    <link rel="alternate" type="application/atom+xml" title="RTFM / Daniel Gasienica" href="/feed" />
+    <link rel="alternate" type="application/atom+xml" title="RTFM / Daniel Gasienica" href="/feed"/>
 
     <!-- Tracker -->
     <script type="text/javascript">
@@ -32,7 +36,7 @@
     <div id="main-container">
         <div id="header">
             <div id="logo">
-                <h1><a href="/" title="Return to Home Page">RTFM<span class="light"> / Daniel Gasienica</span></a></h1>
+                <h1><a href="/" title="Return to homepage">RTFM<span class="light"> / Daniel Gasienica</span></a></h1>
             </div>
             <div id="pages">
                 <ul>
@@ -43,26 +47,18 @@
             </div>
         </div>
 
-    <!-- begin:single-page -->
-    <div id="single-page">
-    {{ content }}
-    </div>
-    <!-- end:single-page -->
+        <div id="single-page">
+        {{ content }}
+        </div>
 
-    <!-- begin:sidebar -->
-    <div id="sidebar">
-            <!--
-            <hr class="notop" />
-            <h5>Navigation</h5>
-            <div id="page-navigation">
-                <p><a href="http://gasi.ch/blog/zoom-it-api/" rel="prev">&laquo; Previous</a></p>
-            </div>
-            -->
+        <div id="sidebar">
             <hr class="notop" />
             <h5>About</h5>
             <p class="about">
                 Welcome. I&rsquo;m Daniel Gasienica and you&rsquo;re on my personal blog.<br/>
-                Currently, I&rsquo;m part of the <a href="http://bing.com">Bing Search User Experience team</a>. You can reach me at <a href="mailto:daniel@gasienica.ch">daniel@gasienica.ch</a> or <a href="http://twitter.com/gasi">@gasi</a>.
+                Currently, I&rsquo;m part of the <a href="http://bing.com">Bing Search User Experience team</a>.
+                You can reach me at <a href="mailto:daniel@gasienica.ch">daniel@gasienica.ch</a> or
+                <a href="http://twitter.com/gasi">@gasi</a>.
             </p>
             <hr class="notop" />
             <h5>Archives</h5>
@@ -71,12 +67,11 @@
                 <li><a href="{{ post.url }}">{{ post.title | strip_html }}</a></li>
             {% endfor %}
             </ul>
+        </div>
+
+        <div id="footer">
+            <div id="footer-copyright"><p>RTFM / &copy; 2006&ndash;2011 <a href="mailto:daniel@gasienica.ch">Daniel Gasienica</a>. All Rights Reversed.</p></div>
+        </div>
     </div>
-    <!-- end:sidebar -->
-    <!-- begin:footer -->
-    <div id="footer">
-        <div id="footer-copyright"><p>RTFM / &copy; 2006&ndash;2011 <a href="mailto:daniel@gasienica.ch">Daniel Gasienica</a>. All Rights Reversed.</p></div>
-    </div>
-    <!-- end:footer -->
 </body>
 </html>
