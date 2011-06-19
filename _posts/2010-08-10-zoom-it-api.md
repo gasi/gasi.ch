@@ -30,11 +30,13 @@ bringing some of [the benefits I've talked about previously][imsir] to every
 author on the web, namely the power & simplicity of publishing the highest
 quality image you've got, irrespective of file size or target device.
 
-> ## Web APIs: A Brief Introduction
+<blockquote class="info" markdown="1">
+## Web APIs: A Brief Introduction
 
-> If you'd like to learn more about this topic, check out the brownbag presentation
-> I gave at Seadragon last year:\\
-> [Web APIs, Mashups & REST (PDF)][web-apis]
+If you'd like to learn more about this topic, check out the brownbag presentation
+I gave at Seadragon last year:\\
+[Web APIs, Mashups & REST (PDF)][web-apis]
+</blockquote>
 
 
 <h2>Contribution</h2>
@@ -44,9 +46,9 @@ The <a href="http://openzoom.org/zoomit-as3-sdk/">Zoom.it ActionScript 3 SDK</a>
 
 I'd like to point out that the <a href="http://openzoom.org/zoomit-as3-sdk/">Zoom.it ActionScript 3 SDK</a> wouldn't have been viable if it weren't for Live Labs' generous support of very liberal <code>clientaccesspolicy.xml</code> and <code>crossdomain.xml</code> files on <a href="http://api.zoom.it/clientaccesspolicy.xml">all</a> <a href="http://cache.zoom.it/clientaccesspolicy.xml">relevant</a> <a href="http://api.zoom.it/crossdomain.xml">API</a> <a href="http://cache.zoom.it/crossdomain.xml">endpoints</a>, enabling an equal experience for the most commonly used client technologies. Enjoy.
 
-<blockquote class="flash">
-<h2>Zoom.it ActionScript 3 SDK</h2>
-<a href="http://openzoom.org/zoomit-as3-sdk/download/latest/zip">Download Zoom.it ActionScript 3 SDK 0.8 (32KB)</a>\\
+<blockquote class="flash" markdown="1">
+## Zoom.it ActionScript 3 SDK
+[Download Zoom.it ActionScript 3 SDK 0.8 (32KB)](http://openzoom.org/zoomit-as3-sdk/download/latest/zip)\\
 <a style="font-weight:normal" href="http://github.com/openzoom/zoomit-as3-sdk">Browse Source</a>\\
 <a style="font-weight:normal" href="http://docs.openzoom.org/zoomit-as3-sdk/">Read Documentation &amp; Examples</a>\\
 <strong>License:</strong> <a style="font-weight:normal" href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a>
