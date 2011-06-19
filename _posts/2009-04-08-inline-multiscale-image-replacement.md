@@ -2,27 +2,31 @@
 layout: post
 title: Inline Multiscale <br/>Image Replacement
 ---
-<q>How will we view and publish images on the web in 5 years?</q> Today I'd like to share with you my vision of how we could improve the publication and viewing of high-resolution images on the web. Before discussing what this vision entails, I'd really like you to explore it yourself.
+<q>How will we view and publish images<br/>on the web in five years?</q>
+Today I'd like to share with you my vision of how we could improve the publication and viewing of high-resolution images on the web. Before discussing what this vision entails, I'd really like you to explore it yourself.
 
 <h1>Scenarios</h1>
 The following are three real-world scenarios for publishing high-resolution images on the web: <strong>news</strong>, <strong>blogs</strong> and <strong>photo sharing</strong>. Explore any one or all of these scenarios and interact with the images within. <em>Come on, let's get your mouse wheel spinnin'!</em> :)
 
-<blockquote class="info">
-<h2>News: The New York Times</h2>
+<blockquote class="info" markdown="1">
+## News: The New York Times
+
 <a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/nytimes/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3299/3419715880_dfac0333de.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
 <a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/nytimes/">View Demo</a> | <a href="http://www.nytimes.com/2007/08/12/world/asia/12afghan.html">View Original Page</a>
 
 <p class="footnote"><em>Disclaimer: Since a high-resolution version of the original image was not available to me, I replaced it with another one from the Department of Defense which was taken in the same region, called Zabul Province.</em></p>
 </blockquote>
 
-<blockquote class="info">
-<h2>Blogs: Information Architects</h2>
+<blockquote class="info" markdown="1">
+## Blogs: Information Architects
+
 <a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/ia/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3651/3418905983_0cd00199f6.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
 <a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/ia/">View Demo</a> | <a href="http://informationarchitects.jp/web-trend-map-4-final-beta/">View Original Page</a>
+
 </blockquote>
 
-<blockquote class="info">
-<h2>Photo Sharing: Flickr</h2>
+<blockquote class="info" markdown="1">
+## Photo Sharing: Flickr
 <a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/flickr/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3408/3419715614_95204d3df9.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
 <a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/flickr/">View Demo</a> | <a href="http://www.flickr.com/photos/oliveralex/524852348/">View Original Page</a>
 
@@ -54,20 +58,23 @@ The solution I developed, based on something I started to call <strong>Inline Mu
 <li><strong>OpenZoom Endo</strong>: A script performing progressive enhancement on new and existing HTML pages. It is written in JavaScript and packaged as <a href="http://jquery.com/">jQuery</a> plugin.</li>
 </ul>
 
-<blockquote class="info">
-<h2>Features</h2>
-<img src="http://farm4.static.flickr.com/3613/3419742376_15aaf47058.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" />
+<blockquote class="info" markdown="1">
+
+## Features
+<img src="http://farm4.static.flickr.com/3613/3419742376_15aaf47058.jpg"
+     width="500" height="500" alt="Inline Multiscale Image Replacement" />
 
 <ul>
-<li><strong>Simple publishing of high-resolution images on the web</strong>, even on existing pages.</li>
-<li><strong>Continue to use interactions your already familiar with</strong> such as <em>Save Image As</em> and <em>View Image</em>. (Screenshot)</li>
-<li><strong>Progressively enhance your browsing experience</strong>, with graceful fallback for those of you with browsers that are not JavaScript or Flash enabled.</li>
-<li><strong>Never download more data than you currently look at.</strong></li>
-<li>Take advantage of your entire screen real estate by using the <strong>full screen mode</strong>.</li>
-<li>Explore the full glory of <strong>high-resolution images without</strong> ever <strong>leaving their page</strong>.</li>
-<li><strong>Publish images in different sizes</strong> from the same source image.</li>
-<li><strong>Free!</strong> <em>as in beer and freedom!</em><br/>Released under the GPLv3 open source license.</li>
+    <li><strong>Simple publishing of high-resolution images on the web</strong>, even on existing pages.</li>
+    <li><strong>Continue to use interactions your already familiar with</strong> such as <em>Save Image As</em> and <em>View Image</em>. (Screenshot)</li>
+    <li><strong>Progressively enhance your browsing experience</strong>, with graceful fallback for those of you with browsers that are not JavaScript or Flash enabled.</li>
+    <li><strong>Never download more data than you currently look at.</strong></li>
+    <li>Take advantage of your entire screen real estate by using the <strong>full screen mode</strong>.</li>
+    <li>Explore the full glory of <strong>high-resolution images without</strong> ever <strong>leaving their page</strong>.</li>
+    <li><strong>Publish images in different sizes</strong> from the same source image.</li>
+    <li><strong>Free!</strong> <em>as in beer and freedom!</em><br/>Released under the GPLv3 open source license.</li>
 </ul>
+
 </blockquote>
 
 ### Known Issues
@@ -134,6 +141,7 @@ Enjoy hassle-free high-resolution imagery on the web!
 -  Have a look at the <a href="http://code.google.com/p/open-zoom/source/browse/trunk/projects/endo/trunk?r=316#trunk/src">source code</a> on the OpenZoom Google Code repository.
 </blockquote>
 
+<!--
 # You
 *I want your feedback!* Let me know if my idea works for you. If it doesn't,
 why not? How could things be improved? *I am listening*. If you're a JavaScript
@@ -151,6 +159,7 @@ follow me on Twitter: [@OpenZoom](http://twitter.com/OpenZoom) and
 [@gasi](http://twitter.com/gasi). In case you find a bug, please file a bug
 report in the
 [OpenZoom Google Code Bug System](http://code.google.com/p/open-zoom/issues/).
+-->
 
 ## Epilogue
 With this and my other work on the OpenZoom project, I want to explore new ways
