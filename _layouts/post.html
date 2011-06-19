@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<!-- begin:single-article -->
 <div id="single-article">
     <hr class="notop" />
     <h5>{{ page.date | date: '%B %e, %Y' }}</h5>
-    <!-- begin:post -->
     <div class="post">
-        <h1><a href="{{ page.url }}" rel="bookmark" title="Permanent Link: {{ page.title }}">{{ page.title }}</a></h1>
+        <h1>
+            <a href="{{ page.url }}"
+               rel="bookmark"
+               title="Permanent Link: {{ page.title }}">{{ page.title }}</a>
+        </h1>
         <div class="entry">{{ content }}</div>
     </div>
-    <!-- end:post -->
 </div>
-<!-- end:single-article -->
