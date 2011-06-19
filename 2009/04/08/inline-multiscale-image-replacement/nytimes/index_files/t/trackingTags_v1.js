@@ -60,6 +60,6 @@ if (navigator.userAgent.indexOf('AppleWebKit/41') == -1 && !window.opera) {
     NYTD.require('/js/app/timespeople_1.1/preloader.js', function() {  NYTD.require('/js/app/timespeople_1.1/loader.js'); });
   }
   else {
-    NYTD.require('/js/app/timespeople_1.1/loader.js');    
+    NYTD.require('/js/app/timespeople_1.1/loader.js');
   }
 }

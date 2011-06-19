@@ -3,10 +3,10 @@ NYTD.SendToPhone=Class.create({
   initialize:function(){
     var nodeList=$$('div#article div.articleTools ul#toolsList li.email');
     var emailForm=$('emailThis');
-    
+
     if(nodeList.size() == 1 && emailForm.nodeName.toLowerCase() == 'form' && !$('send_to_phone_tools_link')){
       var btnTarget=nodeList[0];
-      
+
       this.$emailThisForm=emailForm;
 
       var icon=NYTD.Hosts.imageHost+'/images/article/functions/tools_mobile.gif';
@@ -30,7 +30,7 @@ NYTD.SendToPhone=Class.create({
     setTimeout("document.emailThis.submit()",10);
   }
 });
- 
+
 document.observe("dom:loaded", function() {
   new NYTD.SendToPhone();
 });

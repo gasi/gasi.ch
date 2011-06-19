@@ -25,7 +25,7 @@ Effect.Scroll = Class.create(Effect.Base, {
 
     }
   },
-  update: function(position) {   
+  update: function(position) {
     this.element.scrollLeft = this.options.x * position + this.originalLeft;
     this.element.scrollTop  = this.options.y * position + this.originalTop;
   }

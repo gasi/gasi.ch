@@ -42,7 +42,7 @@ NYTD.ArticleShareTools = function(rootId) {
 		
 		addShareTargets(postList);
 		
-		postElement.appendChild(postList); 
+		postElement.appendChild(postList);
 		parentElement.appendChild(postElement);
 	}
 	
@@ -95,20 +95,20 @@ NYTD.ArticleShareTools = function(rootId) {
 			}
 			element.className="opened";
 			new Effect.Scale (element, 200, {duration:0.5,scaleContent:false,scaleMode:{originalWidth:167.5,originalHeight:114},
-				afterFinish: function() { 
+				afterFinish: function() {
 					closeLink.className="closeButton"; // display CLOSE link
-					$("shareList").className=""; // display the list of Share links 
-					toggleShareAd("show"); 
-					new Effect.Opacity(closeLink,{duration:0.5,from:0,to:1}); 
-					new Effect.Opacity($("shareList"), {duration:0.5,from:0,to:1}); 
+					$("shareList").className=""; // display the list of Share links
+					toggleShareAd("show");
+					new Effect.Opacity(closeLink,{duration:0.5,from:0,to:1});
+					new Effect.Opacity($("shareList"), {duration:0.5,from:0,to:1});
 					var numEvent=0;
 					$(document).observe("mouseover", function(event) { // close window after 5 seconds of mousing outside share tools
-						if(closeLink.hasClassName("closeButton")&&outsideShareTools(event.target)&&numEvent==0) { 
+						if(closeLink.hasClassName("closeButton")&&outsideShareTools(event.target)&&numEvent==0) {
 							closeTimerId = window.setTimeout(closeShareTools,5000); numEvent++;
-						} 
+						}
 						event.stop(); return false;
-					}); 
-				} }); 
+					});
+				} });
 		} else {
 			closeShareTools();
 		}
@@ -118,15 +118,15 @@ NYTD.ArticleShareTools = function(rootId) {
 		clearTimeout(closeTimerId);
 		closeLink.className="hidden"; // hide CLOSE link
 		new Effect.Opacity($("shareList"), {duration:0.5,from:1,to:0,
-			afterFinish: function() { 
-				$("shareList").className="hidden"; // hide the list of Share links 
+			afterFinish: function() {
+				$("shareList").className="hidden"; // hide the list of Share links
 				toggleShareAd("hide");
 				new Effect.Scale($("shareMenu"),50,{duration:0.5,scaleMode:{originalWidth:335,originalHeight:228},scaleContent:false,
-					afterFinish: function() { 
-						$("shareMenu").className="closed"; 
+					afterFinish: function() {
+						$("shareMenu").className="closed";
 						if(parentElement.hasClassName("shareMenuOpened")) parentElement.removeClassName("shareMenuOpened");
-					} }); } });  
-		new Effect.Opacity(closeLink,{from:1,to:0});  
+					} }); } });
+		new Effect.Opacity(closeLink,{from:1,to:0});
 	}
 	
 	function outsideShareTools(target) {
@@ -168,7 +168,7 @@ NYTD.ArticleShareTools = function(rootId) {
 		}
 	}
 
-	function displayShareAd() { 
+	function displayShareAd() {
 		$( "shareMenuAd" ).update("<span class='shareSponsor'></span>"+adxads[adxpos_Frame6A]);
 	}
 	
@@ -210,7 +210,7 @@ NYTD.ArticleShareTools = function(rootId) {
 		addShareLink(sList, "digg", "Digg");
 		addShareLink(sList, "facebook", "Facebook");
 		addShareLink(sList, "mixx", "Mixx");
-      	addShareLink(sList, "myspace", "My Space");  
+      	addShareLink(sList, "myspace", "My Space");
 		addShareLink(sList, "yahoobuzz", "Yahoo! Buzz");
 		addShareLink(sList, "permalink", "Permalink");
 		
@@ -232,7 +232,7 @@ NYTD.ArticleShareTools = function(rootId) {
 	var openers = {
 
 			newsvine : function () {
-					var keywords = meta.getSection(); 
+					var keywords = meta.getSection();
 					if(typeof(getShareSubSection) == 'function') {
 						if(meta.getSubSection() != '') {
 							keywords += ',' + meta.getSubSection();
@@ -273,12 +273,12 @@ NYTD.ArticleShareTools = function(rootId) {
 			mixx : function () {
 				try {
 					var popUpUrl = meta.getURL();
-					var otherParams = 
+					var otherParams =
 						 '?title='       + meta.getHeadline()
 					   + '&description=' + meta.getDescription()
 					   + '&tags='        + meta.getKeywords()
 					   + '&partner='     + 'NYT';
-					postPopUp( 
+					postPopUp(
 					   'http://mini.mixx.com/submit/story'
 					   + '?page_url='    + meta.getURL()
 					   + otherParams,
@@ -286,7 +286,7 @@ NYTD.ArticleShareTools = function(rootId) {
 					   'toolbar=0,status=0,height=550,width=700,scrollbars=yes,resizable=no'
 					);
 				} catch(e) {
-					postPopUp( 
+					postPopUp(
 					   'http://mini.mixx.com/submit/story'
 					   + '?page_url='    + meta.getURL()
 					   + '&title='       + meta.getHeadline()

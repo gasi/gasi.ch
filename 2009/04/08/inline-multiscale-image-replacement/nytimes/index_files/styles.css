@@ -1,6 +1,6 @@
 /*
 $Id: styles.css 16039 2009-03-12 18:24:25Z santep $
-(c)2006 - 2007 The New York Times Company 
+(c)2006 - 2007 The New York Times Company
 */
 @import url(/css/app/lib/cropper/cropper.css);
 @import url(/css/app/lib/shadow/drop_shadow.css);
@@ -15,10 +15,10 @@ button.appButtonSmall {
   height:28px;
   color: white;
   text-decoration: none;
-  text-align:center; 
+  text-align:center;
   border: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background:url(/images/apps/buttons/rightcap.png) right no-repeat; 
+  background:url(/images/apps/buttons/rightcap.png) right no-repeat;
   cursor:pointer;
   width:auto;
 }
@@ -27,7 +27,7 @@ button.appButtonSmall {
   font-size: 11px;
   padding: 0 8px 0 0;
   height:19px;
-  background:url(/images/apps/buttons/rightcapsmall.png) right no-repeat; 
+  background:url(/images/apps/buttons/rightcapsmall.png) right no-repeat;
 }
 
 button.appButton::-moz-focus-inner,
@@ -42,30 +42,30 @@ button.appButtonSmall:focus {
 }
 
 button.appButton span,
-button.appButtonSmall span { 
-  display:block; 
-  white-space:nowrap; 
+button.appButtonSmall span {
+  display:block;
+  white-space:nowrap;
   padding:0 0 0 12px;
-  height:28px; 
+  height:28px;
   line-height:28px;
-  background:url(/images/apps/buttons/leftcap.png) left no-repeat; 
+  background:url(/images/apps/buttons/leftcap.png) left no-repeat;
 }
 
 button.appButtonSmall span  {
   padding:0 0 0 8px;
-  height:19px; 
+  height:19px;
   line-height:19px;
-  background:url(/images/apps/buttons/leftcapsmall.png) left no-repeat; 
+  background:url(/images/apps/buttons/leftcapsmall.png) left no-repeat;
 }
 
 button.altSmall {
   color:#004276;
   font-weight:normal;
-  background:url(/images/apps/buttons/rightcapsmall_line.png) right no-repeat; 
+  background:url(/images/apps/buttons/rightcapsmall_line.png) right no-repeat;
 }
 
 button.altSmall span {
-  background:url(/images/apps/buttons/leftcapsmall_line.png) left no-repeat; 
+  background:url(/images/apps/buttons/leftcapsmall_line.png) left no-repeat;
 }
 
 /*FIXME remove when this is added in ie files*/
@@ -73,13 +73,13 @@ button.appButton,
 button.appButtonSmall {
    *width:auto;
    *overflow:visible;
-   _width:auto; 
+   _width:auto;
    _overflow:visible;
  }
 
 button.appButton span,
-button.appButtonSmall span { 
-   _margin-top:1px; 
+button.appButtonSmall span {
+   _margin-top:1px;
  }
 
 html body {
@@ -103,7 +103,7 @@ html body {
   border-bottom: 1px solid #808080;
   margin-bottom: 10px;
   line-height:normal !important;
-  
+
 }
 
 #TP_container h3 {
@@ -147,12 +147,12 @@ html body {
   line-height:1.2em !important;
 }
 
-#TP_container p, 
-#TP_container h1, 
-#TP_container h2, 
-#TP_container h3, 
-#TP_container h4, 
-#TP_container h5, 
+#TP_container p,
+#TP_container h1,
+#TP_container h2,
+#TP_container h3,
+#TP_container h4,
+#TP_container h5,
 #TP_container h6 {
   margin:0 0 .8em;
 }
@@ -209,8 +209,8 @@ html body {
   margin:0 !important;
   padding:12px 20px;
 }
-#TP_container { 
-  width : 100%; 
+#TP_container {
+  width : 100%;
   height : 35px;
   z-index : 10000;
   background: white;
@@ -221,7 +221,7 @@ html body {
   z-index : 9999;
   font-size:0;
 }
-body > #TP_container { 
+body > #TP_container {
   position : fixed;
   top: 0;
   left: 0;
@@ -236,7 +236,7 @@ body > #TP_container_shadow {
   background: url('/images/global/shadow/drop_shadow/s.png') repeat-x center;
 }
 
-/* FIX ME .module*/ 
+/* FIX ME .module*/
 #TP_container .module, #TP_container .TP_module {
   border-top: 1px solid #ccc;
   padding-top: 10px;
@@ -415,7 +415,7 @@ body > #TP_container_shadow {
 #TP_feed span {
   vertical-align: middle;
 }
-#TP_feed.tease { 
+#TP_feed.tease {
   /*height:28px;*/ border-bottom-width:1px;
   border-color: #CCC;
 }

@@ -60,16 +60,16 @@ var extMouseWheel = function()
 {
     // let's not allow other deltas than +/- 3 because that's what flash player does:
     var keepDeltaAtPlusMinusThree = false;
-    
-    
+
+
     // an associative array, where the keys are the ids of flash
     // objects that have registered for the mouse wheel support, and
     // the values their respective container div elements.
     var f = [];
-    
-    
-    
-    
+
+
+
+
     // helper function courtesy of the Adobe peepz
     var thisMovie = function(movieName)
     {
@@ -79,7 +79,7 @@ var extMouseWheel = function()
             return document[movieName];
         }
     }
-    
+
     // helper functions for getting the position of
     // an element
     // from:  http://blog.firetree.net/2005/07/04/javascript-find-position/
@@ -113,25 +113,25 @@ var extMouseWheel = function()
             curtop += obj.y;
         return curtop;
     }
-    
+
     // helper function for searching the user-agent string
     var uaContains = function(str)
     {
         return (navigator.userAgent.indexOf(str) != -1);
     }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     // Handler for mouse wheel event:
     var onWheelHandler = function( event )
     {
         var delta = 0;
         if (!event)
             event = window.event;
-        
+
         if (event.wheelDelta)
         {
             // Safari
@@ -145,48 +145,48 @@ var extMouseWheel = function()
             // Too fast
             //delta = -event.detail*3;
         }
-        
+
         if (keepDeltaAtPlusMinusThree)
         {
             if (delta > 0) delta = 3;
             else if (delta == 0) delta = 0;
             else delta = -3;
         }
-        
+
         if (delta)
         {
             var thisFlashMovieId = null;
             for (var j in f)
                 if (f[j] != null && f[j] == event.currentTarget) thisFlashMovieId = j;
-            
+
             var thisMouse;
-            
+
             if (uaContains("Camino"))
                 thisMouse = {x:event.layerX, y:event.layerY};
             else if (uaContains('Firefox'))
                 thisMouse = {x:(event.layerX - findPosX(event.currentTarget)), y:(event.layerY - findPosY(event.currentTarget))};
             else
                 thisMouse = {x:event.offsetX, y:event.offsetY};
-            
+
             thisMouse.ctrlKey = (uaContains('Mac')) ? (event.metaKey || event.ctrlKey) : event.ctrlKey;
             thisMouse.altKey = event.altKey;
             thisMouse.shiftKey = event.shiftKey;
             thisMouse.buttonDown = false;
-            
+
             if (thisMovie(thisFlashMovieId).dispatchExternalMouseWheelEvent)
                 thisMovie(thisFlashMovieId).dispatchExternalMouseWheelEvent(delta, thisMouse.x, thisMouse.y,
                                                                             thisMouse.ctrlKey, thisMouse.altKey,
                                                                             thisMouse.shiftKey, thisMouse.buttonDown);
         };
-        
+
         // Prevent default actions caused by mouse wheel
         if (event.preventDefault)
             event.preventDefault();
-        
+
         event.returnValue = false;
     }
-    
-    
+
+
     return {
         // initialize mouse wheel capturing by setting the listener
         // (this is called from within the Flash app):
@@ -198,14 +198,14 @@ var extMouseWheel = function()
                 var parentdiv = document.getElementById(aFlashObjectId).parentNode;
                 while(parentdiv != null && parentdiv.nodeName != "DIV")
                     parentdiv = parentdiv.parentNode;
-                
+
                 if (parentdiv != undefined && parentdiv != null)
                 {
                     f[aFlashObjectId] = parentdiv;
-                    
+
                     if (parentdiv.addEventListener) parentdiv.addEventListener('DOMMouseScroll', onWheelHandler, false); // Firefox
                     parentdiv.onmousewheel = onWheelHandler; // Safari
-                    
+
                     return true;
                 }
                 else

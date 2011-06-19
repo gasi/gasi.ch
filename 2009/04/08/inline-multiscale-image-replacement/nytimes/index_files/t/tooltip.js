@@ -1,11 +1,11 @@
 /*
-$Id: tooltip.js 16265 2009-03-18 18:06:05Z messay $ 
-(c)2006 - 2007 The New York Times Company 
+$Id: tooltip.js 16265 2009-03-18 18:06:05Z messay $
+(c)2006 - 2007 The New York Times Company
 */
 
 function tooltip() {
 	this.container = null;
-	this.content = null; 
+	this.content = null;
 	this.miliseconds = 5000;
 	this.timeoutId = null;
 	this.topOffset = 0;
@@ -29,7 +29,7 @@ tooltip.prototype.write = function(){
 }
 
 tooltip.prototype.stop = function(){
-	if (this.timeoutId != null) window.clearTimeout(this.timeoutId); 
+	if (this.timeoutId != null) window.clearTimeout(this.timeoutId);
 }
 
 

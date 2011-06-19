@@ -1,5 +1,5 @@
-/*!	SWFObject v2.2 <http://code.google.com/p/swfobject/> 
-	is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
+/*!	SWFObject v2.2 <http://code.google.com/p/swfobject/>
+	is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
 */
 
 var swfobject = function() {
@@ -77,10 +77,10 @@ var swfobject = function() {
 		- Will fire an event as soon as the DOM of a web page is loaded
 		- Internet Explorer workaround based on Diego Perini's solution: http://javascript.nwbox.com/IEContentLoaded/
 		- Regular onload serves as fallback
-	*/ 
+	*/
 	onDomLoad = function() {
 		if (!ua.w3) { return; }
-		if ((typeof doc.readyState != UNDEF && doc.readyState == "complete") || (typeof doc.readyState == UNDEF && (doc.getElementsByTagName("body")[0] || doc.body))) { // function is fired after onload, e.g. when script is inserted dynamically 
+		if ((typeof doc.readyState != UNDEF && doc.readyState == "complete") || (typeof doc.readyState == UNDEF && (doc.getElementsByTagName("body")[0] || doc.body))) { // function is fired after onload, e.g. when script is inserted dynamically
 			callDomLoadFunctions();
 		}
 		if (!isDomLoaded) {
@@ -140,14 +140,14 @@ var swfobject = function() {
 		if (isDomLoaded) {
 			fn();
 		}
-		else { 
+		else {
 			domLoadFnArr[domLoadFnArr.length] = fn; // Array.push() is only available in IE5.5+
 		}
 	}
 	
 	/* Cross-browser onload
 		- Based on James Edwards' solution: http://brothercake.com/site/resources/scripts/onload/
-		- Will fire an event as soon as a web page including all of its assets are loaded 
+		- Will fire an event as soon as a web page including all of its assets are loaded
 	 */
 	function addLoadEvent(fn) {
 		if (typeof win.addEventListener != UNDEF) {
@@ -174,7 +174,7 @@ var swfobject = function() {
 	/* Main function
 		- Will preferably execute onDomLoad, otherwise onload (as a fallback)
 	*/
-	function main() { 
+	function main() {
 		if (plugin) {
 			testPlayerVersion();
 		}
@@ -268,7 +268,7 @@ var swfobject = function() {
 					setVisibility(id, true);
 					if (cb) {
 						var o = getObjectById(id); // test whether there is an HTML object element or not
-						if (o && typeof o.SetVariable != UNDEF) { 
+						if (o && typeof o.SetVariable != UNDEF) {
 							cbObj.success = true;
 							cbObj.ref = o;
 						}
@@ -378,7 +378,7 @@ var swfobject = function() {
 		else {
 			obj.parentNode.replaceChild(abstractAltContent(obj), obj);
 		}
-	} 
+	}
 
 	function abstractAltContent(obj) {
 		var ac = createElement("div");
@@ -548,7 +548,7 @@ var swfobject = function() {
 			dynamicStylesheet = null;
 			dynamicStylesheetMedia = null;
 		}
-		if (!dynamicStylesheet || dynamicStylesheetMedia != m) { 
+		if (!dynamicStylesheet || dynamicStylesheetMedia != m) {
 			// create dynamic stylesheet + get a global reference to it
 			var s = createElement("style");
 			s.setAttribute("type", "text/css");
@@ -622,7 +622,7 @@ var swfobject = function() {
 	return {
 		/* Public API
 			- Reference: http://code.google.com/p/swfobject/wiki/documentation
-		*/ 
+		*/
 		registerObject: function(objectIdStr, swfVersionStr, xiSwfUrlStr, callbackFn) {
 			if (ua.w3 && objectIdStr && swfVersionStr) {
 				var regObj = {};
@@ -660,7 +660,7 @@ var swfobject = function() {
 					att.data = swfUrlStr;
 					att.width = widthStr;
 					att.height = heightStr;
-					var par = {}; 
+					var par = {};
 					if (parObj && typeof parObj === OBJECT) {
 						for (var j in parObj) { // copy object to avoid the use of references, because web authors often reuse parObj for multiple SWFs
 							par[j] = parObj[j];
@@ -771,7 +771,7 @@ var swfobject = function() {
 					if (storedCallbackFn) { storedCallbackFn(storedCallbackObj); }
 				}
 				isExpressInstallActive = false;
-			} 
+			}
 		}
 	};
 }();

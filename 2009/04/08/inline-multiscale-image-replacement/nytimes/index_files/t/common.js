@@ -1,6 +1,6 @@
- /*  	 
- $Id: common.js 13985 2009-01-29 16:33:29Z santep $ 	 
- (c) 2006-2007 The New York Times Company 	 
+ /*  	
+ $Id: common.js 13985 2009-01-29 16:33:29Z santep $ 	
+ (c) 2006-2007 The New York Times Company 	
  */
 
 	function nameIt() {
@@ -9,8 +9,8 @@
 				document.all.globalsearchform.style.visibility = "visible";
       }
    }
-     
-	function pop_me_up(pURL,features){ 
+
+	function pop_me_up(pURL,features){
 		new_window = window.open(pURL, "popup_window", features);
 		new_window.focus();
 	}
@@ -34,7 +34,7 @@
 
 	function goToURL2(sel){
 	// This version only works for onChange events from select objects
-	// but the select object can have any name, unlike goToURL() which requires 
+	// but the select object can have any name, unlike goToURL() which requires
 	// the select object to be named "section"
 	
 		var selected = sel.selectedIndex;
@@ -43,7 +43,7 @@
 		return false;
 	}
 	if (window.self != window.top && !document.referrer.match(/https?:\/\/[^?\/]+\.nytimes\.com\//)) {
-		top.location.replace(window.location.pathname); 
+		top.location.replace(window.location.pathname);
 	}
 	
 	//begin functions for Travel flash slideshows
@@ -157,44 +157,44 @@
 
 // Function for Classifieds and Most Popular modules
    function Accordian(target) {
-   	typeof target == "object" ? this.element = target : this.element = document.getElementById(target); if (!this.element) return false;  
-   	this.ul = this.element.getElementsByTagName("ul")[0]; 
+   	typeof target == "object" ? this.element = target : this.element = document.getElementById(target); if (!this.element) return false;
+   	this.ul = this.element.getElementsByTagName("ul")[0];
    	this.tabs = this.ul.getElementsByTagName("li");
    	this.tabContent = this.getTabContent();
    	this.bind();
    }
 
    Accordian.prototype.getTabContent = function() {
-   	tabContent= new Array();    
+   	tabContent= new Array();
    	this.divs = this.element.getElementsByTagName("div");
    	for(var i = 0; i < this.divs.length; i++) {
            if (/tabContent/i.test(this.divs[i].className)) {
-           tabContent.push(this.divs[i]);                        
+           tabContent.push(this.divs[i]);
    		}
    	}
    	return tabContent;
    }
 
 
-   Accordian.prototype.bind = function() {    
+   Accordian.prototype.bind = function() {
    	var o = this;
    	for(var i = 0; i < this.tabs.length; i++) {
-   		this.tabs[i].onclick = function() { 
+   		this.tabs[i].onclick = function() {
    		   if (this.className != 'selected') {
    		      o.open(this); return false;
    		      var a = this.getElementsByTagName("a")[0];
-   		      if (a) a.onclick = function() { 
-                    return false; 
+   		      if (a) a.onclick = function() {
+                    return false;
                }
    		   }
-   		} 
+   		}
    	}
    }
 
-   Accordian.prototype.open = function(caller) {    
+   Accordian.prototype.open = function(caller) {
    	for(var i = 0; i < this.tabs.length; i++) {
-   		var tab = this.tabs[i]; 
-   		if (tab == caller) {  
+   		var tab = this.tabs[i];
+   		if (tab == caller) {
    			this.collapse();
    			tab.className = "selected"
    			this.tabContent[i].style.display = "block";
@@ -203,27 +203,27 @@
    }
 
    Accordian.prototype.collapse = function() {
-   	for(var i = 0; i < this.tabs.length; i++) {    
+   	for(var i = 0; i < this.tabs.length; i++) {
    		this.tabs[i].className = "";
-   		this.tabContent[i].style.display = "none";                 
-   	}                                                                
+   		this.tabContent[i].style.display = "none";
+   	}
    }
 
 //Function for Google ads links
 function linkbox(url, winName) {
-   window.open(url, winName, 
+   window.open(url, winName,
 "location=yes,directories=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes");
-}    
+}
 
 
 function enhanceAccordians() {
 	var divs = document.getElementsByTagName('div');
 	for (var i = 0; i < divs.length; i++) {
-		var element = divs[i];     
+		var element = divs[i];
 		if (/accordian/i.test(element.className)) {
 			new Accordian(element);
 		}
-	} 
+	}
 }
 
 getMetaTagValue = function(name){
@@ -239,7 +239,7 @@ var NYTD = NYTD || {};
 
 NYTD.Hosts = (function(){
   var host, scripts = document.getElementsByTagName("script");
-  
+
   for (var i = 0, script; script = scripts[i]; i++) {
     host = script.src && /^(.+\.nytimes.com)\/js\/common\.js/.test(script.src) ? RegExp.$1 : '';
     if (host) { break };
@@ -254,19 +254,19 @@ NYTD.Hosts = (function(){
 
 
 (function(){
-  
+
   var windowLoaded = false;
   var document_scripts;
-  
+
   if (window.addEventListener) {
     window.addEventListener ("load", function(){ windowLoaded = true }, false);
   } else if (window.attachEvent) {
     window.attachEvent ("onload", function(){ windowLoaded = true });
   }
-  
+
   function scriptLoaded(src) {
     document_scripts = document_scripts || {};
-    
+
     if (document_scripts[src]) { return true; }
     else {
       var script_tags= document.getElementsByTagName("script");
@@ -276,18 +276,18 @@ NYTD.Hosts = (function(){
       if (document_scripts[src]) { return true; }
       else { return false; }
     }
-    
+
   }
 
   NYTD.require = function(file, callback) {
-    
-    if (windowLoaded) { throw('Cannot require file, document is already loaded'); }  
+
+    if (windowLoaded) { throw('Cannot require file, document is already loaded'); }
 
     var url = file.indexOf('/') == 0 ?  NYTD.Hosts.jsHost + file : file;
     var force = arguments[arguments.length - 1] === true;
     var needsCallbackScriptTag;
-    
-    if (force || !scriptLoaded(url)) { 
+
+    if (force || !scriptLoaded(url)) {
       document.write('<script src="' + url + '" type="text/javascript" charset="utf-8" onerror="throw(\'NYTD.require: An error occured: \' + this.src)"><\/script>');
       document_scripts[url] = 1;
       needsCallbackScriptTag = true;
@@ -296,7 +296,7 @@ NYTD.Hosts = (function(){
     if (typeof callback == 'function') {
 
       if (document.addEventListener) {
-        if (needsCallbackScriptTag) { 
+        if (needsCallbackScriptTag) {
           document.write('<script type="text/javascript" charset="utf-8">(' + callback.toString() + ')();<\/script>');
         }
         else {

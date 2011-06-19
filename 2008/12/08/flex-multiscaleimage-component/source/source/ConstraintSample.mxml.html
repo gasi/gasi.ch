@@ -12,10 +12,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
     Constraint Sample
-        
+
     Flex MultiScaleImage Component Preview
     Developed by Daniel Gasienica
-    
+
     Blog: http://gasi.ch/blog/flex-multiscaleimage-component/
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -60,50 +60,50 @@
             <span class="CSSProperty_Name">fill-alphas</span><span class="CSSDelimiters">:</span> <span class="CSSProperty_Value">1, 1, 1, 1</span><span class="CSSDelimiters">;</span>
         <span class="CSSDelimiters">}</span>
     <span class="MXMLSpecial_Tag">&lt;/mx:Style&gt;</span>
-    
+
     <span class="MXMLSpecial_Tag">&lt;mx:Script&gt;</span>
         <span class="ActionScriptOperator">&lt;!</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptDefault_Text">CDATA</span><span class="ActionScriptBracket/Brace">[</span>
-        
+
             <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">org</span>.<span class="ActionScriptDefault_Text">openzoom</span>.<span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">viewport</span>.<span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">CenterConstraint</span>;
             <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">org</span>.<span class="ActionScriptDefault_Text">openzoom</span>.<span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">viewport</span>.<span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">CompositeConstraint</span>;
             <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">org</span>.<span class="ActionScriptDefault_Text">openzoom</span>.<span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">viewport</span>.<span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">VisibilityConstraint</span>;
             <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">org</span>.<span class="ActionScriptDefault_Text">openzoom</span>.<span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">viewport</span>.<span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">ZoomConstraint</span>;
-            
+
             <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">updateConstraints</span><span class="ActionScriptBracket/Brace">()</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
             <span class="ActionScriptBracket/Brace">{</span>
                 <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">compositeConstraint</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">CompositeConstraint</span> <span class="ActionScriptOperator">=</span>
                                                        <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">CompositeConstraint</span><span class="ActionScriptBracket/Brace">()</span>
                 <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">constraints</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptComment">/* of IViewportConstraint */</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">[]</span>
-                
+
                 <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">zoomConstraintCheckBox</span>.<span class="ActionScriptDefault_Text">selected</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">{</span>
                     <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">zoomConstraint</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">ZoomConstraint</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">ZoomConstraint</span><span class="ActionScriptBracket/Brace">()</span>
                     <span class="ActionScriptDefault_Text">zoomConstraint</span>.<span class="ActionScriptDefault_Text">minZoom</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">minZoomNumericStepper</span>.<span class="ActionScriptDefault_Text">value</span>
                     <span class="ActionScriptDefault_Text">zoomConstraint</span>.<span class="ActionScriptDefault_Text">maxZoom</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">maxZoomNumericStepper</span>.<span class="ActionScriptDefault_Text">value</span>
-                    <span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">push</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">zoomConstraint</span> <span class="ActionScriptBracket/Brace">)</span> 
+                    <span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">push</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">zoomConstraint</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">}</span>
-                
+
                 <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">centerConstraintCheckBox</span>.<span class="ActionScriptDefault_Text">selected</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">{</span>
                     <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">centerConstraint</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">CenterConstraint</span> <span class="ActionScriptOperator">=</span>
                                                           <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">CenterConstraint</span><span class="ActionScriptBracket/Brace">()</span>
                     <span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">push</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">centerConstraint</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">}</span>
-                
+
                 <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">visibilityConstraintCheckBox</span>.<span class="ActionScriptDefault_Text">selected</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">{</span>
                     <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">visibilityConstraint</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">VisibilityConstraint</span> <span class="ActionScriptOperator">=</span>
                                                       <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">VisibilityConstraint</span><span class="ActionScriptBracket/Brace">()</span>
                     <span class="ActionScriptDefault_Text">constraints</span>.<span class="ActionScriptDefault_Text">push</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">visibilityConstraint</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">}</span>
-                
+
                 <span class="ActionScriptDefault_Text">compositeConstraint</span>.<span class="ActionScriptDefault_Text">constraints</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">constraints</span>
                 <span class="ActionScriptDefault_Text">image</span>.<span class="ActionScriptDefault_Text">constraint</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">compositeConstraint</span>
             <span class="ActionScriptBracket/Brace">}</span>
-            
+
         <span class="ActionScriptBracket/Brace">]]</span><span class="ActionScriptOperator">&gt;</span>
     <span class="MXMLSpecial_Tag">&lt;/mx:Script&gt;</span>
-    
+
     <span class="MXMLComponent_Tag">&lt;mx:HBox</span><span class="MXMLDefault_Text">
         horizontalCenter=&quot;</span><span class="MXMLString">0</span><span class="MXMLDefault_Text">&quot;
         verticalAlign=&quot;</span><span class="MXMLString">middle</span><span class="MXMLDefault_Text">&quot;
@@ -115,7 +115,7 @@
             selected=&quot;</span><span class="MXMLString">true</span><span class="MXMLDefault_Text">&quot;
             change=&quot;</span><span class="ActionScriptDefault_Text">updateConstraints</span><span class="ActionScriptBracket/Brace">()</span><span class="MXMLDefault_Text">&quot;
             </span><span class="MXMLComponent_Tag">/&gt;</span>
-            
+
         <span class="MXMLComponent_Tag">&lt;mx:Label</span><span class="MXMLDefault_Text"> text=&quot;</span><span class="MXMLString">Minimum</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:NumericStepper</span><span class="MXMLDefault_Text">
             id=&quot;</span><span class="MXMLString">minZoomNumericStepper</span><span class="MXMLDefault_Text">&quot;
@@ -126,7 +126,7 @@
             stepSize=&quot;</span><span class="MXMLString">0.01</span><span class="MXMLDefault_Text">&quot;
             change=&quot;</span><span class="ActionScriptDefault_Text">updateConstraints</span><span class="ActionScriptBracket/Brace">()</span><span class="MXMLDefault_Text">&quot;
             </span><span class="MXMLComponent_Tag">/&gt;</span>
-            
+
         <span class="MXMLComponent_Tag">&lt;mx:Label</span><span class="MXMLDefault_Text"> text=&quot;</span><span class="MXMLString">Maximum</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:NumericStepper</span><span class="MXMLDefault_Text">
             id=&quot;</span><span class="MXMLString">maxZoomNumericStepper</span><span class="MXMLDefault_Text">&quot;
@@ -137,22 +137,22 @@
             stepSize=&quot;</span><span class="MXMLString">5</span><span class="MXMLDefault_Text">&quot;
             change=&quot;</span><span class="ActionScriptDefault_Text">updateConstraints</span><span class="ActionScriptBracket/Brace">()</span><span class="MXMLDefault_Text">&quot;
             </span><span class="MXMLComponent_Tag">/&gt;</span>
-        
+
         <span class="MXMLComponent_Tag">&lt;mx:Spacer</span><span class="MXMLDefault_Text"> width=&quot;</span><span class="MXMLString">12</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:VRule</span><span class="MXMLDefault_Text"> height=&quot;</span><span class="MXMLString">18</span><span class="MXMLDefault_Text">&quot; strokeColor=&quot;</span><span class="MXMLString">#444444</span><span class="MXMLDefault_Text">&quot; strokeWidth=&quot;</span><span class="MXMLString">1</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:Spacer</span><span class="MXMLDefault_Text"> width=&quot;</span><span class="MXMLString">12</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
-            
+
         <span class="MXMLComponent_Tag">&lt;mx:CheckBox</span><span class="MXMLDefault_Text">
             id=&quot;</span><span class="MXMLString">centerConstraintCheckBox</span><span class="MXMLDefault_Text">&quot;
             label=&quot;</span><span class="MXMLString">Center Contraint</span><span class="MXMLDefault_Text">&quot;
             selected=&quot;</span><span class="MXMLString">false</span><span class="MXMLDefault_Text">&quot;
             change=&quot;</span><span class="ActionScriptDefault_Text">updateConstraints</span><span class="ActionScriptBracket/Brace">()</span><span class="MXMLDefault_Text">&quot;
             </span><span class="MXMLComponent_Tag">/&gt;</span>
-        
+
         <span class="MXMLComponent_Tag">&lt;mx:Spacer</span><span class="MXMLDefault_Text"> width=&quot;</span><span class="MXMLString">12</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:VRule</span><span class="MXMLDefault_Text"> height=&quot;</span><span class="MXMLString">18</span><span class="MXMLDefault_Text">&quot; strokeColor=&quot;</span><span class="MXMLString">#444444</span><span class="MXMLDefault_Text">&quot; strokeWidth=&quot;</span><span class="MXMLString">1</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:Spacer</span><span class="MXMLDefault_Text"> width=&quot;</span><span class="MXMLString">12</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
-        
+
         <span class="MXMLComponent_Tag">&lt;mx:CheckBox</span><span class="MXMLDefault_Text">
             id=&quot;</span><span class="MXMLString">visibilityConstraintCheckBox</span><span class="MXMLDefault_Text">&quot;
             label=&quot;</span><span class="MXMLString">Visibility Contraint</span><span class="MXMLDefault_Text">&quot;
@@ -167,11 +167,11 @@
             stepSize=&quot;</span><span class="MXMLString">0.05</span><span class="MXMLDefault_Text">&quot;
             change=&quot;</span><span class="ActionScriptDefault_Text">updateConstraints</span><span class="ActionScriptBracket/Brace">()</span><span class="MXMLDefault_Text">&quot;
             </span><span class="MXMLComponent_Tag">/&gt;</span>
-        
+
         <span class="MXMLComponent_Tag">&lt;mx:Spacer</span><span class="MXMLDefault_Text"> width=&quot;</span><span class="MXMLString">12</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:VRule</span><span class="MXMLDefault_Text"> height=&quot;</span><span class="MXMLString">18</span><span class="MXMLDefault_Text">&quot; strokeColor=&quot;</span><span class="MXMLString">#444444</span><span class="MXMLDefault_Text">&quot; strokeWidth=&quot;</span><span class="MXMLString">1</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
         <span class="MXMLComponent_Tag">&lt;mx:Spacer</span><span class="MXMLDefault_Text"> width=&quot;</span><span class="MXMLString">12</span><span class="MXMLDefault_Text">&quot;</span><span class="MXMLComponent_Tag">/&gt;</span>
-        
+
         <span class="MXMLComponent_Tag">&lt;mx:Button</span><span class="MXMLDefault_Text">
             label=&quot;</span><span class="MXMLString">Show All</span><span class="MXMLDefault_Text">&quot;
             click=&quot;</span><span class="ActionScriptDefault_Text">image</span>.<span class="ActionScriptDefault_Text">showAll</span><span class="ActionScriptBracket/Brace">()</span><span class="MXMLDefault_Text">&quot;

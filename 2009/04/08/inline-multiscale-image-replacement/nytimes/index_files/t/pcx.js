@@ -13,4 +13,3 @@ var rsiPat=/.*_5.*/;
 for(x=0;x<rsinetsegs.length;++x){if(!rsiPat.test(rsinetsegs[x]))rsiSegs+='|'+rsinetsegs[x];}
 document.cookie="rsi_segs="+(rsiSegs.length>0?rsiSegs.substr(1):"")+";expires="+rsiExp.toGMTString()+";path=/;domain="+rsiDom;
 if(typeof(DM_onSegsAvailable)=="function"){DM_onSegsAvailable([],'H07707');}
-  

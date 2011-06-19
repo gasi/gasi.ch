@@ -19,19 +19,19 @@ NYTD = window.NYTD || {};
 
 // PUBLISHER/OBSERVER
 NYTD.EventPublisher = Class.create({
-  
+
   initialize: function(){
     this.observers = [];
   },
-  
+
   register: function(observer) {
     this.observers.push(observer);
   },
-  
+
   unregister: function(observer) {
     this.observers = this.observers.without(observer);
   },
-  
+
   notifyObservers: function(event,data) {
     for (var i = 0, observers = this.observers; i < observers.length; i++) {
       observers[i].update({event:event,data:data})
@@ -75,12 +75,12 @@ var Resizables = {
   },
 
   activate: function(resizable) {
-    if(resizable.options.delay) { 
-      this._timeout = setTimeout(function() { 
-        Resizables._timeout = null; 
-        window.focus(); 
-        Resizables.activeResizable = resizable; 
-      }.bind(this), resizable.options.delay); 
+    if(resizable.options.delay) {
+      this._timeout = setTimeout(function() {
+        Resizables._timeout = null;
+        window.focus();
+        Resizables.activeResizable = resizable;
+      }.bind(this), resizable.options.delay);
     } else {
       window.focus(); // allows keypress events if window isn't currently focused, fails for Safari
       this.activeResizable = resizable;
@@ -97,9 +97,9 @@ var Resizables = {
     this.activeResizable.updateResize(event, pointer);
   },
   endResize: function(event) {
-    if(this._timeout) { 
-      clearTimeout(this._timeout); 
-      this._timeout = null; 
+    if(this._timeout) {
+      clearTimeout(this._timeout);
+      this._timeout = null;
     }
     if(!this.activeResizable) return;
     this._lastPointer = null;
@@ -149,12 +149,12 @@ Resizable.prototype = {
 
       endeffect: function(element) {
         var toOpacity = typeof element._opacity == 'number' ? element._opacity : 1.0;
-        new Effect.Opacity(element, {duration:0.2, from:0.7, to:toOpacity, 
+        new Effect.Opacity(element, {duration:0.2, from:0.7, to:toOpacity,
           queue: {scope:'_resizable', position:'end'},
-          afterFinish: function(){ 
-            Resizable._resizing[element] = false 
+          afterFinish: function(){
+            Resizable._resizing[element] = false
           }
-        }); 
+        });
       },
       zindex: 1000,
       revert: false,
@@ -167,7 +167,7 @@ Resizable.prototype = {
         starteffect: function(element) {
           element._opacity = Element.getOpacity(element);
           Resizable._resizing[element] = true;
-          new Effect.Opacity(element, {duration:0.2, from:element._opacity, to:0.7}); 
+          new Effect.Opacity(element, {duration:0.2, from:element._opacity, to:0.7});
         }
       });
 
@@ -180,10 +180,10 @@ Resizable.prototype = {
     if(!this.handle) this.handle = $(options.handle);
     if(!this.handle) this.handle = this.element;
 
-    Element.makePositioned(this.element); // fix IE    
+    Element.makePositioned(this.element); // fix IE
     this.delta    = this.currentDelta();
     this.options  = options;
-    this.resizing = false;   
+    this.resizing = false;
 
     this.eventMouseDown = this.initResize.bindAsEventListener(this);
     Event.observe(this.handle, "mousedown", this.eventMouseDown);
@@ -210,7 +210,7 @@ Resizable.prototype = {
   initResize: function(event) {
     if(typeof Resizable._resizing[this.element] != 'undefined' &&
       Resizable._resizing[this.element]) return;
-    if(Event.isLeftClick(event)) {    
+    if(Event.isLeftClick(event)) {
       // abort on form elements, fixes a Firefox issue
       var src = Event.element(event);
       if((tag_name = src.tagName.toUpperCase()) && (
@@ -229,14 +229,14 @@ Resizable.prototype = {
           this._min = [1,1];
           this._max = [0,0];
       var pos = Position.cumulativeOffset(this.element);
-      this.offset = [0,1].map( function(i) { return (pointer[i] - pos[i]) }); 
+      this.offset = [0,1].map( function(i) { return (pointer[i] - pos[i]) });
 
         if(this.options.preserveRatio){
-            this._ratio = dim.width / dim.height;    
+            this._ratio = dim.width / dim.height;
         }
 
         if(this.options.bind == true || this.options.flip){
-            this._parentDim = Element.getDimensions(this.element.parentNode); 
+            this._parentDim = Element.getDimensions(this.element.parentNode);
             this._cop = Position.cumulativeOffset(this.element.parentNode);
             this._coe = Position.cumulativeOffset(this.element);
                     this.elementOffset = [this._coe[0]-this._cop[0], this._coe[1]-this._cop[1]];
@@ -259,7 +259,7 @@ Resizable.prototype = {
             }
             else
                 this._min = this._min.map(function(v,i){return (this.options.min > 0 ? this.options.min : 1);}.bind(this));
-        }        
+        }
         if(this.options.max){
             if(this.options.max instanceof Array){
                 this._max = this._max.map(function(v,i){ return (this.options.max[i] >= this._min[i]) ? this.options.max[i] : 0; }.bind(this));
@@ -280,7 +280,7 @@ Resizable.prototype = {
       this.element.style.zIndex = this.options.zindex;
     }
     if(this.options.ghosting) {
-      // If element has margin-left/right/top/bottom set all sort of problems occurs regarding the elements starting position 
+      // If element has margin-left/right/top/bottom set all sort of problems occurs regarding the elements starting position
       // and final position especially in IE (more problems when also snap and ghosting are initiated together)
       // (similar happens in Draggable - might need fixing there as well??)
       // next few lines SOLVE the problem (works for every combination: position:absolute+offset || relative+margins etc.)
@@ -324,11 +324,11 @@ Resizable.prototype = {
     if(revert && this.reverteffect) {
         var dim = Element.getDimensions(this.element);
         this.reverteffect(this.element, dim.width, dim.height);//d[1]-this.delta[1], d[0]-this.delta[0]
-    } 
+    }
     if(this.options.zindex)
       this.element.style.zIndex = this.originalZ;
 
-    if(this.options.endeffect) 
+    if(this.options.endeffect)
       this.options.endeffect(this.element);
 
     Resizables.deactivate(this);
@@ -349,11 +349,11 @@ Resizable.prototype = {
   draw: function(point) {
       var pos = Position.cumulativeOffset(this.element);
     var d = this.currentDelta();
-            pos[0] -= d[0]; 
+            pos[0] -= d[0];
             pos[1] -= d[1];
 
-        var p = [0,1].map(function(i){ 
-          return (point[i]-pos[i]-this.offset[i]) 
+        var p = [0,1].map(function(i){
+          return (point[i]-pos[i]-this.offset[i])
         }.bind(this));
 
     var l_width = p[0] + this._edim[0] - d[0];
@@ -365,7 +365,7 @@ Resizable.prototype = {
     if(this.options.snap) {
         if(typeof this.options.snap == 'function') {
             p = this.options.snap(p[0],p[1],this);
-          } 
+          }
           else {
           if(this.options.snap instanceof Array) {
             p = p.map( function(v, i) {
@@ -373,9 +373,9 @@ Resizable.prototype = {
             // or if this map functions returns 0 for i-th element
             // Same happens in Draggable (needs to be patched??)
             var dim = Math.round(v/this.options.snap[i])*this.options.snap[i];
-            return (this.options.snap[i] > 0) ? ((dim > this._min[i]) ? dim : this._min[i]) : this._edim[i]; 
+            return (this.options.snap[i] > 0) ? ((dim > this._min[i]) ? dim : this._min[i]) : this._edim[i];
             }.bind(this))
-          } 
+          }
           else {
             p = p.map( function(v,i) {
             var dim = Math.round(v/this.options.snap)*this.options.snap-d[i];
@@ -407,7 +407,7 @@ Resizable.prototype = {
         if(r1 <= this._coe[0]){
             style.left = r1-this._cop[0]+"px";//this._mc[0]
             p[0] = this._coe[0] - this.element.offsetLeft;
-        }        
+        }
         else
             style.left = this._inf[0]+'px';
         if(r2 <= this._coe[1]){
@@ -524,7 +524,7 @@ Element.addMethods({
     return element;
   }
 });
-  
+
 Shadow = Class.create({
 
 
@@ -806,20 +806,20 @@ Shadow = Class.create({
   getElementPosition: function() {
     return {top: this.element.getNumStyle("top"), left: this.element.getNumStyle("left")}
   }
-});/** 
+});/**
  * Copyright (c) 2006, David Spurr (http://www.defusion.org.uk/)
  * All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
- * 
+ *
  *     * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
  *     * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
  *     * Neither the name of the David Spurr nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- * 
+ *
  * http://www.opensource.org/licenses/bsd-license.php
- * 
+ *
  * See scriptaculous.js for full scriptaculous licence
  */
 
@@ -1392,7 +1392,7 @@ TimesPeople.User = Class.create({
     if (TimesPeople.User.caller != TimesPeople.User.getInstance) {
       throw new Error("There is no public constructor for TimesPeople.User.");
     }
-    
+
     this.newRecord = true;
     this.tpMember = false;
     this.publisher = new NYTD.EventPublisher();
@@ -1403,11 +1403,11 @@ TimesPeople.User = Class.create({
     };
     this.newsfeed = {};
   },
-  
+
   register: function(observer) {
     this.publisher.register(observer);
   },
-  
+
   unregister: function(observer) {
     this.publisher.unregister(observer);
   },
@@ -1419,12 +1419,12 @@ TimesPeople.User = Class.create({
       method: 'post',
       parameters: credentials,
       onSuccess: function(response) {
-        if (!response) { 
+        if (!response) {
           instance.requestAttributes();
         } else {
-          instance.processResponse(response);  
+          instance.processResponse(response);
         }
-        
+
         instance.newRecord = false;
         instance.publisher.notifyObservers('user logged in', instance);
       },
@@ -1448,7 +1448,7 @@ TimesPeople.User = Class.create({
           instance.requestAttributes();
         }
       }
-      
+
     });
   },
 
@@ -1477,10 +1477,10 @@ TimesPeople.User = Class.create({
       onComplete: function(response) {
         instance.newRecord = false;
       }
-      
+
     });
   },
-  
+
   requestDefaultFeed: function() {
     this.newsfeed =  TimesPeople.DefaultFeed;
     this.publisher.notifyObservers('user followees actions updated');
@@ -1497,12 +1497,12 @@ TimesPeople.User = Class.create({
     }
 
   },
-  
+
   update: function(attributes) {
     Object.extend(this.attributes, attributes);
     this.publisher.notifyObservers('attributes updated', this)
   },
-  
+
   save: function(callback) {
     if (! this.isValid()) {
       this.publisher.notifyObservers('user could not be saved', {errors:[{"code":null,"message":"Display Name cannot be blank.","field":"displayname"}]});
@@ -1542,10 +1542,10 @@ TimesPeople.User = Class.create({
           instance.publisher.notifyObservers('user could not be saved', data);
         }
       });
-      
+
       return true;
     }
-    
+
     delete this.attributes.email;
     delete this.attributes.password1;
     delete this.attributes.password2;
@@ -1567,7 +1567,7 @@ TimesPeople.User = Class.create({
       }
     });
   },
-  
+
   addFollowee: function(uid) {
     this.attributes.following_count++;
     var url = TimesPeople.Config.service + 'following/add';
@@ -1592,7 +1592,7 @@ TimesPeople.User = Class.create({
       }
     });
   },
-  
+
   removeFollowee: function(uid) {
     this.attributes.following_count--;
     var url = TimesPeople.Config.service + 'following/remove';
@@ -1619,20 +1619,20 @@ TimesPeople.User = Class.create({
       }
     });
   },
-  
+
   updateImage: function() {
     this.attributes.picURL = (this.imagePath() + '/cropped-#{uid}.jpg?'   + Math.random().toString()).interpolate(this.attributes);
     this.save();
     this.publisher.notifyObservers.bind(this.publisher).delay(1, 'user image updated', this);
   },
-  
+
   updateFullSizeImage: function() {
     this.attributes.fullpicURL = (this.imagePath() + '/uncropped-#{uid}.jpg?' + Math.random().toString()).interpolate(this.attributes);
     this.save();
 
     this.publisher.notifyObservers.bind(this.publisher).delay(1, 'user full size image updated', this);
   },
-  
+
   invite: function(emails) {
     var instance = this;
     var url = TimesPeople.Config.service + 'user/invite';
@@ -1653,27 +1653,27 @@ TimesPeople.User = Class.create({
       }
     });
   },
-  
+
   isFollowing: function(user) {
     if (!this.attributes.followees || this.attributes.followees.length == 0) return false;
     return this.attributes.followees.any(function(f){
       return f.uid == user.uid;
     });
   },
-  
+
   isTimesPeopleMember: function() {
     return this.tpMember;
   },
-  
+
   isNYTMember: function() {
     return Object.isNumber(this.attributes.uid);
   },
-  
+
   isNewMember: function() {
     // FIXME
     return this.attributes.following_count == 0;
   },
-  
+
   isValid: function() {
    if('displayname' in this.attributes) {
      return Object.isString(this.attributes.displayname) &&
@@ -1682,26 +1682,26 @@ TimesPeople.User = Class.create({
      return true;
    }
   },
-  
+
   getImportPageURI: function() {
     if (!this.attributes.uid) return;
     return TimesPeople.Config.host + '/view/user/' + this.attributes.uid + '/findimport.html';
   },
-  
+
   getSuggestionsPageURI: function() {
     if (!this.attributes.uid) return;
     return TimesPeople.Config.host + '/view/user/' + this.attributes.uid + '/findsuggest.html';
   },
-  
+
   getSearchPageURI: function(args) {
     if (!this.attributes.uid) return;
     return TimesPeople.Config.host + '/view/user/' + this.attributes.uid + '/findpeople.html';
   },
-  
+
   imagePath: function() {
     return TimesPeople.User.imageHost + '/' + TimesPeople.User.idToPartitionedPath(this.attributes.uid);
   }
-  
+
 });
 
 
@@ -1715,12 +1715,12 @@ Object.extend(TimesPeople.User,{
     }
     return this.__instance__;
   },
-  
+
   create: function(attributes) {
     var url = TimesPeople.Config.service + 'register';
     var instance = TimesPeople.User.getInstance();
     if(instance.attributes.uid) {
-      attributes.uid = instance.attributes.uid;  
+      attributes.uid = instance.attributes.uid;
     }
     new TimesPeople.Ajax.Request(url, {
       method: 'post',
@@ -1728,11 +1728,11 @@ Object.extend(TimesPeople.User,{
       onSuccess: function(response) {
         TimesPeople.console.log('Created user!');
         instance.newRecord = false;
-        if (!response) { 
+        if (!response) {
           instance.requestAttributes();
           return;
-        } 
-        
+        }
+
         instance.processResponse(response);
         instance.publisher.notifyObservers('user created', instance);
         instance.publisher.notifyObservers('user saved', instance);
@@ -1757,11 +1757,11 @@ Object.extend(TimesPeople.User,{
       }
     });
   },
-  
+
   idToPartitionedPath: function(id) {
     return id.toString().replace(/(\d{4}(?=\d))/g, '$1/');
   }
-  
+
 });
 
 /*------------------------------- DEPRECATED -------------------------------*/
@@ -1772,12 +1772,12 @@ Object.extend(TimesPeople.User.prototype, {
     TimesPeople.console.log('TimesPeople.User#requestFriends is deprecated. Please use requestFollowees instead');
     this.requestFollowees();
   },
-  
+
   addFriend: function(uid) {
     TimesPeople.console.log('TimesPeople.User#addFriend is deprecated. Please use addFollowee instead');
     this.addFollowee(uid);
   },
-  
+
   removeFriend: function(uid) {
     TimesPeople.console.log('TimesPeople.User#removeFriend is deprecated. Please use addFollowee instead');
     this.removeFollowee(uid);
@@ -1792,12 +1792,12 @@ $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 TimesPeople.Person = function(attributes) {
   Object.extend(this, attributes);
   this.picURL = this.picURL || TimesPeople.Config.image_host + TimesPeople.Config.image_path + 'none.png';
-  this.userpage = TimesPeople.Config.host + '/view/user/' + this.uid;    
+  this.userpage = TimesPeople.Config.host + '/view/user/' + this.uid;
 };
 
 // class members
 Object.extend(TimesPeople.Person, {
-  
+
   search: function(term, callback) {
     var callback = callback || Prototype.emptyFunction;
     var url = TimesPeople.Config.service + 'search?search_term=' + encodeURIComponent(term);
@@ -1812,7 +1812,7 @@ Object.extend(TimesPeople.Person, {
       }
     });
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
@@ -1918,10 +1918,10 @@ TimesPeople.Activity = Class.create({
 //class members
 Object.extend(TimesPeople.Activity, NYTD.EventPublisher.prototype);
 Object.extend(TimesPeople.Activity,{
-  
+
   observers: [],
   verbs:     ["read", "commented", "rated", "reviewed", "recommended", "suggested", "saved", "shared", "browsed", "listened to", "posted", "viewed"],
-  
+
   hide: function(id) {
     var url   = TimesPeople.Config.service + 'activity/hide';
     new TimesPeople.Ajax.Request(url, {
@@ -1932,7 +1932,7 @@ Object.extend(TimesPeople.Activity,{
       }
     });
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
@@ -1998,7 +1998,7 @@ TimesPeople.Page = {
 			{
 				keepGoing  = false;
 				this.group = (metaSearch.alias != undefined) ? metaSearch.alias : metaExists.getAttribute("content").toLowerCase();
-				this.type  = this.group; 
+				this.type  = this.group;
 				mList      = TimesPeople.Config.Page.Type[TimesPeople.Page.group];
 
 				$H(mList).keys().each(function(key)
@@ -2046,7 +2046,7 @@ TimesPeople.Page = {
         if (title == undefined || title == '') {
             title = document.title;
 
-	        var removeThese = [' - NYTimes.com', ' - The New York Times', ' - New York Times', 
+	        var removeThese = [' - NYTimes.com', ' - The New York Times', ' - New York Times',
 	                           ' - NY Times Health Information', ' - NY Times Health' ];
 
 	        removeThese.all(function(removeThis) {
@@ -2113,7 +2113,7 @@ $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
 */
 
-TimesPeople.Panel = Class.create({ 
+TimesPeople.Panel = Class.create({
 
   initialize: function(parent, element, tabcontent, options) {
     this.options = {
@@ -2139,10 +2139,10 @@ TimesPeople.Panel = Class.create({
       if (ad) ad.innerHTML = TimesPeople.Text.adText;
     })
   },
-  
+
   draw: function() {
   },
-  
+
   open: function() {
     TimesPeople.console.log('opening panel');
     if (this.parent.open_panel) this.parent.open_panel.close();
@@ -2153,7 +2153,7 @@ TimesPeople.Panel = Class.create({
     }
     this.parent.open_panel = this;
   },
-  
+
   close: function() {
     TimesPeople.console.log('closing panel');
     this.element.hide();
@@ -2166,7 +2166,7 @@ TimesPeople.Panel = Class.create({
     }
     this.parent.open_panel = null;
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
@@ -2181,51 +2181,51 @@ TimesPeople.firstRunView = {
     return this;
   },
 
-  
+
   drawFirstRun: function() {
     var html = '<h4>Welcome to TimesPeople</h4><a id="TP_infolink" class="toolbar_button"  onclick="return false">What&rsquo;s this?</a>';
     $('TP_user').update(html);
     $('TP_people').update(this.buildFirstStep()).addClassName('firstrun');
-    
+
     this.controller.minimizedView.button.update('<a>TimesPeople</a>');
-    
+
     this.user.newsfeed = this.user.newsfeed || [];
     Event.observe($('TP_infolink'), 'click', this.openInfo.bind(this), true);
     if ($('TP_get_started_button')) $('TP_get_started_button').observe('click', this.onClickGetStarted.bindAsEventListener(this), true);
     $('TP_minimize_button_guest').observe('click', this.onClickMinimize.bindAsEventListener(this), true);
   },
-  
+
   buildFirstStep: function() {
     return '<button  id="TP_get_started_button" class="appButtonSmall"><span>Get Started</span></button>&nbsp;&nbsp;<a id="TP_minimize_button_guest" class="toolbar_button">No, thanks</a>';
   },
-  
+
   openInfo: function() {
     this.parent.drawInfo();
   },
-  
+
   onClickGetStarted: function() {
     window.location = TimesPeople.Config.get_started_uri;
   },
-  
+
   onClickMinimize: function(event) {
     this.parent.minimize();
     event.stop();
   }
-  
+
 };/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
 */
 
 TimesPeople.FeedView = Class.create({
-  
+
   initialize: function(element, parent) {
     this.parent = parent;
     this.element = $(element).addClassName('timespeople_panel').show();
     this.user = TimesPeople.User.getInstance();
     this.user.register(this);
     TimesPeople.Activity.register(this);
-    
+
     // TimesPeople.console.log('instantiate', TimesPeople.FeedContentView)
     this.feedcontent = new TimesPeople.FeedContentView(this.element.down('.TP_feed_content'));
     this.feedHeight = '232px'; //so the feed doesn't cover the article headline and tools //document.viewport.getHeight()/2 + 'px';
@@ -2234,7 +2234,7 @@ TimesPeople.FeedView = Class.create({
       Event.observe(feedLink, "click", this.toggleFeed.bind(this), true);
     }
   },
-  
+
   onResize: function() {
     this.shadow.updateShadow();
   },
@@ -2243,27 +2243,27 @@ TimesPeople.FeedView = Class.create({
     TimesPeople.console.log('drawing main feed', this.feedcontent);
     this.feedcontent.draw(length);
   },
-  
+
   teaseFeed: function() {
     this.element.addClassName('tease');
   },
-  
+
   unteaseFeed: function() {
     this.element.removeClassName('tease');
   },
-  
+
   toggleFeed: function() {
     TimesPeople.console.log('toggle feed');
-    
+
     $('TP_feed_toggle').toggleClassName('open');
-    
+
     if (this.element.hasClassName('open')) {
       this.close();
     } else {
       this.open();
     }
   },
-  
+
   // TODO can this inherit Panel instead??
   open: function(height) {
     this.drawFeed();
@@ -2271,7 +2271,7 @@ TimesPeople.FeedView = Class.create({
     this.shadow = new Shadow(this.element);
     var ad = $('TP_feed_tab').down('.tp_tile_ad_container');
     if (ad) ad.innerHTML = TimesPeople.Text.adText;
-    
+
     $('TP_feed_tab').addClassName('active').show().setStyle({visibility:'visible'});
     this.element.addClassName('open').setStyle({top:'35px'});
     this.resizable = this.resizable || new Resizable('TP_feed',{constraint:'vertical', handle: 'TP_feed_handle', starteffect: null, endeffect: this.shadow.updateShadow.bind(this.shadow), min: 40});
@@ -2280,14 +2280,14 @@ TimesPeople.FeedView = Class.create({
     if (this.parent.open_panel) this.parent.open_panel.close();
     this.parent.open_panel = this;
   },
-  
+
   close: function() {
     this.feedHeight = this.element.style.height || this.feedHeight;
     this.element.style.height = null;
     this.element.removeClassName('open').setStyle({top:'0'});
     var ad = $('TP_feed_tab').down('.tp_tile_ad_container');
     if (ad) ad.innerHTML = '';
-    
+
     $('TP_feed_toggle').removeClassName('open');
     $('TP_feed_tab').removeClassName('active').hide();
     this.shadow.destroy();
@@ -2295,7 +2295,7 @@ TimesPeople.FeedView = Class.create({
     delete this.shadow;
     this.parent.open_panel = null;
   },
-  
+
   update: function(msg) {
     switch(msg.event) {
     case 'action saved':
@@ -2305,43 +2305,43 @@ TimesPeople.FeedView = Class.create({
       break;
     }
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
 */
 
 TimesPeople.FeedContentView = Class.create({
-  
+
   initialize: function(element, data) {
     this.element = element;
     this.data = data || TimesPeople.user.newsfeed;
     // TimesPeople.console.log(this.data)
   },
-  
+
   draw: function(length,data) {
     this.data = data || TimesPeople.user.newsfeed;
     this.element.update(this.buildFeed(length));
   },
-  
+
   //TODO optimize
   buildFeed: function(length) {
     var actions = this.data;
     if (!actions || !actions.length) return;
-    
+
     length = length || actions.length;
     var html = [];
     html.push('<table>');
     for (var i=0; i < length; i++) {
       if (i == 25) break;
       html.push(this.buildFeedItem(actions[i])
-      );         
+      );
     }
     html.push('</table>');
     // TimesPeople.console.log(TimesPeople.user.attributes)
     return html.join('').interpolate(TimesPeople.user.attributes);
   },
-  
+
   buildFeedItem: function(action) {
     action = Object.clone(action);
     action.actorDisplayname = action.actorDisplayname || action.user_displayname;
@@ -2351,8 +2351,8 @@ TimesPeople.FeedContentView = Class.create({
       var dateStr = action.date_updated.replace(/-/g, '/');
       d = new Date(dateStr);
     }
-    
-    
+
+
     if (d.getDate() == new Date().getDate()) {
       var mhours = d.getHours();
       var hours = mhours > 12 ? mhours - 12 : mhours;
@@ -2362,23 +2362,23 @@ TimesPeople.FeedContentView = Class.create({
     } else {
       action.date = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][d.getMonth()] + ' ' + d.getDate();
     }
-    
+
     if (action.verb == 'commented') {
       action.verb = 'commented on';
     }
-    
-    action.object_type = action.object_type.toLowerCase();
-    
 
-    
+    action.object_type = action.object_type.toLowerCase();
+
+
+
     if(action.verb) {
-      action.article = action.object_type.charAt(0).match(/[aeiou]/ig) ? 'an' : 'a';  
+      action.article = action.object_type.charAt(0).match(/[aeiou]/ig) ? 'an' : 'a';
       action.punctuation = ':'
     }
     else {
       action.punctuation = '';
     }
-    
+
     if (action.object_type == 'user') {
       action.article = '';
       action.object_type = '';
@@ -2403,14 +2403,14 @@ TimesPeople.FeedContentView = Class.create({
     ').interpolate(action);
     return action_html;
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
 */
 
 TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
-  
+
   initialize: function($super, parent, target) {
     var element = document.createElement('div');
     element.id = 'TP_settings_pane';
@@ -2419,7 +2419,7 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     TimesPeople.user.register(this);
     this.draw();
   },
-  
+
   draw: function() {
     this.container.update(this.buildContent());
     var TP_pic_form = $('TP_pic_form');
@@ -2431,12 +2431,12 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     Event.observe($('TP_name_and_location_edit_button'), "click", this.toggleNameAndLocationForm.bind(this), true);
     Event.observe($('TP_name_and_location_form'), "submit", this.onSubmitNameAndLocationForm.bindAsEventListener(this), true)
   },
-  
+
   buildContent: function() {
     var user = TimesPeople.user;
     user.attributes.sharing_on  = user.attributes.sharing ? 'checked="checked"' : '';
     user.attributes.sharing_off = user.attributes.sharing ? '' : 'checked="checked"';
-    var html = 
+    var html =
     [
     '<div class="inset">',
       '<div class="module wrap first">',
@@ -2493,17 +2493,17 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
       '</div>',
     '</div>'
     ].join('').interpolate(user.attributes);
-    
-    delete user.attributes.sharing_on; 
+
+    delete user.attributes.sharing_on;
     delete user.attributes.sharing_off;
-    
+
     return html;
   },
-  
+
   buildFacebookControl: function() {
     return '<p style="clear:left"><a href="http://apps.facebook.com/timespeople/" target="_blank"><img src="http://graphics8.nytimes.com/images/article/functions/facebook.gif" alt="Facebook logo"> TimesPeople on Facebook</a></p>';
   },
-  
+
   updateSharing: function() {
     var value = parseInt(this.value, 10);
     if (value == 1) {
@@ -2515,18 +2515,18 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
         this.checked = '';
         $('TP_sharing_off').checked = 'checked';
       }
-    } 
+    }
     else {
       TimesPeople.user.attributes.sharing = value;
       TimesPeople.user.save();
     }
   },
-  
+
   updateLocation: function(form, value) {
     TimesPeople.user.update({location: value.truncate(32)});
     TimesPeople.user.save();
   },
-  
+
   submitImage: function(event) {
     var element = event.element();
     var form = element.up('form');
@@ -2535,15 +2535,15 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     });
     Event.stop(event);
   },
-  
+
   onImageSubmitted: function() {
     TimesPeople.user.updateFullSizeImage();
   },
-  
+
   loadFullSizeImage: function() {
     var img = new Element('img',{id:'croppingImg', src: TimesPeople.user.attributes.fullpicURL});
     $('imageWell').appendChild(img);
-    
+
     //bug in cropper.js library, a blank cropper loads before the img has loaded
     if (Prototype.Browser.WebKit) {
       img.observe('load', this.initializeCropper.bind(this), true);
@@ -2551,7 +2551,7 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
       this.initializeCropper();
     };
   },
-  
+
   initializeCropper: function() {
     if (this.cropper) {
       this.cropper.previewWrap.update('').show();
@@ -2560,16 +2560,16 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     this.cropper = new Cropper.ImgWithPreview(
       'croppingImg',
       {
-        minWidth: 64, 
+        minWidth: 64,
         minHeight: 64,
         ratioDim: { x: 64, y: 64 },
-        displayOnInit: true, 
+        displayOnInit: true,
         onEndCrop: this.onEndCrop,
         previewWrap: 'previewArea',
         onloadCoords: { x1: 10, y1: 10, x2: 74, y2: 74 }
       }
     );
-    
+
     this.cropper.previewWrap.show();
     $('TP_pic_form').hide();
     $('TP_profile').down('.TP_avatar').hide();
@@ -2578,9 +2578,9 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     $('TP_profile').down('.imageWell').show();
     this.shadow.updateShadow();
     $('TP_crop_button').observe('click', this.submitCoords.bindAsEventListener(this), true);
-    
+
   },
-  
+
   resetCropper: function() {
     $('croppingImg').show();
     $('cropImageForm').show();
@@ -2589,7 +2589,7 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     $('TP_profile').down('.TP_avatar').hide();
     this.shadow.updateShadow();
   },
-  
+
   removeCropper: function() {
     TimesPeople.user.updateImage();
     $('croppingImg').hide();
@@ -2600,7 +2600,7 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     this.cropper.remove();
     this.shadow.updateShadow();
   },
-  
+
   submitCoords: function(event) {
     var element = event.element();
     var form = element.up('form');
@@ -2609,7 +2609,7 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     });
     Event.stop(event);
   },
-  
+
   onEndCrop: function(coords, dimensions) {
     $( 'x1' ).value = coords.x1;
     $( 'y1' ).value = coords.y1;
@@ -2618,30 +2618,30 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
     $( 'width' ).value = dimensions.width;
     $( 'height' ).value = dimensions.height;
   },
-  
+
   toggleNameAndLocationForm: function(event) {
     [$('TP_name_and_location'), $('TP_name_and_location_form')].invoke('toggle');
   },
-  
+
   onSubmitNameAndLocationForm: function(event) {
     var name_and_location = $('TP_name_and_location_form').serialize(true);
-    
+
     for (i in name_and_location) {
       name_and_location[i] = name_and_location[i].stripScripts().unescapeHTML();
     }
-    
+
     Object.extend(TimesPeople.user.attributes, name_and_location);
     TimesPeople.user.save();
     this.toggleNameAndLocationForm();
     event.stop();
   },
-  
+
   update: function(msg) {
     switch(msg.event) {
     case 'user saved':
       // FIXME quick hack, don't let the ui redraw if the cropper is on screen. Means location updates won't display during image editing.
       if(!this.cropper) {
-        this.draw(); 
+        this.draw();
       }
       break;
     case 'user full size image updated':
@@ -2653,7 +2653,7 @@ TimesPeople.SettingsPanelView = Class.create(TimesPeople.Panel, {
       break;
     }
   }
-  
+
 });
 /*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
@@ -2661,12 +2661,12 @@ $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 */
 
 TimesPeople.userView = Class.create({
-  
+
   initialize: function(parent) {
     this.parent = parent;
     this.user = TimesPeople.user;
   },
-  
+
   buildUser: function() {
     var template_object = {};
     Object.extend(template_object, this.user.attributes);
@@ -2677,47 +2677,47 @@ TimesPeople.userView = Class.create({
       '<span class="toolbar_button"><a id="TP_settingsLink">Settings</a> | <a href="#{userpage}">My Activity</a></span>'
     ].join('').interpolate(template_object);
   },
-  
+
   drawUser: function() {
     $('TP_user').update(this.buildUser());
     var settingsLink = $('TP_settingsLink');
     if (settingsLink) Event.observe(settingsLink, 'click', this.onClickSettings.bindAsEventListener(this), true);
   },
-  
+
   buildPeople: function() {
     var number = this.user.attributes.following_count;
     var people = (number == 1) ? 'Person' : 'People';
     return '<div style="float:left;width:85px"><h4><span class="TP_people_count">' + number + '</span> '+ people +' </h4><a id="TP_searchLink" class="toolbar_button">Add / Remove</a></div>';
   },
-  
+
   buildSharing: function() {
     var status =  this.user.attributes.sharing ? 'ON' : 'OFF';
     return '<div style="float:right;width:55px"><h4>Sharing</h4><span class="'+status+' toolbar_button">'+status+'</span></div>';
   },
-  
+
   buildMinimizeButton: function() {
     return '<div id="TP_minimize_button">×</div>';
   },
-  
+
   drawPeople: function() {
     $('TP_people').removeClassName('firstrun').update(this.buildPeople() /*+ this.buildSharing()*/ + this.buildMinimizeButton());
     var searchLink = $('TP_searchLink');
     if (searchLink) Event.observe(searchLink, 'click', this.onClickAddRemove.bindAsEventListener(this) , true);
-    
+
     var minimizeButton = $('TP_minimize_button');
     if(minimizeButton) minimizeButton.observe('click', this.parent.minimize.bind(this.parent));
   },
-  
+
   onClickSettings: function(event) {
     this.parent.drawSettings();
     event.stop();
   },
-  
+
   onClickAddRemove: function(event) {
     this.parent.drawPeople();
     event.stop();
   },
-  
+
   update: function(msg) {
     switch(msg.event) {
     case 'attributes updated':
@@ -2728,36 +2728,36 @@ TimesPeople.userView = Class.create({
       break;
     }
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
 */
 
 TimesPeople.FolloweesPanelView = Class.create(TimesPeople.Panel, {
-  
+
   initialize: function($super, parent, target) {
     var element = $('TP_followees_panel') || new Element('div', {id: 'TP_followees_panel'});
     target.appendChild(element);
     $super(parent, element, 'People', {position:'right', target: target});
-    
+
     this.title = TimesPeople.user.isNewMember() ? TimesPeople.Text.welcomeTitle : TimesPeople.Text.searchTitle;
-    
+
     this.container.update(NYTD.Template(this.template, this));
-    
+
     this.searchView = new TimesPeople.SearchView('TP_search_view', parent);
     this.searchView.draw();
-    
+
     this.events = {
       clickRemoveButton: this.removeFollowee.bindAsEventListener(this),
       clickCloseButton: this.close.bindAsEventListener(this),
       mouseOverRow: this.toggleHighlight.bindAsEventListener(this),
       mouseOutRow: this.toggleHighlight.bindAsEventListener(this)
     };
-    
+
     Event.observe($('TP_close_search'), "click", this.events.clickCloseButton, true);
   },
-  
+
   template:'\
   <div class="wrap inset">\
     <div class="wrap row">\
@@ -2787,7 +2787,7 @@ TimesPeople.FolloweesPanelView = Class.create(TimesPeople.Panel, {
     </div>\
   </div>\
   ',
-  
+
   followeesTemplate:'\
     <p>You have <strong class="TP_people_count"><%= TimesPeople.user.attributes.following_count %></strong> People</p>\
     <div class="scrollbox">\
@@ -2803,12 +2803,12 @@ TimesPeople.FolloweesPanelView = Class.create(TimesPeople.Panel, {
       </table>\
     </div>\
   ',
-  
+
   updateFollowees: function(followees) {
     this.followees = followees;
     var followeesPane = $('TP_followees_pane');
     followeesPane.innerHTML = NYTD.Template(this.followeesTemplate, this);
-    
+
     // TODO event delegation
     $$('#TP_followees_pane tr').each(function(row) {
       row = $(row);
@@ -2821,7 +2821,7 @@ TimesPeople.FolloweesPanelView = Class.create(TimesPeople.Panel, {
     };
     this.shadow.updateShadow();
   },
-  
+
   open: function($super) {
     TimesPeople.user.register(this);
     TimesPeople.user.requestFollowees();
@@ -2830,36 +2830,36 @@ TimesPeople.FolloweesPanelView = Class.create(TimesPeople.Panel, {
     var search_field = $('TP_search_term');
     if(search_field) {search_field.focus();}
   },
-  
+
   close: function($super, event) {
     TimesPeople.user.unregister(this);
     TimesPeople.user.requestAttributes();
     $super();
     event.stop();
   },
-  
+
   toggleHighlight: function(event) {
     var row = event.element().up('tr').toggleClassName('highlight');
     row.down('input[type=image]').toggle();
   },
-  
+
   personAdded: function() {
     TimesPeople.user.requestFollowees();
   },
-  
+
   removeFollowee: function(event) {
     var element = event.element();
     element.stopObserving('click', this.events.clickRemoveButton, true);
     var uid = parseInt(element.value, 10);
     TimesPeople.user.removeFollowee(uid);
   },
-  
+
   personRemoved : function(uid) {
     $('TP_followee_' + uid).remove();
     $$('.TP_people_count').invoke('update', TimesPeople.user.attributes.following_count);
     TimesPeople.user.requestAttributes();
   },
-  
+
   update: function(msg) {
     switch(msg.event) {
     case 'attributes updated':
@@ -2872,7 +2872,7 @@ TimesPeople.FolloweesPanelView = Class.create(TimesPeople.Panel, {
       break;
     }
   }
-  
+
 })/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
@@ -2885,12 +2885,12 @@ TimesPeople.SearchView = Class.create({
     this.controller = controller;
     TimesPeople.user.register(this)
   },
-  
+
   draw: function() {
     this.container.update(this.buildSearch());
     this.bootSearch();
   },
-  
+
   buildSearch: function() {
     return [
     '<form id="TP_search" onsubmit="return false">',
@@ -2901,11 +2901,11 @@ TimesPeople.SearchView = Class.create({
     (function(){ return TimesPeople.user.isNewMember() ? '<p id="TP_welcome_text" style="margin-top:10px;height:123px">#{welcomeText}</p>'.interpolate(TimesPeople.Text) : '<div id="TP_search_results" class="scrollbox"></div>'})()
     ].join('');
   },
-  
+
   bootSearch: function() {
     $('TP_search').observe('submit', this.onSubmitSearch.bindAsEventListener(this), true);
   },
-  
+
   buildResult: function(user) {
     var str = '<tr id="TP_search_result_#{uid}"><td><a href="#{userpage}"><img class="TP_avatar" src="#{picURL}" width="16" height="16"> ' +
            '<span class="TP_story">#{displayname}</span> <span class="TP_status">#{location}</span></a></td>' +
@@ -2913,7 +2913,7 @@ TimesPeople.SearchView = Class.create({
            '</tr>';
     return str.interpolate(user);
   },
-  
+
   buildResult: function(user) {
     //TODO duplicate template
     return ('<tr id="TP_search_result_#{uid}">' +
@@ -2923,7 +2923,7 @@ TimesPeople.SearchView = Class.create({
              this.buildAddButton(user) +
            '</tr>').interpolate(user);
   },
-  
+
   buildAddButton: function(user) {
     // FIXME no followees here...
     if (! TimesPeople.user.isFollowing(user)) {
@@ -2931,9 +2931,9 @@ TimesPeople.SearchView = Class.create({
     } else {
       return '<td class="TP_button_cell"></td>';
     }
-    
+
   },
-  
+
   drawSearchResults: function(users) {
     var welcomeText = $('TP_welcome_text');
     if (welcomeText)  {
@@ -2952,7 +2952,7 @@ TimesPeople.SearchView = Class.create({
     }
 
     html.push('</table>');
-    
+
     $('TP_search_results').innerHTML = html.join('');
     var buttons = $$('#TP_search_results input[type="image"]');
     for (var i=0; i < buttons.length; i++) {
@@ -2960,18 +2960,18 @@ TimesPeople.SearchView = Class.create({
     };
 
   },
-  
+
   addFollowee: function(event) {
     var element = event.element();
     var uid = parseInt(element.value, 10);
     TimesPeople.user.addFollowee(uid);
   },
-  
+
   addedFollowee: function(uid) {
     this.remove(uid);
     this.controller.people_panel.personAdded();
   },
-  
+
   remove: function(uid) {
     TimesPeople.console.log('searchView: remove', uid);
     var result_for_uid = $('TP_search_result_' + uid);
@@ -2985,7 +2985,7 @@ TimesPeople.SearchView = Class.create({
     if(results) results.update('');
     TimesPeople.Person.search(values.term, this.drawSearchResults.bind(this));
   },
-  
+
   update: function(msg) {
     switch(msg.event) {
     case 'followee added':
@@ -2995,28 +2995,28 @@ TimesPeople.SearchView = Class.create({
       break;
     }
   }
-  
-  
+
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
 */
 
 TimesPeople.InfoPanelView = Class.create(TimesPeople.Panel, {
-  
+
   initialize: function($super, parent, target) {
     var element = new Element('div', {id:'TP_info_pane'});
-        
+
     $super(parent, element, 'What is TimesPeople?', {target: target});
-    
+
     this.container.update(this.buildContent());
-    
+
     var get_started_button = element.down('.TP_get_started_button');
     get_started_button.observe("click", this.onClickGetStarted.bind(this), true);
-    
+
     element.down('.info_close_button').observe('mousedown', this.close.bind(this), true);
   },
-  
+
   buildContent: function() {
     var html = '\
       <div class="inset wrap">\
@@ -3028,7 +3028,7 @@ TimesPeople.InfoPanelView = Class.create(TimesPeople.Panel, {
       </div>';
     return html.interpolate(TimesPeople.Text);
   },
-  
+
   onClickGetStarted: function() {
     window.location = TimesPeople.Config.get_started_uri;
   }
@@ -3039,18 +3039,18 @@ $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 */
 
 TimesPeople.Form = Class.create({
-  
+
   messages: {'-6': 'E-mail address already registered.', '-4': 'Incorrect Login'},
-  
+
   initialize: function(form) {
     this.element = $(form);
     this.element.focusFirstElement();
   },
-  
+
   showErrors: function(errors) {
     var form = this.element;
     this.clearErrors();
-    
+
     for (var i = 0, error; error = errors[i]; i++) {
       var text = this.messages[error.code.toString()] || error.message;
       var message = new Element('p', {'class':'error'}).update(text);
@@ -3063,13 +3063,13 @@ TimesPeople.Form = Class.create({
     };
 
   },
-  
+
   clearErrors: function() {
     var form = this.element;
     form.getElementsBySelector('input.error').invoke('removeClassName', 'error');
     form.getElementsBySelector('p.error').invoke('remove');
   }
-  
+
 });
 
 // Class methods
@@ -3086,13 +3086,13 @@ Element.addMethods('form', {
     var iframe = new Element('iframe', {id: frameId, name: frameId, style: 'position:absolute; top:-1000px;left:-1000px'});
     form.target = frameId;
     document.body.appendChild(iframe);
-    
+
     var uploadHandler = function() {
        iframe.stopObserving('load', uploadHandler);
        if (Object.isFunction(options.onComplete)) options.onComplete();
        setTimeout(iframe.remove.bind(iframe),100);
     };
-    
+
     iframe.observe('load', uploadHandler);
     form.submit();
   }
@@ -3102,11 +3102,11 @@ $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 */
 
 TimesPeople.ToolbarView = Class.create({
-  
+
   initialize: function() {
     this.open_panel = null;
   },
-  
+
   template:' \
     <div id="TP_container" class="TP_env"> \
       <div id="TP_inner"> \
@@ -3133,7 +3133,7 @@ TimesPeople.ToolbarView = Class.create({
     </div> \
     <div id="TP_container_shadow" class="s_shadow"></div>'
   ,
-  
+
   draw: function() {
     if (this.drawn) return;
     [$('TP_container'), $('TP_container_shadow')].compact().invoke('remove');
@@ -3144,7 +3144,7 @@ TimesPeople.ToolbarView = Class.create({
     this.feedView = new TimesPeople.FeedView('TP_feed', this);
     this.registerAjaxIndicator();
   },
-  
+
   registerAjaxIndicator: function() {
     var spinner = $('TP_spinner');
     Ajax.Responders.register({
@@ -3158,7 +3158,7 @@ TimesPeople.ToolbarView = Class.create({
   },
 
   drawMemberToolbar: function() {
-    
+
     if (!TimesPeople.user.isTimesPeopleMember()) {
       $$('.toolbar_button').invoke('hide');
       this.hiddenLinks = true
@@ -3166,7 +3166,7 @@ TimesPeople.ToolbarView = Class.create({
       $$('.toolbar_button').invoke('show');
       delete this.hiddenLinks;
     }
-    
+
     TimesPeople.Activity.register(this.feedView);
     this.feedView.drawFeed(1);
     if (TimesPeople.firstrun) {
@@ -3195,7 +3195,7 @@ TimesPeople.ToolbarView = Class.create({
     $('TP_container').setStyle({position:'absolute', top: '0%'});
     $('TP_container_shadow').setStyle({position:'absolute', top: '0%'}).style.top = '30px';
   },
-  
+
   drawGetStartedToolbar: function() {
     TimesPeople.user.update({following_count:0, displayname: 'Your Name'});
     $('TP_minimize_button').hide();
@@ -3219,7 +3219,7 @@ TimesPeople.ToolbarView = Class.create({
   minimize: function() {
     if (!this.minimized) {
       if (this.open_panel) this.open_panel.close();
-      var page = $(document.body);      
+      var page = $(document.body);
       this.minimized = true;
       TimesPeople.ToolbarController.stateStore.add({minimized:'YES'});
       page.morph('padding-top:13px', {duration:0.5});
@@ -3236,7 +3236,7 @@ TimesPeople.ToolbarView = Class.create({
       var page = $(document.body);
       this.minimized = false;
       TimesPeople.ToolbarController.stateStore.add({minimized:'NO'});
-      
+
       if (!TimesPeople.ToolbarController.initialized) {
         TimesPeople.ToolbarController.initialize();
       }
@@ -3281,18 +3281,18 @@ TimesPeople.ToolbarView = Class.create({
       break;
     }
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
 */
 
 TimesPeople.MemberToolsItemView = Class.create({
-  
+
   initialize: function(toolbar) {
     this.toolbar = toolbar;
     this.toolbar.minimizedView = this;
-    
+
     // TODO optimize template
     var memberTools = $('memberTools');
     var memberLinks = $('memberLinks');
@@ -3308,7 +3308,7 @@ TimesPeople.MemberToolsItemView = Class.create({
           marginRight: '-4px'
         });
       }
-    } 
+    }
     else if(memberLinks){
       memberLinks.insert('- <a id="TP_restore_button" style="display:none">TimesPeople</a>');
     }
@@ -3316,19 +3316,19 @@ TimesPeople.MemberToolsItemView = Class.create({
       var page = $('shell') || $(document.body);
       page.insert({top:'<a id="TP_restore_button" style="display:none;position: absolute; top: -15px; right: 0pt;font-family: Arial, Helvetica, sans-serif;font-size:10px;">TimesPeople</a>'});
     }
-    
+
     this.button = $('TP_restore_button');
     this.button.observe('click', this.toolbar.restore.bind(this.toolbar));
   },
-  
+
   toggle: function() {
     this.button.toggle();
   },
-  
+
   show: function() {
     this.button.show();
   }
-  
+
 });/*
 $Id: build.js 15918 2009-03-11 00:25:45Z santep $
 (c) 2008 The New York Times Company
@@ -3343,21 +3343,21 @@ TimesPeople.ToolbarController = {
     this.stateStore = NYTD.Cookies.getOrCreate('tpstate');
     this.run();
   },
-  
+
   run: function() {
     if (this.stateStore.lookup('minimized') == 'YES') {
       this.runMinimized();
-    } 
+    }
     else {
       this.runMaximized();
     }
   },
-  
+
   runMinimized: function() {
     this.toolbarView.minimized = true;
     this.minimizedView.show();
   },
-  
+
   runMaximized: function() {
     //TODO remove global user
     TimesPeople.user = TimesPeople.User.getInstance();
@@ -3381,10 +3381,10 @@ TimesPeople.ActivityCollectionController = {
         this.user = TimesPeople.User.getInstance();
         if(this.user.newRecord) {
           this.user.register(TimesPeople.ActivityCollectionController);
-        } 
+        }
         else {
           if(this.user.isTimesPeopleMember()) {
-            this.listen(); 
+            this.listen();
           }
         }
       }
@@ -3734,7 +3734,7 @@ TimesPeople.run = function(){
     });
   }
   else {
-    setTimeout(TimesPeople.run, 10);  
+    setTimeout(TimesPeople.run, 10);
   }
 }
 

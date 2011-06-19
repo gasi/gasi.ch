@@ -29,9 +29,9 @@ NYTD.MOTH = function(mothContainerId, visibleAtOnce, scrollIncrementAmount, alte
 		if (imagesLoaded) return;
 		$$("#"+mothContainerId+" span.img[src]").each(function(span) {
 			var image = new Element("img", {
-				src: span.getAttribute("src"), 
-				alt: span.getAttribute("alt"), 
-				height:span.getAttribute("height"), 
+				src: span.getAttribute("src"),
+				alt: span.getAttribute("alt"),
+				height:span.getAttribute("height"),
 				width:span.getAttribute("width")
 			});
 			span.up("a").insert(image);
@@ -72,11 +72,11 @@ NYTD.MOTH = function(mothContainerId, visibleAtOnce, scrollIncrementAmount, alte
 		loadUnloadedImages();
 		var incrementAmount = (direction == "right") ? distance : - distance;
 		var that = this;
-		new Effect.Scroll($("insideNYTimesScrollWrapper"), { 
-			x: incrementAmount, 
-			y: 0, 
-			mode: 'relative', 
-			duration: 0.4, 
+		new Effect.Scroll($("insideNYTimesScrollWrapper"), {
+			x: incrementAmount,
+			y: 0,
+			mode: 'relative',
+			duration: 0.4,
 			afterFinish: function() { that.activateButtons(); } });
 		this.showButtons();
 	};

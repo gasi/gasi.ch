@@ -1,52 +1,52 @@
-/* 
+/*
 *  Mouse wheel support for OS X - implemented in javascript because Adobe
 *  hasn't implemented it in the mac version of Flash Player  >:(
-*  
+*
 *  Copyright (c) 2007-2008 Ali Rantakari ( http://hasseg.org/blog )
-*  
+*
 *  Requires related ActionScript 3 class:
 *  org.hasseg.externalMouseWheel.ExternalMouseWheelSupport
-*  
-*  
+*
+*
 *  Changelog:
 *  ---------------------------------------------------------------------------------
 *  VERSION 1.0 (Ali Rantakari)
 *  July 2007
-*  
+*
 *  - Initial implementation
-*  
-*  
+*
+*
 *  ---------------------------------------------------------------------------------
 *  VERSION 1.5 (Changes by Pavel Fljot, http://inreflected.com)
 *  Jan 2008
-*  
+*
 *  - Added statement to support Safari under Windows
-*  
-*  
+*
+*
 *  ---------------------------------------------------------------------------------
 *  VERSION 2.0 (Changes by Ali Rantakari)
 *  Apr 2008
-*  
+*
 *  - Changed structure of JavaScript so that everything is encapsulated
 *    inside one top-level function
 *  - Added support for modifier keys (ctrl (i.e. command on a Mac,) alt, shift)
 *  - Fixed code for determining coordinates on different (recent) browsers
 *  - Added support for registering multiple Flash objects and their container DIVs
-*  
-*  
+*
+*
 *  ---------------------------------------------------
 *  This code is licensed under the MIT License:
-*  
+*
 *  Permission is hereby granted, free of charge, to any person obtaining a copy
 *  of this software and associated documentation files (the "Software"), to deal
 *  in the Software without restriction, including without limitation the rights
 *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 *  copies of the Software, and to permit persons to whom the Software is
 *  furnished to do so, subject to the following conditions:
-*  
+*
 *  The above copyright notice and this permission notice shall be included in
 *  all copies or substantial portions of the Software.
-*  
+*
 *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -87,7 +87,7 @@ var extMouseWheel = function()
 	{
 		var curleft = 0;
 		if(obj.offsetParent)
-			while(1) 
+			while(1)
 			{
 			  curleft += obj.offsetLeft;
 			  if(!obj.offsetParent)
@@ -182,7 +182,7 @@ var extMouseWheel = function()
 		// Prevent default actions caused by mouse wheel
 		if (event.preventDefault)
 		    event.preventDefault();
-		    
+		
 		event.returnValue = false;
 	}
 	

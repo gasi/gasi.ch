@@ -1,5 +1,5 @@
 /*
-$Id: controller_v1.1.js 16840 2009-03-30 01:04:56Z konige $ 
+$Id: controller_v1.1.js 16840 2009-03-30 01:04:56Z konige $
 */
 
 // SET GLOBAL VARS
@@ -176,11 +176,11 @@ if (wt_contentGroup == "") {
 wt_scgTag = getMetaTag("SCG");
 wt_tempsubcontentGroup = wt_scgArray[wt_scgTag];
 if (wt_tempsubcontentGroup != undefined) {
-  wt_scgTag = wt_tempsubcontentGroup; 
+  wt_scgTag = wt_tempsubcontentGroup;
 }
 wt_subcontentGroup = wt_scgTag;
 
-// Update content and subcontent groups 
+// Update content and subcontent groups
 handleCGExceptions();
 addMetaTag("WT.cg_n", wt_contentGroup);
 addMetaTag("WT.cg_s", wt_subcontentGroup);
@@ -235,7 +235,7 @@ if (tomMetaTag == "interactive_graphic" || tomMetaTag == "interactive_feature") 
   setInteractiveGraphicInfo();
 }
 
-// Set imagepages 
+// Set imagepages
 if (/^\/imagepages/.test(nyt_path)) {
   addMetaTag("PT", "Multimedia");
   addMetaTag("PST", "Image");
@@ -258,7 +258,7 @@ if (externalCampId != "") {
 }
 
 if (getMetaTag("WT.mc_id") != "") {
-  addMetaTag("WT.mc_ev", "click"); 
+  addMetaTag("WT.mc_ev", "click");
 }
 
 // Set no_interstitial param
@@ -356,7 +356,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
     // technology
     } else if (wt_domain == "tech.nytimes.com"
             || wt_domain == "tech2.nytimes.com"
-            || wt_domain == "download.nytimes.com"    
+            || wt_domain == "download.nytimes.com"
             || /\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/technology\//.test(wt_path)
             || /\/packages\/html\/technology\//.test(wt_path)
             || /^\/pages\/technology\//.test(wt_path)
@@ -377,7 +377,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/ref\/science\//.test(wt_path)
             || /^\/pages\/science\//.test(wt_path)) {
       contentGroup = "Science";
-  
+
     // health
     } else if (wt_domain == "health.nytimes.com"
             || /\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/health\//.test(wt_path)
@@ -387,7 +387,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/reuters\/health\//.test(wt_path)
             || /^\/ref\/health\//.test(wt_path)) {
       contentGroup = "Health";
- 
+
     // sports
     } else if (/\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/sports\//.test(wt_path)
             || /\/packages\/html\/sports\//.test(wt_path)
@@ -397,7 +397,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/aponline\/sports\//.test(wt_path)
             || /^\/reuters\/sports\//.test(wt_path)) {
       contentGroup = "Sports";
- 
+
     // opinion
     } else if (/\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/opinion\//.test(wt_path)
             || /\/packages\/html\/opinion\//.test(wt_path)
@@ -407,7 +407,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/top\/opinion\//.test(wt_path)
             || /^\/ref\/opinion\//.test(wt_path)) {
       contentGroup = "Opinion";
- 
+
     // books
     } else if (/\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/books\//.test(wt_path)
             || /\/packages\/html\/books\//.test(wt_path)
@@ -441,7 +441,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /\/packages\/html\/television\//.test(wt_path)
             || /^\/pages\/arts\/television\//.test(wt_path)) {
       contentGroup = "TV";
- 
+
     // theater
     } else if (wt_domain == "theater.nytimes.com"
             || wt_domain == "theater2.nytimes.com"
@@ -465,7 +465,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
     } else if (/\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/style\/\b(t|tmagazine)\b\//.test(wt_path)
             || /^\/pages\/style\/(t|tmagazine)\//.test(wt_path)) {
       contentGroup = "T:Style";
- 
+
     // style
     } else if (/\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/\b(style|fashion|dining|garden)\b\//.test(wt_path)
             || /\/packages\/html\/\b(style|fashion|dining|garden)\b\//.test(wt_path)
@@ -484,7 +484,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/gst\/travel\/travsearch\.html/.test(wt_path)
             || (/^\/gst\/fullpage\.html/.test(wt_path) && getQueryParameter("sec") == "travel")) {
       contentGroup = "Travel";
- 
+
     // jobs
     } else if (wt_domain == "jobmarket.nytimes.com"
             || wt_domain == "salary.nytimes.com"
@@ -492,7 +492,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/pages\/jobs\//.test(wt_path)
             || /^\/marketing\/jobmarket\//.test(wt_path)) {
       contentGroup = "Jobs";
-    
+
     // greathomes
     } else if (/\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/\b(realestate\/greathomes|greathomesanddestinations)\b\//.test(wt_path)
             || /^\/pages\/great-homes-and-destinations\//.test(wt_path)
@@ -519,7 +519,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/packages\/html\/automobiles\//.test(wt_path)) {
       contentGroup = "Autos";
 
-    // search 
+    // search
     } else if (/^\/search\/query/.test(wt_path)) {
       contentGroup = "Search";
 
@@ -546,10 +546,10 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
     } else if (/^\/mem\/emailthis.html/.test(wt_path)) {
       contentGroup = "Email This";
 
-    // newstracker 
+    // newstracker
     } else if (/^\/mem\/tnt.html/.test(wt_path)) {
       contentGroup = "News Tracker";
- 
+
     // membercenter
     } else if (/^\/membercenter\//.test(wt_path)
             || /^\/mem\/email\.html/.test(wt_path)
@@ -560,7 +560,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
             || /^\/commerce\/jsp\//.test(wt_path)
             || /^\/gst\/(regi|forgot|confirmem|betamail|signout|purchase_gc)\.html/.test(wt_path)) {
       contentGroup = "Member Center";
- 
+
     // crosswordsgames
     } else if (/\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/crosswords\//.test(wt_path)
             || /^\/pages\/crosswords\//.test(wt_path)
@@ -616,12 +616,12 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
     } else if (/^\/pages\/cartoons\//.test(wt_path)
             || /\/packages\/html\/cartoons\//.test(wt_path)) {
       contentGroup = "Cartoons";
- 
+
     // apreuters
     } else if (/^\/pages\/\b(aponline|reuters)\b\//.test(wt_path)) {
       contentGroup = "AP/Reuters";
 
-    // pictures of the day 
+    // pictures of the day
     } else if (/^\/slideshow\/[0-9][0-9][0-9][0-9]\/[0-1][0-9]\/[0-3][0-9]\/nytfrontpage\//.test(wt_path)) {
       contentGroup = "Homepage";
 		
@@ -629,7 +629,7 @@ function getContentGroup(wt_url, wt_domain, wt_path) {
     } else if (wt_domain == "nytimes.adready.com") {
       contentGroup = "Self Service";
 
-    // default to General 
+    // default to General
     } else {
       contentGroup = "General";
     }
@@ -647,7 +647,7 @@ function readPageTags() {
   addMetaTag("WT.z_gpsst",  getMetaTag("PSST"));     // page sub 2 type
   addMetaTag("WT.z_gpssst", getMetaTag("PSSST"));    // page sub 3 type
   addMetaTag("WT.z_pc",     getMetaTag("PC"));       // partner content
-  addMetaTag("WT.z_ps",     getMetaTag("PS"));       // partner supplied 
+  addMetaTag("WT.z_ps",     getMetaTag("PS"));       // partner supplied
   addMetaTag("WT.z_puv",    getMetaTag("PUV"));      // publish view
   addMetaTag("WT.z_gosst",  getMetaTag("GOOST"));    // global onsite search
   addMetaTag("WT.z_gosst",  getMetaTag("GOSST"));    // global onsite search
@@ -663,10 +663,10 @@ function readPageTags() {
   addMetaTag("WT.z_tDest",  getMetaTag("TDES"));     // travel meta tag
   addMetaTag("WT.z_tRegion",getMetaTag("TDREG"));    // travel meta tag
   addMetaTag("WT.cre",      getMetaTag("cre"));      // creator  meta tag
-  addMetaTag("WT.z_nyts",   getCookie("NYT-S"));     // NYT-S cookie 
-  addMetaTag("WT.z_nytd",   getCookie("nyt-d"));     // nyt-d cookie 
-  addMetaTag("WT.z_rmid",   getCookie("RMID"));      // RMID cookie 
-  addMetaTag("WT.z_gblc",   getMetaTag("GBLC"));      // global - blogs 
+  addMetaTag("WT.z_nyts",   getCookie("NYT-S"));     // NYT-S cookie
+  addMetaTag("WT.z_nytd",   getCookie("nyt-d"));     // nyt-d cookie
+  addMetaTag("WT.z_rmid",   getCookie("RMID"));      // RMID cookie
+  addMetaTag("WT.z_gblc",   getMetaTag("GBLC"));      // global - blogs
   addMetaTag("WT.z_hpt",    getMetaTag("HPT"));      // home page type - Extra
 }
 
@@ -684,7 +684,7 @@ function setContentInfo() {
 
   // read page tags for content groups
   if (wt_contentGroup == "Health") {
- 
+
     addMetaTag("WT.z_hgst",  getMetaTag("HGST"));   // health guide subject type
     addMetaTag("WT.z_hgsn",  getMetaTag("HGSN"));   // health guide subject name
 
@@ -699,7 +699,7 @@ function setContentInfo() {
     addMetaTag("WT.z_resz",  getMetaTag("RESZ"));   // real estate search zip codes
     addMetaTag("WT.z_res",   getMetaTag("RES"));    // real estate state
     addMetaTag("WT.z_reco",  getMetaTag("RECO"));   // real estate counties
-    addMetaTag("WT.z_rer",   getMetaTag("RER"));    // real estate region 
+    addMetaTag("WT.z_rer",   getMetaTag("RER"));    // real estate region
 
   } else if (wt_contentGroup == "Theater") {
     addMetaTag("WT.z_eplay",  getMetaTag("ttl"));
@@ -724,10 +724,10 @@ function setReferrerInfo() {
 
   var refUrl = document.referrer;
   if (refUrl != undefined && refUrl != "" ) {
-    var refDom = refUrl.match( /:\/\/(www\.)?([^\/:]+)/ ); 
-    refDom = refDom[2]?refDom[2]:''; 
+    var refDom = refUrl.match( /:\/\/(www\.)?([^\/:]+)/ );
+    refDom = refDom[2]?refDom[2]:'';
     addMetaTag("WT.z_ref", refDom);
-    addMetaTag("WT.z_sorg", isSearchEngine(refDom)); 
+    addMetaTag("WT.z_sorg", isSearchEngine(refDom));
   }
 }
 
@@ -735,7 +735,7 @@ function getReferrerQuery() {
 
   var refQuery = "";
   var url_parts = document.referrer.split('?');
-  if (url_parts[1]){ 
+  if (url_parts[1]){
     var url_args = url_parts[1].split('&');
     for(var i=0; i<url_args.length; i++){
       var keyval = url_args[i].split('=');
@@ -750,7 +750,7 @@ function getReferrerQuery() {
 function isSearchEngine(refDom) {
 
   var refType = "";
-  if((/google\./.test(refDom) && getReferrerQuery() != "") 
+  if((/google\./.test(refDom) && getReferrerQuery() != "")
    ||(/search\./.test(refDom))
    ||(/ask.com/.test(refDom))
    ||(/altavista.com/.test(refDom))) {
@@ -805,7 +805,7 @@ function handleCGExceptions() {
   if (wt_subcontentGroup == "Dealbook Jobs") {
     wt_contentGroup = "Business";
   }
-  
+
   // rewrite content group
   if (wt_cgTag == "xword") {
     wt_contentGroup = "Crosswords/Games";
@@ -842,12 +842,12 @@ function setArticleInfo(articleID) {
   if (articleID != "") {
     addMetaTag("WT.z_gpt", "Article");
     addMetaTag("WT.z_gpst", getMetaTag("tom"));
-    addMetaTag("WT.z_hdl", getMetaTag("hdl")); 
+    addMetaTag("WT.z_hdl", getMetaTag("hdl"));
     addMetaTag("WT.z_aid", articleID);
     var pubDate = getMetaTag("pdate");
     addMetaTag("WT.z_pud", pubDate);
     addMetaTag("WT.z_put", "web");
-	 var pubType = getPubTypeFromDate(pubDate); 
+	 var pubType = getPubTypeFromDate(pubDate);
     addMetaTag("WT.z.gsg", pubType);
 	 if (pubType == "Archive") {
 	   addMetaTag("WT.z_gat", "1987-Present");
@@ -855,7 +855,7 @@ function setArticleInfo(articleID) {
     addMetaTag("WT.z_pua", "free");
 
     var bylVal = getMetaTag("byl");
-    bylVal = bylVal.replace("&#8217;","'"); 
+    bylVal = bylVal.replace("&#8217;","'");
     if (bylVal.indexOf("By ") != -1) {
       bylVal = bylVal.substring(3);
       bylValInd = bylVal.indexOf(" and ");
@@ -867,7 +867,7 @@ function setArticleInfo(articleID) {
     setXTS(bylVal);
     var pageWanted = getQueryParameter("pagewanted");
     if (pageWanted == "") {
-      addMetaTag("WT.z_puv", "Normal"); 
+      addMetaTag("WT.z_puv", "Normal");
     } else {
       addMetaTag("WT.z_puv", pageWanted);
     }
@@ -956,12 +956,12 @@ function setPubDateRange(pdate) {
 function setCommentOverflowInfo(articleID) {
 
   addMetaTag("WT.z_aid", articleID);
-  addMetaTag("WT.z_hdl", getMetaTag("hdl")); 
+  addMetaTag("WT.z_hdl", getMetaTag("hdl"));
   if (getMetaTag("WT.z_gpst") == "Comments Overflow") {
-    addMetaTag("WT.gcom", "Com"); 
+    addMetaTag("WT.gcom", "Com");
   }
- 
-  // Set article comment page number 
+
+  // Set article comment page number
   addMetaTag("WT.z_acpn", getMetaTag("ACPN"));
 
   // Set article comment overview sort
@@ -1057,7 +1057,7 @@ function setSearchInfo() {
   if (/\/gst\/health\/healthsearch.html/.test(nyt_path)) {
     wt_oss = getQueryParameter("query");
     if (wt_oss == "") {
-      wt_oss = getQueryParameter("term"); 
+      wt_oss = getQueryParameter("term");
     }
     searchResults = document.getElementById("sortBy");
     ossName = "WT.z_hoss";
@@ -1102,7 +1102,7 @@ function setTrackEvents() {
   var wt_pagesubtype = getMetaTag("WT.z_gpst");
     if ((wt_pagetype == "Homepage" && wt_pagesubtype != "Times Extra") ||
        (wt_section == "Technology" && wt_pagetype == "Section Front") ||
-       (wt_section == "Autos" && wt_pagetype == "Section Front") || 
+       (wt_section == "Autos" && wt_pagetype == "Section Front") ||
        (wt_section == "Search" && wt_subsection == "nyt")) {
     gtrackevents = true;
   }
@@ -1193,7 +1193,7 @@ function getElementsByClass(tagName, className) {
   for(var i=0,j=elementsByTag.length; i<j; i++) {
     if(classRegExp.test(elementsByTag[i].className)) {
       resultArray.push(elementsByTag[i]);
-    } 
+    }
   }
   if (resultArray.length == 0) resultArray = null;
   return resultArray;

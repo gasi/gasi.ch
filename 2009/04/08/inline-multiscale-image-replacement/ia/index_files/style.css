@@ -2,7 +2,7 @@
 	Author:    InformationArchitects.jp
 	Updated:   October 30th, 2008 */
 
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td, img, hr, embed, object { 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td, img, hr, embed, object {
 	margin: 0;
 	padding: 0;
 	}
@@ -10,7 +10,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	}
-fieldset, img { 
+fieldset, img {
 	border: 0;
 	}
 address, caption, cite, code, dfn, em, strong, th, var {
@@ -136,7 +136,7 @@ div.post h1 {
 	line-height: 1em;
 	padding: 0.5em 0;
 	}
-h2 { 
+h2 {
 	font-size: 1.5em;
 	line-height: 2em;
 	}
@@ -149,8 +149,8 @@ h3 {
 	line-height: 1.5em;
 	}
 h4 {
-	font-size: 1em; 
-	line-height: 1.125em; 
+	font-size: 1em;
+	line-height: 1.125em;
 	padding-bottom: 0.375em;
 	margin-top: 1.5em;
 	}
@@ -194,8 +194,8 @@ div.entry h3 {
 		border-top: 1px dotted #ccc;
 		}
 div.entry h4, div.entry cite {
-	font-size: 0.813em; 
-	line-height: 1.846em; 
+	font-size: 0.813em;
+	line-height: 1.846em;
 	color: #333;
 	}
 div.entry cite {
@@ -611,7 +611,7 @@ div.entry cite {
 		background-color: #fafafa;
 		}
 .commentlist img.cmd-avatar {
-	float: left; 
+	float: left;
 	margin-top: 0.313em;
 	margin-left: 1em;
 	display: inline; /*IE6*/
@@ -713,7 +713,7 @@ div.commentRight {
 	}
 #issueCovers li img {
 	width: 5em;
-	margin-right: 1em; 
+	margin-right: 1em;
 	float: left;
 	}
 #issueCovers caption {
@@ -743,7 +743,7 @@ div.postDateArchives {
 	position: relative;
 	}
 
-#singlePage, 
+#singlePage,
 #page {
 	width: 36em;
 	float: left;
@@ -849,7 +849,7 @@ div.postDateArchives {
 	#singleNavigation h5 {
 		border-top: 0;
 		}
-	#singleNavigation p { 
+	#singleNavigation p {
 		margin-left: -0.825em;
 		color: #999;
 		}
@@ -946,12 +946,12 @@ p.trackback {
 	font-variant: small-caps;
 	}
 
-#openid_enabled_link, 
-.openid_link,  
-#openid_url, 
+#openid_enabled_link,
+.openid_link,
+#openid_url,
 #commentform #openid_url {
-	background: url(images/openid.gif) center left no-repeat; 
-	padding-left: 18px; 
+	background: url(images/openid.gif) center left no-repeat;
+	padding-left: 18px;
 	}
 
 /* Contact and About */

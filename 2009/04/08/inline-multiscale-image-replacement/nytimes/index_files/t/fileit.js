@@ -1,17 +1,17 @@
- /*      
- $Id: fileit.js 7478 2008-12-23 19:39:35Z helckt $       
- (c) 2008 The New York Times Company        
+ /*
+ $Id: fileit.js 7478 2008-12-23 19:39:35Z helckt $
+ (c) 2008 The New York Times Company
  */
 
 
 /**
- * The Times File feature is discontinued. These functions are only used to 
+ * The Times File feature is discontinued. These functions are only used to
  * redirect the "SAVE" links to a marketing page that explains why Times File
  * is no longer supported.
  */
 
 function articleSaveRedirect() {
-	var timesFileUrl = "http://www.nytimes.com/marketing/timesfile/timesfile.html"; 
+	var timesFileUrl = "http://www.nytimes.com/marketing/timesfile/timesfile.html";
 	document.location.href = timesFileUrl;
     return false;
 }

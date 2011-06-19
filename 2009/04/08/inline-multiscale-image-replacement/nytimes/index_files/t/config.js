@@ -32,7 +32,7 @@ TPCONFIG = {
 /*
 Determining page group, type, title and descriptions based on META tags
 */
-TimesPeople.Config.Page = {                                                                           
+TimesPeople.Config.Page = {
     Group:
     [
         { value: 'articleid', alias: 'article' },
@@ -41,7 +41,7 @@ TimesPeople.Config.Page = {
     ],
     Type:
     {
-        "article": 
+        "article":
         {
             "tom" :
             [
@@ -54,14 +54,14 @@ TimesPeople.Config.Page = {
                 { value: "review"         }
             ]
         },
-        "topic": 
+        "topic":
         {
             "SCG":
-            [ 
+            [
                 { value: "movie pages", alias: "movie guide" }
             ],
             "PST":
-            [ 
+            [
                 { value: "movie details", alias: "movie guide" },
                 { value: "health guide" },
                 { value: "travel guide" }
@@ -70,12 +70,12 @@ TimesPeople.Config.Page = {
         "community":
         {
             "PST":
-            [ 
+            [
                 { value: "comments overflow", alias: "article" },
                 { value: "rate-review",       alias: "movie guide" }
             ]
         },
-        "multimedia": 
+        "multimedia":
         {
             "SCG":
             [
@@ -101,7 +101,7 @@ TimesPeople.Config.Page = {
                 { value: "blog post" }
             ]
         },
-        "venue": 
+        "venue":
         {
             "tom":
             [
@@ -109,7 +109,7 @@ TimesPeople.Config.Page = {
                 { value: "dining",        alias: "restaurant" },
                 { value: "accommodation", alias: "hotel"      },
                 { value: "shopping",      alias: "attraction" },
-                { value: "night life",    alias: "attraction" } 
+                { value: "night life",    alias: "attraction" }
             ]
         }
     },
@@ -234,7 +234,7 @@ TimesPeople.Config.Style = {
 TimesPeople.Config.Action = {
 	Recommend:
 	{
-		"article": 
+		"article":
 		{
 			"article":      { key: "#toolsList", target: "#toolsList", type: "li", style: {}, position: "first", html: TimesPeople.Config.HTML.Recommend.standard },
 			"editorial":    { key: "#toolsList", target: "#toolsList", type: "li", style: {}, position: "first", html: TimesPeople.Config.HTML.Recommend.standard },

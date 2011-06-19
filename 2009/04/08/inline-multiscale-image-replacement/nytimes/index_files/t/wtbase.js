@@ -1,5 +1,5 @@
 /*
-$Id: wtbase.js 10005 2008-06-16 14:33:39Z utzc $ 
+$Id: wtbase.js 10005 2008-06-16 14:33:39Z utzc $
  */
 function dcsCQP(){
             var qry=window.location.search.toLowerCase();
@@ -470,7 +470,7 @@ function dcsVar(){
 		WT.em=(typeof(encodeURIComponent)=="function")?"uri":"esc";
 		if (typeof(document.defaultCharset)=="string"){
 			WT.le=document.defaultCharset;
-		} 
+		}
 		else if (typeof(document.characterSet)=="string"){
 			WT.le=document.characterSet;
 		}

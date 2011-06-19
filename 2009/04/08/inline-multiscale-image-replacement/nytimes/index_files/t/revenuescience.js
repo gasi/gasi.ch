@@ -1,11 +1,11 @@
 /*
-$Id: revenuescience.js 10005 2008-06-16 14:33:39Z utzc $ 
+$Id: revenuescience.js 10005 2008-06-16 14:33:39Z utzc $
 */
 
 function getMetaTag(tagName) {
 
   var metaTags=document.getElementsByTagName("meta");
-  for(var i in metaTags){ 
+  for(var i in metaTags){
     if(metaTags[i].name == tagName) {
       return metaTags[i].content;
     }
@@ -15,7 +15,7 @@ function getMetaTag(tagName) {
 
 function addCategory(category, valueToAppend) {
 
-  if (valueToAppend != "") 
+  if (valueToAppend != "")
     return category + " > " + valueToAppend;
   else
     return category;

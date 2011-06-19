@@ -139,7 +139,7 @@ function urchinTracker(page) {
   _ufns=1;
  } else if (a>=0 && b>=0 && c>=0) {
    b = _uGC(dc,"__utmb="+_udh,";");
-   b = ("-" == b) ? _udh : b;  
+   b = ("-" == b) ? _udh : b;
   _ubd.cookie="__utmb="+b+"; path="+_utcp+";"+x+_udo;
  } else {
   if (a>=0) a=_uFixA(_ubd.cookie,";",_ust);
@@ -551,7 +551,7 @@ function _uDomain() {
   }
   _udn=d;
  }
- _udn = _udn.toLowerCase(); 
+ _udn = _udn.toLowerCase();
  if (_uhash=="off") return 1;
  return _uHash(_udn);
 }
@@ -600,8 +600,8 @@ function __utmVisitorCode(f) {
  var r=0,t=0,i=0,i2=0,m=31;
  var a=_uGC(_ubd.cookie,"__utma="+_udh+".",";");
  if ((i=a.indexOf(".",0))<0) return;
- if ((i2=a.indexOf(".",i+1))>0) r=a.substring(i+1,i2); else return "";  
- if ((i=a.indexOf(".",i2+1))>0) t=a.substring(i2+1,i); else return "";  
+ if ((i2=a.indexOf(".",i+1))>0) r=a.substring(i+1,i2); else return "";
+ if ((i=a.indexOf(".",i2+1))>0) t=a.substring(i2+1,i); else return "";
  if (f) {
   return r;
  } else {
@@ -669,7 +669,7 @@ function _uCO() {
  sc.type='text/javascript';
  sc.id="_gasojs";
  sc.src='https://'+d+'/analytics/reporting/overlay_js?gaso='+_utk+'&'+Math.random();
- document.getElementsByTagName('head')[0].appendChild(sc);  
+ document.getElementsByTagName('head')[0].appendChild(sc);
 }
 function _uGT() {
  var h=location.hash, a;
@@ -683,8 +683,8 @@ function _uGT() {
 var _utk=_uGT();
 if (_utk && _utk!="" && _utk.length>10 && _utk.indexOf("=")==-1) {
  if (window.addEventListener) {
-  window.addEventListener('load', _uCO, false); 
- } else if (window.attachEvent) { 
+  window.addEventListener('load', _uCO, false);
+ } else if (window.attachEvent) {
   window.attachEvent('onload', _uCO);
  }
 }

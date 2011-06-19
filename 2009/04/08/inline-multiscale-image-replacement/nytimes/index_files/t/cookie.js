@@ -4,7 +4,7 @@ var NYTD = window.NYTD || {};
  * Standard class to work with unencrypted cookies in JS.
  *  Use the NYTD.Cookies.getOrCreate() method to receive a cookie
  *  object to work with.  Details of cookie setting and parsing
- *  are private for protection. 
+ *  are private for protection.
  */
 NYTD.Cookies = {
     getOrCreate: function (cookieName) {

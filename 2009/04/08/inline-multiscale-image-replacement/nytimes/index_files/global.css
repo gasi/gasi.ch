@@ -1,6 +1,6 @@
 /*
 $Id: global.css,v 1.9 2008/06/23 21:25:12 kcockburn Exp $
-(c)2006 - 2007 The New York Times Company 
+(c)2006 - 2007 The New York Times Company
 */
 
 
@@ -10,8 +10,8 @@ body {
 	}
 
 @media print {
-		body { 
-			background-image: url(http://wt.o.nytimes.com/dcsym57yw10000s1s8g0boozt_9t1x/dcs.gif?dcsuri=print.html&dcsdat=1068453281752&WT.ti=Print-Tracker&WT.z_dcsm=1); 
+		body {
+			background-image: url(http://wt.o.nytimes.com/dcsym57yw10000s1s8g0boozt_9t1x/dcs.gif?dcsuri=print.html&dcsdat=1068453281752&WT.ti=Print-Tracker&WT.z_dcsm=1);
 			}
 	}
 

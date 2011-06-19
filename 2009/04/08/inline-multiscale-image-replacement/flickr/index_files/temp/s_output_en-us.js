@@ -5,7 +5,7 @@
 F.output.thou_sep = ',';
 F.output.dec_sep = '.';
 F.output.date_strs = {
-	daysA: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], 
+	daysA: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 	days_abbA: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
 	months_abbA: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
 	monthsA: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -13,7 +13,7 @@ F.output.date_strs = {
 	
 F.output.format_strs = {
 	you: '(You)',
-	me: 'me', 
+	me: 'me',
 	searching: 'Searching...',
 	search: 'Search',
 	create_up: 'CREATE',
@@ -439,8 +439,8 @@ F.output.format_strs = {
 	
 	replace_tag_confirm: 'Are you sure you want to replace %s with %s?',
 	
-	 
-	tagrs_tag_not_added: 'Tag not added!',		 
+	
+	tagrs_tag_not_added: 'Tag not added!',		
 	tagrs_tag_not_deleted: 'Tag not deleted!',
 	tagrs_max_limit: 'Hey! It looks like you\'re trying to add more than %s tags. Unfortunately, there\'s a limit of %s tags per item.',
 	tagrs_click_icon_all_public: 'Click this icon to see everything on Flickr tagged with %s',

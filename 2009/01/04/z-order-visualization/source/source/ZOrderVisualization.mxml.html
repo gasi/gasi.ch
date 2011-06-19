@@ -13,7 +13,7 @@
 
     OpenZoom Visualization: Z-Order
     Developed by Daniel Gasienica
-    
+
     Blog: http://gasi.ch/blog/openzoom-visualization-z-order/
     License: GPL3
 
@@ -29,7 +29,7 @@
     layout=&quot;</span><span class="MXMLString">absolute</span><span class="MXMLDefault_Text">&quot;
     applicationComplete=&quot;</span><span class="ActionScriptDefault_Text">applicationCompleteHandler</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">event</span> <span class="ActionScriptBracket/Brace">)</span><span class="MXMLDefault_Text">&quot;
     </span><span class="MXMLComponent_Tag">&gt;</span>
-    
+
     <span class="MXMLSpecial_Tag">&lt;mx:Style&gt;</span>
         <span class="CSSSelector">global </span><span class="CSSDelimiters">{</span>
             <span class="CSSProperty_Name">theme-color</span><span class="CSSDelimiters">:</span> <span class="CSSProperty_Value">#222222</span><span class="CSSDelimiters">;</span>
@@ -47,57 +47,57 @@
 
     <span class="MXMLSpecial_Tag">&lt;mx:Script&gt;</span>
         <span class="ActionScriptOperator">&lt;!</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptDefault_Text">CDATA</span><span class="ActionScriptBracket/Brace">[</span>
-            
+
             <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">mx</span>.<span class="ActionScriptDefault_Text">events</span>.<span class="ActionScriptDefault_Text">FlexEvent</span>;
 
             <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">org</span>.<span class="ActionScriptDefault_Text">openzoom</span>.<span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">utils</span>.<span class="ActionScriptDefault_Text">ExternalMouseWheel</span>;
             <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">org</span>.<span class="ActionScriptDefault_Text">openzoom</span>.<span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">utils</span>.<span class="ActionScriptDefault_Text">ZOrder</span>;
 
-            
+
             <span class="ActionScriptReserved">private</span> <span class="ActionScriptReserved">static</span> <span class="ActionScriptReserved">const</span> <span class="ActionScriptDefault_Text">DEFAULT_ITERATIONS</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">uint</span> <span class="ActionScriptOperator">=</span> 15000
             <span class="ActionScriptReserved">private</span> <span class="ActionScriptReserved">static</span> <span class="ActionScriptReserved">const</span> <span class="ActionScriptDefault_Text">SPACING</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 16
 
             <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">canvas</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Sprite</span>
 
-            
+
             <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">applicationCompleteHandler</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">event</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">FlexEvent</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
             <span class="ActionScriptBracket/Brace">{</span>
                 <span class="ActionScriptComment">// Mouse wheel support on Mac OS
 </span>                <span class="ActionScriptDefault_Text">ExternalMouseWheel</span>.<span class="ActionScriptDefault_Text">initialize</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">stage</span> <span class="ActionScriptBracket/Brace">)</span>
-                
+
                 <span class="ActionScriptDefault_Text">canvas</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Sprite</span><span class="ActionScriptBracket/Brace">()</span>
                 <span class="ActionScriptDefault_Text">container</span>.<span class="ActionScriptDefault_Text">addChild</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">canvas</span> <span class="ActionScriptBracket/Brace">)</span>
-                
-                <span class="ActionScriptDefault_Text">drawCurve</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">DEFAULT_ITERATIONS</span> <span class="ActionScriptBracket/Brace">)</span>           
+
+                <span class="ActionScriptDefault_Text">drawCurve</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">DEFAULT_ITERATIONS</span> <span class="ActionScriptBracket/Brace">)</span>
             <span class="ActionScriptBracket/Brace">}</span>
-            
+
             <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">drawCurve</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">iterations</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">uint</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
             <span class="ActionScriptBracket/Brace">{</span>
                 <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">target</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Graphics</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">canvas</span>.<span class="ActionScriptDefault_Text">graphics</span>
-                
+
                 <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">position</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Point</span>
                 <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">drawingPosition</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Point</span>
-                
+
                 <span class="ActionScriptDefault_Text">target</span>.<span class="ActionScriptDefault_Text">clear</span><span class="ActionScriptBracket/Brace">()</span>
                 <span class="ActionScriptDefault_Text">target</span>.<span class="ActionScriptDefault_Text">beginFill</span><span class="ActionScriptBracket/Brace">(</span> 0<span class="ActionScriptDefault_Text">x000000</span>, 0 <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptReserved">for</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">i</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptOperator">=</span> 0; <span class="ActionScriptDefault_Text">i</span> <span class="ActionScriptOperator">&lt;</span> <span class="ActionScriptDefault_Text">iterations</span>; <span class="ActionScriptDefault_Text">i</span><span class="ActionScriptOperator">++</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">{</span>
                     <span class="ActionScriptDefault_Text">position</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">ZOrder</span>.<span class="ActionScriptDefault_Text">getPosition</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">i</span><span class="ActionScriptBracket/Brace">)</span>
                     <span class="ActionScriptDefault_Text">drawingPosition</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Point</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">position</span>.<span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">SPACING</span>,
-                                                 <span class="ActionScriptDefault_Text">position</span>.<span class="ActionScriptDefault_Text">y</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">SPACING</span> <span class="ActionScriptBracket/Brace">)</span> 
+                                                 <span class="ActionScriptDefault_Text">position</span>.<span class="ActionScriptDefault_Text">y</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">SPACING</span> <span class="ActionScriptBracket/Brace">)</span>
                     <span class="ActionScriptDefault_Text">target</span>.<span class="ActionScriptDefault_Text">lineStyle</span><span class="ActionScriptBracket/Brace">(</span> 0, <span class="ActionScriptDefault_Text">i</span> <span class="ActionScriptOperator">/</span> <span class="ActionScriptDefault_Text">iterations</span> <span class="ActionScriptOperator">*</span> 0<span class="ActionScriptDefault_Text">xFFFFFF</span> <span class="ActionScriptBracket/Brace">)</span>
                     <span class="ActionScriptDefault_Text">target</span>.<span class="ActionScriptDefault_Text">lineTo</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">drawingPosition</span>.<span class="ActionScriptDefault_Text">x</span>, <span class="ActionScriptDefault_Text">drawingPosition</span>.<span class="ActionScriptDefault_Text">y</span> <span class="ActionScriptBracket/Brace">)</span>
                     <span class="ActionScriptDefault_Text">target</span>.<span class="ActionScriptDefault_Text">moveTo</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">drawingPosition</span>.<span class="ActionScriptDefault_Text">x</span>, <span class="ActionScriptDefault_Text">drawingPosition</span>.<span class="ActionScriptDefault_Text">y</span> <span class="ActionScriptBracket/Brace">)</span>
                 <span class="ActionScriptBracket/Brace">}</span>
                 <span class="ActionScriptDefault_Text">target</span>.<span class="ActionScriptDefault_Text">endFill</span><span class="ActionScriptBracket/Brace">()</span>
-                
+
                 <span class="ActionScriptDefault_Text">container</span>.<span class="ActionScriptDefault_Text">sceneWidth</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">canvas</span>.<span class="ActionScriptDefault_Text">width</span>
                 <span class="ActionScriptDefault_Text">container</span>.<span class="ActionScriptDefault_Text">sceneHeight</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">canvas</span>.<span class="ActionScriptDefault_Text">height</span>
             <span class="ActionScriptBracket/Brace">}</span>
-            
+
         <span class="ActionScriptBracket/Brace">]]</span><span class="ActionScriptOperator">&gt;</span>
     <span class="MXMLSpecial_Tag">&lt;/mx:Script&gt;</span>
-    
+
     <span class="MXMLComponent_Tag">&lt;mx:HBox</span><span class="MXMLDefault_Text">
         width=&quot;</span><span class="MXMLString">100%</span><span class="MXMLDefault_Text">&quot;
         height=&quot;</span><span class="MXMLString">40</span><span class="MXMLDefault_Text">&quot;
