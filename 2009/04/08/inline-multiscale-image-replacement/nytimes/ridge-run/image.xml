@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<image xmlns="http://ns.openzoom.org/openzoom/2008">
+    <source height="401" type="image/jpeg" uri="ridge-run-600x401.jpg" width="600"/>
+    <source height="1283" type="image/jpeg" uri="ridge-run-1920x1283.jpg" width="1920"/>
+    <source height="2424" type="image/jpeg" uri="ridge-run-3627x2424.jpg" width="3627"/>
+    <pyramid height="2424" origin="topLeft" tileHeight="256" tileOverlap="1" tileWidth="256" type="image/jpeg" width="3627">
+        <level columns="1" height="1" rows="1" width="1">
+            <uri template="image_files/0/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="2" rows="1" width="2">
+            <uri template="image_files/1/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="3" rows="1" width="4">
+            <uri template="image_files/2/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="5" rows="1" width="8">
+            <uri template="image_files/3/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="10" rows="1" width="15">
+            <uri template="image_files/4/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="19" rows="1" width="29">
+            <uri template="image_files/5/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="38" rows="1" width="57">
+            <uri template="image_files/6/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="76" rows="1" width="114">
+            <uri template="image_files/7/{column}_{row}.jpg"/>
+        </level>
+        <level columns="1" height="152" rows="1" width="227">
+            <uri template="image_files/8/{column}_{row}.jpg"/>
+        </level>
+        <level columns="2" height="303" rows="2" width="454">
+            <uri template="image_files/9/{column}_{row}.jpg"/>
+        </level>
+        <level columns="4" height="606" rows="3" width="907">
+            <uri template="image_files/10/{column}_{row}.jpg"/>
+        </level>
+        <level columns="8" height="1212" rows="5" width="1814">
+            <uri template="image_files/11/{column}_{row}.jpg"/>
+        </level>
+        <level columns="15" height="2424" rows="10" width="3627">
+            <uri template="image_files/12/{column}_{row}.jpg"/>
+        </level>
+    </pyramid>
+</image>

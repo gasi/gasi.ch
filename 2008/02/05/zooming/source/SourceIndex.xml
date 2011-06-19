@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+    <title>Source of Zooming</title>
+    <nodes>
+        <node label="Circle.as" icon="actionScriptIcon" url="source/Circle.as.html"/>
+        <node label="ZoomCanvas.as" icon="actionScriptIcon" url="source/ZoomCanvas.as.html"/>
+        <node selected="true" label="ZoomingExample.as" icon="mxmlAppIcon" url="source/ZoomingExample.as.html"/>
+    </nodes>
+</index>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+	
+		<title>Deux Femmes | Deep Zoom in Adobe Flash | Inside Deep Zoom &mdash; RTFM / Daniel Gasienica</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="Deep Zoom in Flash by Daniel Gasienica."/>
+		<meta name="keywords" content="deepzoom, deep zoom, microsoft, seadragon, flash, adobe, daniel, gasienica, danielgasienica, multiscale, multiscaleimaging"/>
+	
+		<script type="text/javascript" src="../../assets/scripts/swfobject/swfobject.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/extMouseWheel.js"></script>
+		<style type="text/css">
+			/* hide from ie on mac \*/
+			html {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			#container {
+				height: 100%;
+			}
+			/* end hide */
+		
+			body {
+				color: #ccc;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				background-color: #111;
+			}
+		
+		</style>
+
+<!--
+		<script type="text/javascript">
+        	var params = {};
+            params.quality = "autohigh";
+            params.allowfullscreen = "true";
+            params.bgcolor = "#111111";
+            var player = "../../DeepZoomFlashViewer.swf";
+            var expressInstall = "../../assets/scripts/swfobject/expressInstall.swf";
+            swfobject.embedSWF( player, "container", "100%", "100%", "9.0.28", expressInstall, {source: "../silverlight/GeneratedImages/dzc_output.xml" }, params );
+        </script>
+-->
+	</head>
+	<body>
+	
+		<div id="container">
+			You need to upgrade your Flash Player. <a href="http://www.adobe.com/go/getflashplayer/"/>Download here.</a><br />
+			<a href="?detectflash=false">Bypass the detection</a> if you wish.
+		</div>
+		<script type="text/javascript">
+             // <![CDATA[
+                 var viewer = new SWFObject("../../DeepZoomFlashViewer.swf", "viewer", "100%", "100%", "9", "#111111");
+                 viewer.useExpressInstall("../../assets/scripts/swfobject/expressInstall.swf");
+                 viewer.addParam("scale", "noScale");
+                 viewer.addParam("allowFullScreen", "true");
+                 viewer.addParam("FlashVars", "source=../silverlight/GeneratedImages/dzc_output.xml");
+                 viewer.write("container");
+             // ]]>
+       </script>
+        
+
+		<!-- Tracker -->
+		<script type="text/javascript">
+		    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		    var pageTracker = _gat._getTracker("UA-2390888-1");
+		    pageTracker._setDomainName(".gasi.ch");
+		    pageTracker._initData();
+		    pageTracker._trackPageview();
+		</script>
+	</body>
+</html>

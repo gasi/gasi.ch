@@ -1,0 +1,142 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>FunctionalActionScript3.as</title>
+<link rel="stylesheet" type="text/css" href="../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptComment">/*
+
+    Example: Functional ActionScript — Part III
+
+    Author:
+    Daniel Gasienica
+    daniel@gasienica.ch
+    http://gasi.ch/
+
+
+    Originally published on
+    http://gasi.ch/blog/functional-actionscript-part-3/
+
+    Released under the
+    Creative Commons Attribution-Share Alike License
+    http://creativecommons.org/licenses/by-sa/3.0/
+
+*/</span>
+<span class="ActionScriptpackage">package</span>
+<span class="ActionScriptBracket/Brace">{</span>
+    <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Sprite</span>;
+
+
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptclass">class</span> <span class="ActionScriptDefault_Text">FunctionalActionScript3</span> <span class="ActionScriptReserved">extends</span> <span class="ActionScriptDefault_Text">Sprite</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">unsortedList</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">[</span> 23, 15, 16, 42, 8, 4 <span class="ActionScriptBracket/Brace">]</span>
+
+
+        <span class="ActionScriptComment">// Constructor
+</span>        <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">FunctionalActionScript3</span><span class="ActionScriptBracket/Brace">()</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptComment">// quick sort the functional way
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;\n--- QuickSort ------------------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>                 <span class="ActionScriptString">&quot;unsorted:&quot;</span>, <span class="ActionScriptDefault_Text">unsortedList</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>                   <span class="ActionScriptString">&quot;sorted:&quot;</span>, <span class="ActionScriptDefault_Text">quickSort</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">unsortedList</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+
+        <span class="ActionScriptComment">// quick sort the functional way
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">quickSort</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">list</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptComment">// non-recursive branch
+</span>            <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">length</span> <span class="ActionScriptOperator">==</span> 0 <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptBracket/Brace">{</span>
+                <span class="ActionScriptComment">// return the empty array if we can&apos;t split it more
+</span>                <span class="ActionScriptReserved">return</span> <span class="ActionScriptBracket/Brace">[]</span>
+            <span class="ActionScriptBracket/Brace">}</span>
+            <span class="ActionScriptReserved">else</span>
+            <span class="ActionScriptBracket/Brace">{</span>
+                <span class="ActionScriptComment">// choose first element as pivot
+</span>                <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">pivot</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">list</span><span class="ActionScriptBracket/Brace">[</span> 0 <span class="ActionScriptBracket/Brace">]</span>
+
+                <span class="ActionScriptComment">// slice of the pivot and keep them as rest
+</span>                <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">rest</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">slice</span><span class="ActionScriptBracket/Brace">(</span> 1 <span class="ActionScriptBracket/Brace">)</span>
+
+                <span class="ActionScriptReserved">return</span><span class="ActionScriptBracket/Brace">(</span>
+                    <span class="ActionScriptComment">// sort all numbers…
+</span>                    <span class="ActionScriptDefault_Text">quickSort</span><span class="ActionScriptBracket/Brace">(</span>
+                        <span class="ActionScriptComment">// …that are less or equal than pivot…
+</span>                        <span class="ActionScriptDefault_Text">rest</span>.<span class="ActionScriptDefault_Text">filter</span><span class="ActionScriptBracket/Brace">(</span>
+                                      <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">lessOrEqualThan</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">pivot</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+                                    <span class="ActionScriptBracket/Brace">)</span>
+                             <span class="ActionScriptBracket/Brace">)</span>
+                             <span class="ActionScriptComment">// …concatenate them with the pivot…
+</span>                             .<span class="ActionScriptDefault_Text">concat</span><span class="ActionScriptBracket/Brace">(</span>
+                                       <span class="ActionScriptBracket/Brace">[</span> <span class="ActionScriptDefault_Text">pivot</span> <span class="ActionScriptBracket/Brace">]</span>
+                                    <span class="ActionScriptBracket/Brace">)</span>
+                             <span class="ActionScriptComment">// …and concatenate all of the previous…
+</span>                             .<span class="ActionScriptDefault_Text">concat</span><span class="ActionScriptBracket/Brace">(</span>
+                    <span class="ActionScriptComment">// …with all sorted numbers…
+</span>                    <span class="ActionScriptDefault_Text">quickSort</span><span class="ActionScriptBracket/Brace">(</span>
+                        <span class="ActionScriptComment">// …that are greater than pivot.
+</span>                        <span class="ActionScriptDefault_Text">rest</span>.<span class="ActionScriptDefault_Text">filter</span><span class="ActionScriptBracket/Brace">(</span>
+                                        <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">greaterThan</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">pivot</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+                                      <span class="ActionScriptBracket/Brace">)</span>
+                             <span class="ActionScriptBracket/Brace">)</span>
+                        <span class="ActionScriptBracket/Brace">)</span>
+                    <span class="ActionScriptBracket/Brace">)</span>
+
+<span class="ActionScriptComment">/*
+             // too much whitespace for your taste? try this… =)
+             return(quickSort(rest.filter(wrap(lessOrEqualThan(pivot))))
+                  .concat([pivot])
+            .concat(quickSort(rest.filter(wrap(greaterThan(pivot))))))
+*/</span>
+            <span class="ActionScriptBracket/Brace">}</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptComment">// quicksort helper (higher order functions, meaning they return functions themselves)
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">lessOrEqualThan</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">value</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Function</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span><span class="ActionScriptBracket/Brace">(</span>
+                    <span class="ActionScriptfunction">function</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Boolean</span>
+                    <span class="ActionScriptBracket/Brace">{</span>
+                        <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">&lt;=</span> <span class="ActionScriptDefault_Text">value</span>
+                    <span class="ActionScriptBracket/Brace">}</span>
+                  <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">greaterThan</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">value</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Function</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span><span class="ActionScriptBracket/Brace">(</span>
+                    <span class="ActionScriptfunction">function</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Boolean</span>
+                    <span class="ActionScriptBracket/Brace">{</span>
+                        <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">&gt;</span> <span class="ActionScriptDefault_Text">value</span>
+                    <span class="ActionScriptBracket/Brace">}</span>
+                  <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+
+        <span class="ActionScriptComment">/*
+            a beautiful example of a higher order function that takes a function
+            as argument and then constructs and returns a new function:
+
+            wrapper to make a function&apos;s signature conform to that of
+            a valid callback which looks like this, e.g. for the filter function
+
+                function callback(item:*, index:int, array:Array):Boolean;
+
+            http://livedocs.adobe.com/flex/3/langref/Array.html#filter()
+        */</span>
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">f</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Function</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Function</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span><span class="ActionScriptBracket/Brace">(</span>
+                    <span class="ActionScriptfunction">function</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptOperator">*</span>, <span class="ActionScriptDefault_Text">index</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span>, <span class="ActionScriptDefault_Text">array</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptOperator">*</span>
+                    <span class="ActionScriptBracket/Brace">{</span>
+                        <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">f</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptBracket/Brace">)</span>
+                    <span class="ActionScriptBracket/Brace">}</span>
+                <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+<span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>
