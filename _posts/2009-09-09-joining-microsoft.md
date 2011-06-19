@@ -6,14 +6,20 @@ I am thrilled to announce that I'll be joining the <a href="http://seadragon.com
 
 <blockquote class="flash" markdown="1">
 ## All Good Things Come To An End
-I've had a blast and learned a lot during my internship at [Seadragon](http://seadragon.com/).
+I've had a blast and learned a lot during my internship at [Seadragon][].
 More importantly, I was fortunate enough to meet and spend time with many great
-people whom I dearly miss now.\\
-The internship ended at the beginning of January
-and I've returned to Switzerland in February.
+people whom I dearly miss now.
+
+*The internship ended at the beginning of January and I've returned to
+Switzerland in February.*
 </blockquote>
 
-[<img src="http://farm3.static.flickr.com/2617/3898566366_c287c95d04_o.png" width="500" height="320" alt="Seadragon"/>](http://seadragon.com)
+<a href="http://seadragon.com/">
+    <img src="http://farm3.static.flickr.com/2617/3898566366_c287c95d04_o.png"
+         width="500"
+         height="320"
+         alt=""/>
+</a>
 
 Getting the chance to be a part of this group of extremely visionary &amp;
 talented people is a feeling I cannot describe. I am looking forward to finally
@@ -60,6 +66,7 @@ It's still open source and free. Actually, I'd like to encourage other people to
 [Seadragon Ajax]: http://seadragon.com/developer/ajax/
 [Seadragon Mobile]: http://itunes.apple.com/us/app/seadragon-mobile/id299655981?mt=8
 [Seadragon.com]: http://seadragon.com/
+[Seadragon]: http://seadragon.com/
 [Photosynth]: http://photosynth.net/
 [WMP]: http://en.wikipedia.org/wiki/Windows_Media_Photo
 [HD Photo]: http://en.wikipedia.org/wiki/HD_Photo
