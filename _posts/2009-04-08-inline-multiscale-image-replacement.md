@@ -53,6 +53,7 @@ The solution I developed, based on something I started to call <strong>Inline Mu
 <li><strong>OpenZoom Nano</strong>: A light-weight multiscale image viewer running in the Adobe Flash Player and built with the <a href="http://openzoom.org/">OpenZoom SDK</a>.</li>
 <li><strong>OpenZoom Endo</strong>: A script performing progressive enhancement on new and existing HTML pages. It is written in JavaScript and packaged as <a href="http://jquery.com/">jQuery</a> plugin.</li>
 </ul>
+
 <blockquote class="info">
 <h2>Features</h2>
 <img src="http://farm4.static.flickr.com/3613/3419742376_15aaf47058.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" />
@@ -69,64 +70,90 @@ The solution I developed, based on something I started to call <strong>Inline Mu
 </ul>
 </blockquote>
 
-<h3>Known Issues</h3>
-Of course, as with any <em>fresh-out-of-the-oven</em> technology there a couple of things that don't work as intended. Here's a list of <em>known issues</em>:
-<p class="footnote">Image replacement can be delayed by large pages, resulting in a visible page flicker.</p>
-<p class="footnote">At this point, OpenZoom Endo does not pass the W3C validator due to the custom attribute <em>(XHTML namespaces &amp; custom DTDs, anyone?)</em></p>
-<p class="footnote">Ideally, the viewer would initially feature some visual cues that convey the enhanced functionality. Add some simple controls to that. <em> Designer, anyone?</em></p>
-<p class="footnote">Script sometimes conflicts with existing JavaScript within the same page.</p>
-<p class="footnote">Multiple replacements of images cause performance problem related to Flash Player plugin instantiation.</p>
-<p class="footnote">Images sometimes fail to load due to plugin activation issues.</p>
+### Known Issues
+Of course, as with any *fresh-out-of-the-oven* technology there a couple of
+things that don't work as intended. Here's a list of *known issues*:
 
-<br/>
+ - Image replacement can be delayed by large pages, resulting in a visible page flicker.
+ - At this point, OpenZoom Endo does not pass the W3C validator due to the custom attribute *(XHTML namespaces & custom DTDs, anyone?)*
+ - Ideally, the viewer would initially feature some visual cues that convey the enhanced functionality. Add some simple controls to that. *Designer, anyone?*
+ - Script sometimes conflicts with existing JavaScript within the same page.
+ - Multiple replacements of images cause performance problem related to Flash Player plugin instantiation.
+ - Images sometimes fail to load due to plugin activation issues.
 
-<blockquote class="info">
-<h2>Walkabout</h2>
+<blockquote markdown="1" class="info">
+## Walkabout
 Let me quickly guide you through the basic process of publishing a high-resolution image on your web page:
 
 <ol>
-<li>First, use Python and the <strong>OpenZoom Caral</strong> library to convert your image into a multiscale image pyramid and optionally define additional sizes of your image you'd like to publish or offer for download:
-<br/>
-<pre lang="python">
+<li markdown="1">
+First, use Python and the **OpenZoom Caral** library to convert your image
+into a multiscale image pyramid and optionally define additional sizes of
+your image you'd like to publish or offer for download:
+{% highlight py %}
 import openzoom
 
 creator = openzoom.ImageCreator()
 creator.create("awesome.jpg", "awesome", [0, 600, 1920])
-</pre>
+{% endhighlight %}
 </li>
 
-<li>Reference jQuery library (e.g., using Google) and the <strong>OpenZoom Endo</strong> script in your HTML page:
-<br/>
-<pre lang="javascript">
+<li markdown="1">
+Reference jQuery library, e.g. using Google's CDN and the **OpenZoom Endo**
+script in your HTML page:
+{% highlight js %}
 <script type="text/javascript"
  src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 <script type="text/javascript"
  src="openzoom-min.js"></script>
-</pre>
+    {% endhighlight %}
 </li>
-<li>Place the <strong>OpenZoom Nano</strong> viewer SWF (<code>OpenZoomViewer.swf</code>) file into the same directory as your page.</li>
-<li>Add the image to your HTML page and annotate it with the special <code>openzoom:source</code> attribute:
-<br/>
-<pre lang="xml">
+<li markdown="1">
+Place the **OpenZoom Nano** viewer SWF (`OpenZoomViewer.swf`) file into the
+same directory as your page.
+</li>
+<li markdown="1">
+Add the image to your HTML page and annotate it with the special
+`openzoom:source` attribute:
+
+{% highlight xml %}
 <img src="awesome/awesome-600x320.jpg" width="600" height="320"
  openzoom:source="awesome/image.xml"/>
-</pre>
+{% endhighlight %}
 </li>
 
-<li>Enjoy hassle-free high-resolution imagery on the web!</li>
+<li markdown="1">
+Enjoy hassle-free high-resolution imagery on the web!
+</li>
+</ol>
 </blockquote>
 
-<blockquote class="info">
-<h2>Download & Source</h2>
-<ul>
-<li>Download <a href="http://open-zoom.googlecode.com/files/openzoom-endo-0.4.zip">OpenZoom Endo (808kb)</a>  from Google Code.</li>
-<li>Have a look at the <a href="http://code.google.com/p/open-zoom/source/browse/trunk/projects/endo/trunk?r=316#trunk/src">source code</a> on the OpenZoom Google Code repository.</li>
-</ul>
+<blockquote markdown="1" class="flash">
+## Download & Source
+-  Download <a href="http://open-zoom.googlecode.com/files/openzoom-endo-0.4.zip">OpenZoom Endo (808kb)</a> from Google Code.
+-  Have a look at the <a href="http://code.google.com/p/open-zoom/source/browse/trunk/projects/endo/trunk?r=316#trunk/src">source code</a> on the OpenZoom Google Code repository.
 </blockquote>
 
-<h1>You</h1>
-<strong>I want your feedback!</strong> Let me know if my idea works for you. If it doesn't, why not? How could things be improved? <em>I am listening</em>. If you're a JavaScript hacker, take apart my code and share with me what could be done better! If you're a designer, consider contributing to a better interface for the viewer for an even better user experience! If you're an iPhone user, let me know if my solution breaks when you check out one of the previous demos! If you think this is <em>b#$&#($*</em>, then share your vision of the future of high-resolution images on the web with me!
-As always, if you have feedback, questions or want to start a dialogue, feel free to leave a comment down below, head over to the awesome <a href="http://getsatisfaction.com/openzoom/">OpenZoom Get Satisfaction site</a> or follow me on Twitter: <a href="http://twitter.com/OpenZoom">@OpenZoom</a> and <a href="http://twitter.com/gasi">@gasi</a>. In case you find a bug, please file a bug report in the <a href="http://code.google.com/p/open-zoom/issues/">OpenZoom Google Code Bug System.</a>
+# You
+*I want your feedback!* Let me know if my idea works for you. If it doesn't,
+why not? How could things be improved? *I am listening*. If you're a JavaScript
+hacker, take apart my code and share with me what could be done better.
+If you're a designer, consider contributing to a better interface for the viewer
+for an even better user experience. If you're an iPhone user, let me know if my
+solution breaks when you check out one of the previous demos. If you think
+this is *b#$&#($@*, then share your vision of the future of high-resolution
+images on the web with me!
 
-<h2>Epilogue</h2>
-With this and my other work on the OpenZoom project, I want to explore new ways of interacting with visual information on the web. Join me and let's explore how the future of browsers with the appropriate image formats that support high-definition images could look &amp; feel like!
+As always, if you have feedback, questions or want to start a dialogue, feel
+free to leave a comment down below, head over to the awesome
+[OpenZoom Get Satisfaction site](http://getsatisfaction.com/openzoom/) or
+follow me on Twitter: [@OpenZoom](http://twitter.com/OpenZoom) and
+[@gasi](http://twitter.com/gasi). In case you find a bug, please file a bug
+report in the
+[OpenZoom Google Code Bug System](http://code.google.com/p/open-zoom/issues/).
+
+## Epilogue
+With this and my other work on the OpenZoom project, I want to explore new ways
+of interacting with visual information on the web. Join me and let's explore how
+the future of browsers with the appropriate image formats that support
+high-definition images could look & feel like!
