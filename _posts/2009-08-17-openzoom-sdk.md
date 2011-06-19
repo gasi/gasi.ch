@@ -8,25 +8,30 @@ After many months of hard, fun, frustrating &amp; rewarding work, I am happy to 
 The <strong>OpenZoom SDK</strong> is a <em>free &amp; open source toolkit</em> for delivering <em>high-resolution images</em> and <em>Zoomable User Interfaces (ZUIs)</em> to the web and desktop. It is built on top of the <a href="http://www.adobe.com/flashplatform/">Adobe Flash Platform</a> which means you can use it in Flash, Flex, ActionScript &amp; AIR projects equally well.
 
 <h2>Showcase</h2>
-<blockquote class="info">
+<blockquote class="info" markdown="1">
 <h2>Gigapixel Photography</h2>
 <a href="http://gigapixelphotography.com" title="Gigapixel Photography Powered By OpenZoom"><img style="border: 2px solid #CCC;" src="http://farm3.static.flickr.com/2460/3828368948_3729196555.jpg" width="500" height="300" alt="Gigapixel Photography Powered By OpenZoom" /></a>
 <a href="http://gigapixelphotography.com/">GigapixelPhotography.com</a> &mdash; Dugg almost 5000 times on <a href="http://digg.com/arts_culture/Extreme_Gigapixel_Photo_Look_into_everyone_s_apartment">digg.com</a>.
+
 <p class="footnote">Copyright 2009, <a href="http://gigapixelphotography.com/">Gigapixel Photography</a></p>
 </blockquote>
 
-<blockquote class="info">
+<blockquote class="info" markdown="1">
 <h2>Alba Water</h2>
 <a href="http://www.albawater.com.vn" title="Alba Water Powered By OpenZoom"><img style="border: 2px solid #CCC;" src="http://farm3.static.flickr.com/2480/3828349350_532a27d90a.jpg" width="500" height="300" alt="Alba Water Powered By OpenZoom" /></a>
 <a href="http://albawater.com.vn/">AlbaWater.com.vn</a> &mdash; Stunning microsite for Alba Water.
+
 <p class="footnote">Copyright 2009, <a href="http://albawater.com.vn/">Alba Water</a></p>
+
 </blockquote>
 
-<blockquote class="info">
+<blockquote class="info" markdown="1">
 <h2>Is This Your Luggage?</h2>
 <a href="http://gasi.ch/blog/openzoom-is-this-your-luggage/" title="Is This Your Luggage? Powered By OpenZoom"><img style="border: 2px solid #CCC;" src="http://farm4.static.flickr.com/3594/3474363339_fafdee1f23.jpg" width="500" height="347" alt="Is This Your Luggage? Powered By OpenZoom" /></a>
 Remix of the famous <a href="http://isthisyourluggage.com/">IsThisYourLuggage.com</a>. Powered by OpenZoom.
+
 <p class="footnote">Copyright 2009, <a href="http://isthisyourluggage.com/">IsThisYourLuggage.com</a></p>
+
 </blockquote>
 
 <h2>Development</h2>
@@ -53,13 +58,14 @@ Should your project require a different kind of licensing scheme, please contact
 <h3>Attribution</h3>
 Besides publishing any source code as required by the license you chose, please attribute your use of the <strong>OpenZoom SDK</strong> by creating a context menu entry with the caption <code>About OpenZoom...</code> linked to <a href="http://openzoom.org/">http://openzoom.org/</a>. Thanks.
 
-<blockquote class="flash">
-<h2>Download &amp; Documentation</h2>
-Get the latest <strong>OpenZoom SDK</strong>, including source code, documentation, SWC library and 14 examples for Flash CS3, Flash CS4, Flex &amp; ActionScript projects.
+<blockquote class="flash" markdown="1">
+## Download & Documentation
+Get the latest **OpenZoom SDK**, including source code, documentation, SWC
+library and 14 examples for Flash CS3, Flash CS4, Flex & ActionScript projects.
 
-<a href="http://openzoom.org/sdk/download/latest/zip/">Download OpenZoom SDK (ZIP)</a>
+[Download OpenZoom SDK (ZIP)](http://openzoom.org/sdk/download/latest/zip/)
 
-After you've downloaded the SDK, please read the <a href="http://docs.openzoom.org/sdk/">OpenZoom SDK API documentation</a>.
+After you've downloaded the SDK, please read the [OpenZoom SDK API documentation][api].
 </blockquote>
 
 <h3>Follow</h3>
@@ -87,3 +93,6 @@ Keep up with the development progress of the <strong>OpenZoom SDK</strong> throu
 
 <h3>Footnote</h3>
 <p class="footnote"><strike><a name="cite-1">[1]</a> Thanks, Google, for not ever replying to my two emails and one tweet regarding my deep wish to get the much deserved <strong>openzoom</strong> project handle which is reserved by a #$*&#@ project on SourceForge (link purposely not included) which hasn't even had a commit in four years.</strike></p><br/>
+
+
+[api]: http://www.openzoom.org/sdk/api/
