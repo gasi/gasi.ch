@@ -1,5 +1,6 @@
 permalink: /blog/:title
 
+exclude: build, README.md
 
 # markdown: rdiscount
 markdown: kramdown
