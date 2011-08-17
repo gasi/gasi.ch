@@ -1,3 +1,4 @@
+baseurl: /
 permalink: /blog/:title
 
 exclude: build, README.md
