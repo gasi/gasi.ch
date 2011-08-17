@@ -9,7 +9,23 @@ Last November someone left a comment on my blog (the first non-robotic one). Thi
 <h2>TGV</h2>
 Last Tuesday I fulfilled one of my dreams when I entered the <em>TGV </em>to Paris. Imagine yourself travelling with <strong>more than 300km/h</strong> through the French countryside. This video will hopefully give you a little taste:
 
-<object type="application/x-shockwave-flash" width="500" height="375" data="http://www.flickr.com/apps/video/stewart.swf?v=49235" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"> <param name="flashvars" value="intl_lang=en-us&amp;photo_secret=65cb8b174b&amp;photo_id=2578241597&amp;show_info_box=true"></param> <param name="movie" value="http://www.flickr.com/apps/video/stewart.swf?v=49235"></param> <param name="bgcolor" value="#000000"></param> <param name="allowFullScreen" value="true"></param>&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.flickr.com/apps/video/stewart.swf?v=49235&quot; bgcolor=&quot;#000000&quot; allowfullscreen=&quot;true&quot; flashvars=&quot;intl_lang=en-us&amp;photo_secret=65cb8b174b&amp;photo_id=2578241597&amp;flickr_show_info_box=true&quot; height=&quot;375&quot; width=&quot;500&quot;&gt;&lt;/embed&gt;</object>
+<object type="application/x-shockwave-flash"
+        width="500"
+        height="375"
+        data="http://www.flickr.com/apps/video/stewart.swf?v=49235"
+        classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+    <param name="flashvars" value="intl_lang=en-us&amp;photo_secret=65cb8b174b&amp;photo_id=2578241597&amp;show_info_box=true"></param>
+    <param name="movie" value="http://www.flickr.com/apps/video/stewart.swf?v=49235"></param>
+    <param name="bgcolor" value="#000000"></param>
+    <param name="allowFullScreen" value="true"></param>
+    <embed type="application/x-shockwave-flash"
+           src="http://www.flickr.com/apps/video/stewart.swf?v=49235"
+           bgcolor="#000000"
+           allowfullscreen="true"
+           flashvars="intl_lang=en-us&amp;photo_secret=65cb8b174b&amp;photo_id=2578241597&amp;flickr_show_info_box=true"
+           height="375"
+           width="500"></embed>
+</object>
 
 <h2>Paris L&#x27;Est</h2>
 I arrived at <em>Paris L&#x27;Est</em> where Franklin picked me up. We took the <em>m&eacute;tro</em> to the apartment I will stay at during the summer. Climbing the stairs of Paris&#x27; underground was somewhat exhausting but not a surprise considering that I couldn&#x27;t let my favorite literature getting dusty at home. Besides some clothes, my toothbrush and lots of chocolate for the team, I brought the following books with me, <em>la cr&egrave;me de la cr&egrave;me</em> of my bookshelf so to speak:
