@@ -12,18 +12,18 @@ To zoom, use your mouse wheel or the arrow keys on your Keyboard, especially if 
 To rotate the object, press and hold the <code>Alt</code> key while scrolling.
 Panning works with drag and drop or, again, with the arrow keys on your keyboard.
 
-<a href="http://gasi.ch//examples/2008/02/05/zooming-broken/"><img src="/examples/2008/02/05/zooming-broken/zooming-broken.png" width="460" height="320" alt="Example: Zooming Broken" title="alt="Example: Zooming Broken""></a>
+<a href="/blog/examples/2008/02/05/zooming-broken/"><img src="/blog/examples/2008/02/05/zooming-broken/zooming-broken.png" width="460" height="320" alt="Example: Zooming Broken" title="alt="Example: Zooming Broken""></a>
 
-<a href="/examples/2008/02/05/zooming-broken/">View Example</a>
+<a href="/blog/examples/2008/02/05/zooming-broken/">View Example</a>
 </blockquote>
 
 Basically, any transformation that you apply to a <code>DisplayObject</code> has its origin at the object&#x27;s registration point. The registration point of an object is typically the upper left corner and cannot be changed directly in ActionScript.
 
-While working on <a href="http://gasi.ch/blog/category/tandem/" title="tandem">tandem</a>, I tried to implement the behavior that normal mapping applications have where you can zoom to the coordinates your mouse points at by scrolling. Oh my, how long it took me. To work around the issue, I nested two <code>Sprites</code> and moved the inner object in such a way that the registration point of the outer one was at the coordinates of the mouse. This way to dynamically change the registration point was a hack at best.
+While working on <a href="http://tandem.gasi.ch" title="tandem">tandem</a>, I tried to implement the behavior that normal mapping applications have where you can zoom to the coordinates your mouse points at by scrolling. Oh my, how long it took me. To work around the issue, I nested two <code>Sprites</code> and moved the inner object in such a way that the registration point of the outer one was at the coordinates of the mouse. This way to dynamically change the registration point was a hack at best.
 
 However, the revelation came soon: zooming (or scaling) is a linear transformation. This means I can scale an object and readjust its position afterwards so that it appears as if it has never moved but rather scaled right from the origin I pointed at.
 
-At this point I successfully wrote a function to scale from an arbitrary point on an object. This code was not too long, actually pretty sweet after all my previous, fruitless endeavours. But yesterday, after looking at the source code of <a href="http://www.cs.umd.edu/hcil/jazz/" title="Piccolo">Piccolo</a>, a powerful framework for building <a href="http://gasi.ch/blog/category/zui/" title="Zoomable User Interfaces">Zoomable User Interfaces (ZUI)</a> in Java or C#, I came across an even more elegant solution:
+At this point I successfully wrote a function to scale from an arbitrary point on an object. This code was not too long, actually pretty sweet after all my previous, fruitless endeavours. But yesterday, after looking at the source code of <a href="http://www.cs.umd.edu/hcil/jazz/" title="Piccolo">Piccolo</a>, a powerful framework for building Zoomable User Interfaces (ZUI) in Java or C#, I came across an even more elegant solution:
 
 <code><a href="http://java.sun.com/j2se/1.4.2/docs/api/java/awt/geom/AffineTransform.html" title="AffineTransform" alt="AffineTransform">AffineTransform</a></code> is the name of the class where the magic lies in Java.
 <h2>What Are Affine Transformations?</h2>
@@ -46,15 +46,15 @@ Enough theory, let&#x27;s see how it&#x27;s done.
 <blockquote class="info">
 <h2>Example: Zooming Done Right</h2>
 
-<a href="/examples/2008/02/05/zooming/"><img src="/examples/2008/02/05/zooming/zooming.png" width="460" height="320" alt="Example: Zooming"></a>
+<a href="/blog/examples/2008/02/05/zooming/"><img src="/blog/examples/2008/02/05/zooming/zooming.png" width="460" height="320" alt="Example: Zooming"></a>
 
-<a href="/examples/2008/02/05/zooming/">View Example</a> | <a href="/examples/2008/02/05/zooming/source/">View Source</a> | <a href="/examples/2008/02/05/zooming/source/Zooming.zip">Download Source (ZIP, 5KB)</a>
+<a href="/blog/examples/2008/02/05/zooming/">View Example</a> | <a href="/blog/examples/2008/02/05/zooming/source/">View Source</a> | <a href="/blog/examples/2008/02/05/zooming/source/Zooming.zip">Download Source (ZIP, 5KB)</a>
 </blockquote>
 
 
 <blockquote class="info">
 <h2>Code Walk-Trough</h2>
-Let us go step by step through the code of the example class called <code>ZoomCanvas</code> that you&#x27;ll find in the <a href="/examples/2008/02/05/zooming/source/" title="Example: Zooming Source Code">source</a> of the example above.
+Let us go step by step through the code of the example class called <code>ZoomCanvas</code> that you&#x27;ll find in the <a href="/blog/examples/2008/02/05/zooming/source/" title="Example: Zooming Source Code">source</a> of the example above.
 
 Let&#x27;s say you have an object you want to scale at a certain point.
 First, you get its transformation <code>Matrix</code>:

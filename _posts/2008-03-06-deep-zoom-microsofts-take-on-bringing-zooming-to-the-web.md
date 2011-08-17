@@ -2,7 +2,7 @@
 layout: post
 title: 'Deep Zoom: Microsoft’s Take on Bringing Zooming to the Web'
 ---
-Yesterday, Microsoft announced <a href="http://silverlight.net/">Silverlight Beta 2</a> at <a href="http://visitmix.com/2008/">MIX08 </a>which features a technology called <a href="http://blogs.msdn.com/stevecla01/archive/2008/03/05/prepare-to-be-blown-away-with-deep-zoom.aspx">Deep Zoom</a>. Deep Zoom seems to stem from Microsoft research project called <a href="http://labs.live.com/Seadragon.aspx">SeaDragon</a> which I mentioned in the footnote of <a href="http://gasi.ch/blog/zoomable-user-interfaces/">my post on Zoomable User Interfaces</a>.
+Yesterday, Microsoft announced <a href="http://silverlight.net/">Silverlight Beta 2</a> at <a href="http://visitmix.com/2008/">MIX08</a> which features a technology called <a href="http://blogs.msdn.com/stevecla01/archive/2008/03/05/prepare-to-be-blown-away-with-deep-zoom.aspx">Deep Zoom</a>. Deep Zoom seems to stem from Microsoft research project called <a href="http://labs.live.com/Seadragon.aspx">SeaDragon</a> which I mentioned in the footnote of <a href="/blog/zoomable-user-interfaces/">my post on Zoomable User Interfaces</a>.
 
 Deep Zoom is simply another way of bringing the zooming metaphor to the web, although, I admit, a quite impressive one. However, when I tried it out with my laptop running on battery it felt a little sluggish. I am sure performance will be better when Silverlight 2.0 is released.
 

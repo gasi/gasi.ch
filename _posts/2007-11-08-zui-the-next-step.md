@@ -44,7 +44,7 @@ and [this beautiful example][zoomorama-example] of his work. Thanks, Franklin.
 
 
 [tandem]: http://tandem.gasi.ch/
-[1]: http://gasi.ch/blog/2007/11/07/zoomable-user-interfaces/#comment-142
+[1]: /blog/zoomable-user-interfaces/#comment-142
 [zoomorama]: http://www.zoomorama.com/
 [zoomorama-intro]: http://zoomorama.typepad.com/zooming/2007/09/index.html
 [zoomorama-example]: http://mail.zoomodev.com/ab5c3015b9361c504a573bdc8166f449

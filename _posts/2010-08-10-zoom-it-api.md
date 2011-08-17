@@ -64,8 +64,8 @@ I'd like to point out that the <a href="http://openzoom.org/zoomit-as3-sdk/">Zoo
 <h2>Demo</h2>
 <p class="footnote">Browse the front pages of the <a href="http://nytimes.com">New York Times</a>, between August 9 and August 15, depending on your time zone. The widget utilizes the <a href="http://api.zoom.it">Zoom.it API</a> to dynamically create the corresponding multiscale image of the front page and renders it using the OpenZoom SDK.</p>
 
-<a href="/examples/zoom-it-api/" title="Zoom.it NY Times Demo by Daniel Gasienica, on Flickr"><img style="border: 2px solid #999999" src="http://farm5.static.flickr.com/4102/4877662142_f21494697c.jpg" width="500" height="300" alt="Zoom.it NY Times Demo" /></a>
-<a href="/examples/zoom-it-api/">View Demo</a> | <a href="/examples/zoom-it-api/source/">View Source</a>
+<a href="/blog/examples/zoom-it-api/" title="Zoom.it NY Times Demo by Daniel Gasienica, on Flickr"><img style="border: 2px solid #999999" src="http://farm5.static.flickr.com/4102/4877662142_f21494697c.jpg" width="500" height="300" alt="Zoom.it NY Times Demo" /></a>
+<a href="/blog/examples/zoom-it-api/">View Demo</a> | <a href="/blog/examples/zoom-it-api/source/">View Source</a>
 </blockquote>
 
 <h3>Acknowledgements</h3>
@@ -80,7 +80,7 @@ I'd like to point out that the <a href="http://openzoom.org/zoomit-as3-sdk/">Zoo
 [zoom.it]: http://zoom.it/
 [zoomit-api]: http://api.zoom.it/
 [seadragon]: http://seadragon.com/
-[idz-1]: http://gasi.ch/blog/inside-deep-zoom-1/
+[idz-1]: /blog/inside-deep-zoom-1/
 [dz-spec]: http://msdn.microsoft.com/en-us/library/cc645077(VS.95).aspx
 [deep-zoom]: http://www.microsoft.com/silverlight/deep-zoom/
 [seadragon-ajax]: http://seadragon.com/developer/ajax/
@@ -89,8 +89,8 @@ I'd like to point out that the <a href="http://openzoom.org/zoomit-as3-sdk/">Zoo
 [openzoom]: http://openzoom.org
 [yt-rick-roll]: http://www.youtube.com/watch?v=oHg5SJYRHA0
 [tc-yt-platform]: http://techcrunch.com/2008/03/12/youtube-the-platform/
-[imsir]: http://gasi.ch/blog/inline-multiscale-image-replacement/
-[web-apis]: http://gasi.ch/publications/web-apis-daniel-gasienica.pdf
+[imsir]: /blog/inline-multiscale-image-replacement/
+[web-apis]: /publications/web-apis-daniel-gasienica.pdf
 [zoomit-as3-sdk]: http://openzoom.org/zoomit-as3-sdk/
 [zoomit-api-docs]: http://zoom.it/pages/api/
 [zoomit-api-libs]: http://zoom.it/pages/api/libraries/

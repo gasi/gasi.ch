@@ -17,7 +17,7 @@ check. Alright, enough talked, check it out!
 <blockquote class="info" markdown="1">
 ## Remix: Is This Your Luggage
 
-<a href="/examples/openzoom-is-this-your-luggage/"
+<a href="/blog/examples/openzoom-is-this-your-luggage/"
    title="OpenZoom, Is This Your Luggage?">
    <img style="border: 3px solid #CCC"
         src="http://farm4.static.flickr.com/3594/3474363339_fafdee1f23.jpg"
@@ -46,5 +46,5 @@ and a boring layout. Hope you enjoy it. ;)
 [OpenZoom SDK]: http://www.openzoom.org/go/code
 [api]: http://www.openzoom.org/sdk/api
 
-[showcase]: /examples/openzoom-is-this-your-luggage/
+[showcase]: /blog/examples/openzoom-is-this-your-luggage/
 [source]: https://github.com/openzoom/sdk/tree/master/examples/flex/isthisyourluggage

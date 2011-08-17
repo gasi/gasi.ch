@@ -27,7 +27,7 @@ The <strong>OpenZoom SDK</strong> is a <em>free &amp; open source toolkit</em> f
 
 <blockquote class="info" markdown="1">
 <h2>Is This Your Luggage?</h2>
-<a href="http://gasi.ch/blog/openzoom-is-this-your-luggage/" title="Is This Your Luggage? Powered By OpenZoom"><img style="border: 2px solid #CCC;" src="http://farm4.static.flickr.com/3594/3474363339_fafdee1f23.jpg" width="500" height="347" alt="Is This Your Luggage? Powered By OpenZoom" /></a>
+<a href="/blog/openzoom-is-this-your-luggage/" title="Is This Your Luggage? Powered By OpenZoom"><img style="border: 2px solid #CCC;" src="http://farm4.static.flickr.com/3594/3474363339_fafdee1f23.jpg" width="500" height="347" alt="Is This Your Luggage? Powered By OpenZoom" /></a>
 Remix of the famous <a href="http://isthisyourluggage.com/">IsThisYourLuggage.com</a>. Powered by OpenZoom.
 
 <p class="footnote">Copyright 2009, <a href="http://isthisyourluggage.com/">IsThisYourLuggage.com</a></p>

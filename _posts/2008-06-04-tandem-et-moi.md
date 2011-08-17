@@ -21,4 +21,4 @@ Anyway, the real test for <a href="http://tandem.gasi.ch/">tandem</a>, to a cert
 By the way, this fun little experiment only used up little more than 1.2&nbsp;GB of memory. Gotta love this little quote by <a href="http://en.wikipedia.org/wiki/C._Northcote_Parkinson">Parkinson</a>:
 <q>Software expands to fill the available memory.</q>
 
-<em><strong>P.S.</strong> Since <a href="http://gasi.ch/blog/hello-tandem/#comments">someone asked already</a>, the closest to setting up a feed for releases, was setting up a <strong>tandem commits mailing list</strong> at <a href="http://groups.google.com/group/tandem-commits">http://groups.google.com/group/tandem-commits</a>.</em>
+<em><strong>P.S.</strong> Since <a href="/blog/hello-tandem/#comments">someone asked already</a>, the closest to setting up a feed for releases, was setting up a <strong>tandem commits mailing list</strong> at <a href="http://groups.google.com/group/tandem-commits">http://groups.google.com/group/tandem-commits</a>.</em>

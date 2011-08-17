@@ -2,7 +2,7 @@
 layout: post
 title: 'Functional ActionScript &ndash; Part II'
 ---
-Welcome to the second part of my series on <em>Functional ActionScript</em>. <a href="http://gasi.ch/blog/functional-actionscript-part-1/">Part&nbsp;I</a> was a brief introduction to some concepts of <a hef="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> in ActionScript. In this second part, I will present you some examples to ActionScript&#x27;s built-in functional APIs on <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html">Array</a></code>. However, first I would like to introduce you to a neat little trick that will save us some typing and make our code more clear.
+Welcome to the second part of my series on <em>Functional ActionScript</em>. <a href="/blog/functional-actionscript-part-1/">Part&nbsp;I</a> was a brief introduction to some concepts of <a hef="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> in ActionScript. In this second part, I will present you some examples to ActionScript&#x27;s built-in functional APIs on <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html">Array</a></code>. However, first I would like to introduce you to a neat little trick that will save us some typing and make our code more clear.
 
 <h2>Foreplay</h2>
 If you take a look at the <a href="http://livedocs.adobe.com/flex/3/langref/Array.html">documentation</a> of the following methods that we will discuss later (<code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#every()">every</a></code>, <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#some()">some</a></code>, <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#filter()">filter</a></code>, <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#forEach()">forEach</a></code>, and <code><a href="http://livedocs.adobe.com/flex/3/langref/Array.html#map()">map</a></code>) you will notice that they all take a callback that, apart from the return type maybe, has a signature that looks like this:
@@ -34,11 +34,11 @@ function even(x:int):Boolean
 }
 {% endhighlight %}
 
-&hellip;and returns a function which conforms to the callback signature shown above. Another great example for the power of <a href="http://gasi.ch/blog/functional-actionscript-part-1/#higher-order-functions">higher-order functions</a>.
+&hellip;and returns a function which conforms to the callback signature shown above. Another great example for the power of <a href="/blog/functional-actionscript-part-1/#higher-order-functions">higher-order functions</a>.
 
 
 <h2>The Party</h2>
-After having been introduced to friend number one, namely <code>map</code>, in <a href="http://gasi.ch/blog/functional-actionscript-part-1/">Part&nbsp;I</a>, I suggest we get to know some new friends but first a small convention:
+After having been introduced to friend number one, namely <code>map</code>, in <a href="/blog/functional-actionscript-part-1/">Part&nbsp;I</a>, I suggest we get to know some new friends but first a small convention:
 
 <blockquote class="info">
 <h2>trace</h2>
@@ -160,7 +160,7 @@ In this example I purposely didn&#x27;t use my carefully crafted <code>wrap</cod
 
 
 <h2>Old Friend: map</h2>
-We&#x27;ve already met <code>map</code> in the <a href="http://gasi.ch/blog/functional-actionscript-part-1/#map">first part</a> on <em>Functional ActionScript</em> but I allow myself to introduce her here once again. <code>Array.map</code> takes a function, applies it to all elements in an <code>Array</code> and returns an <code>Array</code> with all modified elements.
+We&#x27;ve already met <code>map</code> in the <a href="/blog/functional-actionscript-part-1/#map">first part</a> on <em>Functional ActionScript</em> but I allow myself to introduce her here once again. <code>Array.map</code> takes a function, applies it to all elements in an <code>Array</code> and returns an <code>Array</code> with all modified elements.
 
 <blockquote class="info">
 <h2>Example: We&#x27;re Square</h2>
@@ -224,7 +224,7 @@ Isn't the expressivess of this code just beautiful?
 Like what you saw? Have look at it, download it, and play with it!
 <blockquote class="info">
 <h2>Source</h2>
-<a href="/examples/2008/03/31/functional-actionscript-part-2/source/">View Source</a> | <a href="/examples/2008/03/31/functional-actionscript-part-2/source/FunctionalActionScript2.zip">Download Source (ZIP, 3KB)</a>
+<a href="/blog/examples/2008/03/31/functional-actionscript-part-2/source/">View Source</a> | <a href="/blog/examples/2008/03/31/functional-actionscript-part-2/source/FunctionalActionScript2.zip">Download Source (ZIP, 3KB)</a>
 </blockquote>
 
 Thank you for your attention and stay tuned for Part III of <em>Functional ActionScript</em>&hellip;

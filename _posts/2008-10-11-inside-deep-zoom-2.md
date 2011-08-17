@@ -2,7 +2,7 @@
 layout: post
 title: 'Inside Deep Zoom &ndash; <br/>Part II: Mathematical Analysis'
 ---
-Welcome to part two of <em>Inside Deep Zoom</em>. In <a href="http://gasi.ch/blog/inside-deep-zoom-1/">part one</a>, I talked about the very basic ideas behind Deep Zoom and other multi-scale image technologies. Today, I&#x27;d like to continue in a more <em>hands-on</em> fashion and show you how to calculate the properties of the Deep Zoom image pyramid.
+Welcome to part two of <em>Inside Deep Zoom</em>. In <a href="/blog/inside-deep-zoom-1/">part one</a>, I talked about the very basic ideas behind Deep Zoom and other multi-scale image technologies. Today, I&#x27;d like to continue in a more <em>hands-on</em> fashion and show you how to calculate the properties of the Deep Zoom image pyramid.
 
 <h2>Anatomy of a Deep Zoom Image</h2>
 When you convert one of your images, let&#x27;s say with <a href="http://www.microsoft.com/downloads/details.aspx?familyid=457b17b7-52bf-4bda-87a3-fa8a4673f8bf&displaylang=en">Deep Zoom Composer</a>, into a Deep Zoom image you get an output that looks something along the lines of this:
@@ -208,7 +208,7 @@ To solve this equation I&#x27;ve used a <a href="http://en.wikipedia.org/wiki/Ge
 In my opinion quite surprising, is the fact that storing an image pyramid of base two only requires 33% more space than simply storing the original image.
 
 <h2>Deeper and Deeper&hellip;</h2>
-After a rather basic introduction to multi-scale imaging in <a href="http://gasi.ch/blog/inside-deep-zoom-1/">part one</a> of <em>Inside Deep Zoom</em>, I hope you gained more insight in this second part and got a better understanding on what&#x27;s going on behind the scenes. Be sure to come back for part three where I will wrap-up everything I talked about so far, show off some cool demos as well as give an outlook on where Deep Zoom &amp; Co. could take us.
+After a rather basic introduction to multi-scale imaging in <a href="/blog/inside-deep-zoom-1/">part one</a> of <em>Inside Deep Zoom</em>, I hope you gained more insight in this second part and got a better understanding on what&#x27;s going on behind the scenes. Be sure to come back for part three where I will wrap-up everything I talked about so far, show off some cool demos as well as give an outlook on where Deep Zoom &amp; Co. could take us.
 
 <h3><a name="further-reading">Further Reading</a></h3>
 <ul>

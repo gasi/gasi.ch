@@ -24,20 +24,20 @@ Second, unlike Deep Zoom in Silverlight, Deep Zoom in Flash doesn&#x27;t crash F
 
 <blockquote class="info">
 <h2>Sample #1 &ndash; Mont Saint Michel</h2>
-<a href="/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/flash/"><img src="http://farm4.static.flickr.com/3011/2933175032_8d570e7e51.jpg" width="500" height="334" alt="Mont Saint Michel" /></a>
-<a href="/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/flash/">View in Flash</a> | <a href="/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/silverlight">View in Silverlight Deep Zoom</a> | <a href="/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/mont-saint-michel.jpg">View Original Image</a>
+<a href="/blog/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/flash/"><img src="http://farm4.static.flickr.com/3011/2933175032_8d570e7e51.jpg" width="500" height="334" alt="Mont Saint Michel" /></a>
+<a href="/blog/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/flash/">View in Flash</a> | <a href="/blog/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/silverlight">View in Silverlight Deep Zoom</a> | <a href="/blog/examples/2008/10/13/inside-deep-zoom/mont-saint-michel/mont-saint-michel.jpg">View Original Image</a>
 </blockquote>
 
 <blockquote class="info">
 <h2>Sample #2 &ndash; Billions</h2>
-<a href="/examples/2008/10/13/inside-deep-zoom/billions/flash/"><img src="http://farm1.static.flickr.com/200/441355880_94f96bcd5d.jpg" width="500" height="334" alt="Billions &amp; Billions Served." /></a>
-<a href="/examples/2008/10/13/inside-deep-zoom/billions/flash/">View in Flash</a> | <a href="/examples/2008/10/13/inside-deep-zoom/billions/silverlight">View in Silverlight Deep Zoom</a> | <a href="/examples/2008/10/13/inside-deep-zoom/billions/billions.jpg">View Original Image</a>
+<a href="/blog/examples/2008/10/13/inside-deep-zoom/billions/flash/"><img src="http://farm1.static.flickr.com/200/441355880_94f96bcd5d.jpg" width="500" height="334" alt="Billions &amp; Billions Served." /></a>
+<a href="/blog/examples/2008/10/13/inside-deep-zoom/billions/flash/">View in Flash</a> | <a href="/blog/examples/2008/10/13/inside-deep-zoom/billions/silverlight">View in Silverlight Deep Zoom</a> | <a href="/blog/examples/2008/10/13/inside-deep-zoom/billions/billions.jpg">View Original Image</a>
 </blockquote>
 
 <blockquote class="info">
 <h2>Sample #3 &ndash; Deux Femmes</h2>
-<a href="/examples/2008/10/13/inside-deep-zoom/deux-femmes/flash/"><img src="http://farm3.static.flickr.com/2084/2101923518_c021e4766f_b.jpg" width="500" height="746" alt="Deux Femmes" /></a>
-<a href="/examples/2008/10/13/inside-deep-zoom/deux-femmes/flash/">View in Flash</a> | <a href="/examples/2008/10/13/inside-deep-zoom/deux-femmes/silverlight/">View in Silverlight Deep Zoom</a> | <a href="/examples/2008/10/13/inside-deep-zoom/deux-femmes/deux-femmes.jpg">View Original Image</a>
+<a href="/blog/examples/2008/10/13/inside-deep-zoom/deux-femmes/flash/"><img src="http://farm3.static.flickr.com/2084/2101923518_c021e4766f_b.jpg" width="500" height="746" alt="Deux Femmes" /></a>
+<a href="/blog/examples/2008/10/13/inside-deep-zoom/deux-femmes/flash/">View in Flash</a> | <a href="/blog/examples/2008/10/13/inside-deep-zoom/deux-femmes/silverlight/">View in Silverlight Deep Zoom</a> | <a href="/blog/examples/2008/10/13/inside-deep-zoom/deux-femmes/deux-femmes.jpg">View Original Image</a>
 </blockquote>
 
 <h2>Addendum</h2>

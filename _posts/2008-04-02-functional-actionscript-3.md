@@ -2,7 +2,7 @@
 layout: post
 title: 'Functional ActionScript &ndash; Part III'
 ---
-In <a href="http://gasi.ch/blog/functional-actionscript-part-1/">Part&nbsp;I</a> of <em>Functional ActionScript</em> I gave a short introduction to <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> in ActionScript. Then, <a href="http://gasi.ch/blog/functional-actionscript-part-2/">Part&nbsp;II</a> discussed some functional <acronym title="Application Programming Interface">APIs</acronym> that ActionScript provides and gave an example for each one of them. This last part &mdash; Part&nbsp;III &mdash; of my series will be a little bit different. This time I would like to take the opportunity to share a small but fascinating example with you that will hopefully serve as an inspiration to look at functional programming more closely.
+In <a href="/blog/functional-actionscript-part-1/">Part&nbsp;I</a> of <em>Functional ActionScript</em> I gave a short introduction to <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> in ActionScript. Then, <a href="/blog/functional-actionscript-part-2/">Part&nbsp;II</a> discussed some functional <acronym title="Application Programming Interface">APIs</acronym> that ActionScript provides and gave an example for each one of them. This last part &mdash; Part&nbsp;III &mdash; of my series will be a little bit different. This time I would like to take the opportunity to share a small but fascinating example with you that will hopefully serve as an inspiration to look at functional programming more closely.
 
 <h2>Functional vs. Imperative</h2>
 Without going into much depth, I&#x27;d like to quickly discuss the main conceptual difference between <a href="http://en.wikipedia.org/wiki/Functional_programming">functional</a> and <a href="http://en.wikipedia.org/wiki/Imperative_programming">imperative programming</a> as it applies to the example in this article. In the course <a href="http://www.infsec.ethz.ch/education/ss08/fmfp">Formal Methods &amp; Functional Programming</a> we were taught that often times
@@ -176,7 +176,7 @@ function greaterThan( value : Number ) : Function
 }
 </pre>
 
-<em>For the <a href="http://gasi.ch/blog/functional-actionscript-part-2/#wrap">definition of <code>wrap</code></a> check out <a href="http://gasi.ch/blog/functional-actionscript-part-2/#wrap">Functional ActionScript &ndash; Part II</a>.</em>
+<em>For the <a href="/blog/functional-actionscript-part-2/#wrap">definition of <code>wrap</code></a> check out <a href="/blog/functional-actionscript-part-2/#wrap">Functional ActionScript &ndash; Part II</a>.</em>
 </blockquote>
 
 The example above (and the fact that I wrote it in a few minutes) made me realize for the first time the potential of ActionScript which allows us to write programs in a functional way. The QuickSort code in ActionScript is pretty much the equivalent of the Haskell code at the beginning. You can walk through it with the Haskell <em>Walk-Trough</em> and the comments will hopefully help you in case you get stuck.
@@ -194,7 +194,7 @@ quickSort( unsortedList )
 
 <blockquote class="info">
 <h2>Source</h2>
-<a href="/examples/2008/04/02/functional-actionscript-part-3/source/">View Source</a> | <a href="/examples/2008/04/02/functional-actionscript-part-3/source/FunctionalActionScript3.zip">Download Source (ZIP, 3KB)</a>
+<a href="/blog/examples/2008/04/02/functional-actionscript-part-3/source/">View Source</a> | <a href="/blog/examples/2008/04/02/functional-actionscript-part-3/source/FunctionalActionScript3.zip">Download Source (ZIP, 3KB)</a>
 </blockquote>
 
 <h2>Epilogue</h2>

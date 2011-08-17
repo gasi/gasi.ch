@@ -74,12 +74,12 @@ It's still open source and free. Actually, I'd like to encourage other people to
 [Infinite Canvas]: http://infinitecanvas.appjet.net/
 [Gimme Shiny!]: http://gimmeshiny.com/
 [PSP Player]: http://code.google.com/p/pspplayer/
-[OpenZoom SDK]: http://gasi.ch/blog/openzoom-sdk/
+[OpenZoom SDK]: /blog/openzoom-sdk/
 [OpenZoom]: http://openzoom.org/
 [openzoom-sdk-latest]: http://www.openzoom.org/sdk/download/latest/zip
 [seattle-maps]: http://maps.google.com/maps?q=Seattle,+WA+,USA
 [tandem]: http://tandem.gasi.ch/
-[tandem-post]: http://gasi.ch/blog/tandem
-[gigapan-mobile]: http://gasi.ch/blog/gigapan-mobile
-[OZI]: http://gasi.ch/blog/openzoom-description-format
-[ZUIs]: http://gasi.ch/blog/zoomable-user-interfaces
+[tandem-post]: /blog/tandem/
+[gigapan-mobile]: /blog/gigapan-mobile/
+[OZI]: /blog/openzoom-description-format/
+[ZUIs]: /blog/zoomable-user-interfaces/

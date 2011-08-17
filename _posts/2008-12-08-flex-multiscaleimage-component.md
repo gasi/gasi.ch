@@ -3,13 +3,13 @@ layout: post
 tags: ActionScript, Adobe, Deep Zoom, Flash, Flex, Microsoft, multiscale, MultiScaleImage, OpenZoom, Silverlight, Zoomify
 title: 'MultiScaleImage: <br/>Flex Deep Zoom Component'
 ---
-Ever since I published my proof of concept of <a href="http://gasi.ch/blog/inside-deep-zoom-3/">Deep Zoom in Flash</a>, many people from around the world got in touch with me and told me that they also wanted to play around with this technology. Therefore, for a couple of months now, I've been working on an <acronym title="Software Development Kit">SDK</acronym> for <acronym title="Zoomable User Interface">ZUIs</acronym> and multi-scale images for Flash called <a href="http://openzoom.org/">OpenZoom</a>. The SDK is still <em>work in progress</em> and I won't focus on it today. However, I promise you it will definitely be topic of many posts in the future.
+Ever since I published my proof of concept of <a href="/blog/inside-deep-zoom-3/">Deep Zoom in Flash</a>, many people from around the world got in touch with me and told me that they also wanted to play around with this technology. Therefore, for a couple of months now, I've been working on an <acronym title="Software Development Kit">SDK</acronym> for <acronym title="Zoomable User Interface">ZUIs</acronym> and multi-scale images for Flash called <a href="http://openzoom.org/">OpenZoom</a>. The SDK is still <em>work in progress</em> and I won't focus on it today. However, I promise you it will definitely be topic of many posts in the future.
 
 Today I'd like to share with you a first preview of the <a href="http://docs.openzoom.org/sdk/org/openzoom/flex/components/MultiScaleImage.html">MultiScaleImage component</a> that I've built on top of the <a href="http://openzoom.org/">OpenZoom SDK</a>.
 
 <blockquote class="flash">
 <h2>Introducing the OpenZoom SDK</h2>
-This stuff is really old and is only kept around here for archival purposes. Get the latest news and the first public release of the <a href="http://gasi.ch/blog/openzoom-sdk">OpenZoom SDK</a> in the <a href="http://gasi.ch/blog/openzoom-sdk">official announcement</a>.
+This stuff is really old and is only kept around here for archival purposes. Get the latest news and the first public release of the <a href="/blog/openzoom-sdk">OpenZoom SDK</a> in the <a href="/blog/openzoom-sdk">official announcement</a>.
 </blockquote>
 
 <h2>Nomen Est Omen</h2>
@@ -50,36 +50,36 @@ I could go on and on about how the Flex MultiScaleImage component works but inst
 <h2>Demo #1: Transformers</h2>
 The transformer controls the animation of the viewport. Currently, I've implemented one controller, <a href="http://docs.openzoom.org/sdk/org/openzoom/flash/viewport/transformers/TweenerTransformer.html">TweenerTransformer</a>, that is based on the fantastic <a href="http://tweener.googlecode.com/">Tweener</a> animation library. Check out the demo to see how flexible the architecture is and how easily you can customize the animation of MultiScaleImage. You want to know what's also great about transformers? If for whatever reason you don't need them, you don't pay a single kilobyte penalty for an animation library that is never used.
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/transformers/" title="Flex MultiScaleImage Transformers Demo"><img src="http://farm4.static.flickr.com/3159/3090848151_e68b462ebc.jpg" width="500" height="300" /></a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/transformers/" title="Flex MultiScaleImage Transformers Demo"><img src="http://farm4.static.flickr.com/3159/3090848151_e68b462ebc.jpg" width="500" height="300" /></a>
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/transformers/">View Demo</a> | <a href="/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/transformers/">View Demo</a> | <a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
 </blockquote>
 
 <blockquote class="info">
 <h2>Demo #2: Controllers</h2>
 Controllers are the glue between user input and viewport control. The <a href="http://openzoom.org/">OpenZoom SDK</a> features two implementations of controllers at this point, namely a <a href="http://docs.openzoom.org/sdk/org/openzoom/flash/viewport/controllers/MouseController.html">MouseController</a> and a <a href="http://docs.openzoom.org/sdk/org/openzoom/flash/viewport/controllers/KeyboardController.html">KeyboardController</a>. Both have already built-in support for quite some customization but if you need more, feel free to implement your own controller based on <a href="http://docs.openzoom.org/sdk/org/openzoom/flash/viewport/IViewportController.html">IViewportController</a>.
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/controllers/" title="Flex MultiScaleImage Controllers Demo"><img src="http://farm4.static.flickr.com/3220/3090848513_70f2a74735.jpg" width="500" height="300"/></a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/controllers/" title="Flex MultiScaleImage Controllers Demo"><img src="http://farm4.static.flickr.com/3220/3090848513_70f2a74735.jpg" width="500" height="300"/></a>
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/controllers/">View Demo</a> | <a href="/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/controllers/">View Demo</a> | <a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
 </blockquote>
 
 <blockquote class="info">
 <h2>Demo #3: Constraints</h2>
 The constraint controls what states the viewport can reach. Don't want people to zoom out too much? Just add a <a href="http://docs.openzoom.org/sdk/org/openzoom/flash/viewport/constraints/ZoomConstraint.html">ZoomConstraint</a> and set minimum and maximum zoom. Don't want them to lose the scene out of sight? Add a <a href="http://docs.openzoom.org/sdk/org/openzoom/flash/viewport/constraints/VisibilityConstraint.html">VisibilityConstraint</a>. Doesn't the component only support a single constraint? Yes, but the architecture is flexible enough to allow you to combine constraints in a <a href="http://docs.openzoom.org/sdk/org/openzoom/flash/viewport/constraints/CompositeConstraint.html">CompositeConstraint</a> which is an application of the <a href="http://en.wikipedia.org/wiki/Composite_pattern">Composite Design Pattern</a>.
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/constraints/" title="Flex MultiScaleImage Constraints Demo"><img src="http://farm4.static.flickr.com/3270/3090847691_b2b3725fff.jpg" width="500" height="300"/></a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/constraints/" title="Flex MultiScaleImage Constraints Demo"><img src="http://farm4.static.flickr.com/3270/3090847691_b2b3725fff.jpg" width="500" height="300"/></a>
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/constraints/">View Demo</a> | <a href="/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/constraints/">View Demo</a> | <a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
 </blockquote>
 
 <blockquote class="info">
 <h2>Demo #3&frac12;: Out of the Box</h2>
 After having experienced all the advanced features of the component, let's sit back and enjoy the elegance and purity of the MultiScaleImage component as it comes out of the box. In its plain form, a MultiScaleImage has only one purpose: Displaying images tack sharp no matter how big they appear on the screen. Try for yourself, click on the picture to go to the demo and there just keep on resizing your browser window and enjoy the beauty of simplicity how the image slowly appears sharper and sharper.
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/out-of-the-box/" title="Flex MultiScaleImage Out of the Box Demo" target="_blank"><img src="http://farm3.static.flickr.com/2074/1572001177_f2b1783b09.jpg" width="500" height="375" /></a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/out-of-the-box/" title="Flex MultiScaleImage Out of the Box Demo" target="_blank"><img src="http://farm3.static.flickr.com/2074/1572001177_f2b1783b09.jpg" width="500" height="375" /></a>
 
-<a href="/examples/2008/12/08/flex-multiscaleimage-component/out-of-the-box/">View Demo</a> | <a href="/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
+<a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/out-of-the-box/">View Demo</a> | <a href="/blog/examples/2008/12/08/flex-multiscaleimage-component/source/">View Source</a>
 </blockquote>
 
 <h2>Download</h2>
