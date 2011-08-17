@@ -13,8 +13,8 @@ Therefore, while enjoying the calm of the holidays, I sat down and developed an 
 <h2>Demo: OpenZoom Viewer for Adobe Photoshop</h2>
 New and improved viewer built with the <a href="http://openzoom.org/">OpenZoom SDK</a>:
 
-<a href="http://gasi.ch/examples/2008/12/23/photoshop-openzoom-viewer/openzoom/" title="OpenZoom Viewer for Adobe Photoshop"><img src="http://farm3.static.flickr.com/2134/2041196959_db9cc76bbc.jpg" width="500" height="375" alt="" /></a>
-<a href="http://gasi.ch/examples/2008/12/23/photoshop-openzoom-viewer/openzoom/">View Demo</a> | <a href="http://github.com/openzoom/nano/raw/1b0dbf94c5083c07afdd0dc134ac2acfd267b277/src/OpenZoomViewer.as">View Source</a>
+<a href="/examples/2008/12/23/photoshop-openzoom-viewer/openzoom/" title="OpenZoom Viewer for Adobe Photoshop"><img src="http://farm3.static.flickr.com/2134/2041196959_db9cc76bbc.jpg" width="500" height="375" alt="" /></a>
+<a href="/examples/2008/12/23/photoshop-openzoom-viewer/openzoom/">View Demo</a> | <a href="http://github.com/openzoom/nano/raw/1b0dbf94c5083c07afdd0dc134ac2acfd267b277/src/OpenZoomViewer.as">View Source</a>
 <h2>Features</h2>
 <ul>
   <li><strong>Fullscreen support</strong></li>
@@ -33,8 +33,8 @@ New and improved viewer built with the <a href="http://openzoom.org/">OpenZoom S
 <h2>Demo: Zoomify Viewer for Adobe Photoshop</h2>
 For comparison, this is the old Zoomify viewer in Photoshop:
 
-<a href="http://gasi.ch/examples/2008/12/23/photoshop-openzoom-viewer/zoomify/" title="Zoomify Viewer for Adobe Photoshop"><img src="http://farm4.static.flickr.com/3119/3131151323_30940a5f34.jpg" width="500" height="355" alt="Zoomify Viewer" /></a>
-<a href="http://gasi.ch/examples/2008/12/23/photoshop-openzoom-viewer/zoomify/">View Demo</a>
+<a href="/examples/2008/12/23/photoshop-openzoom-viewer/zoomify/" title="Zoomify Viewer for Adobe Photoshop"><img src="http://farm4.static.flickr.com/3119/3131151323_30940a5f34.jpg" width="500" height="355" alt="Zoomify Viewer" /></a>
+<a href="/examples/2008/12/23/photoshop-openzoom-viewer/zoomify/">View Demo</a>
 </blockquote>
 
 <blockquote class="info">

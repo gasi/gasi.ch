@@ -6,6 +6,6 @@ This weekend I've been playing around with a couple of things related to the Ope
 
 <blockquote class="info">
 <h2>Demo: Z-Order Visualization</h2>
-<a href="http://gasi.ch/examples/2009/01/04/z-order-visualization/" title="Z-Order Visualization"><img src="http://farm4.static.flickr.com/3261/3166780093_7b2d2eedf8.jpg" width="500" height="279" alt="Z-Order" /></a>
-<a href="http://gasi.ch/examples/2009/01/04/z-order-visualization/">View Demo</a> | <a href="http://gasi.ch/examples/2009/01/04/z-order-visualization/source/">View Source</a> | <a href="http://code.google.com/p/open-zoom/source/browse/trunk/src/main/flash/org/openzoom/flash/utils/ZOrder.as">View ZOrder Class Source</a>
+<a href="/examples/2009/01/04/z-order-visualization/" title="Z-Order Visualization"><img src="http://farm4.static.flickr.com/3261/3166780093_7b2d2eedf8.jpg" width="500" height="279" alt="Z-Order" /></a>
+<a href="/examples/2009/01/04/z-order-visualization/">View Demo</a> | <a href="/examples/2009/01/04/z-order-visualization/source/">View Source</a> | <a href="http://code.google.com/p/open-zoom/source/browse/trunk/src/main/flash/org/openzoom/flash/utils/ZOrder.as">View ZOrder Class Source</a>
 </blockquote>

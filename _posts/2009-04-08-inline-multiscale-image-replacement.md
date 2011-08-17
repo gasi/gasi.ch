@@ -11,8 +11,8 @@ The following are three real-world scenarios for publishing high-resolution imag
 <blockquote class="info" markdown="1">
 ## News: The New York Times
 
-<a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/nytimes/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3299/3419715880_dfac0333de.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
-<a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/nytimes/">View Demo</a> | <a href="http://www.nytimes.com/2007/08/12/world/asia/12afghan.html">View Original Page</a>
+<a href="/examples/2009/04/08/inline-multiscale-image-replacement/nytimes/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3299/3419715880_dfac0333de.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
+<a href="/examples/2009/04/08/inline-multiscale-image-replacement/nytimes/">View Demo</a> | <a href="http://www.nytimes.com/2007/08/12/world/asia/12afghan.html">View Original Page</a>
 
 <p class="footnote"><em>Disclaimer: Since a high-resolution version of the original image was not available to me, I replaced it with another one from the Department of Defense which was taken in the same region, called Zabul Province.</em></p>
 </blockquote>
@@ -20,15 +20,15 @@ The following are three real-world scenarios for publishing high-resolution imag
 <blockquote class="info" markdown="1">
 ## Blogs: Information Architects
 
-<a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/ia/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3651/3418905983_0cd00199f6.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
-<a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/ia/">View Demo</a> | <a href="http://informationarchitects.jp/web-trend-map-4-final-beta/">View Original Page</a>
+<a href="/examples/2009/04/08/inline-multiscale-image-replacement/ia/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3651/3418905983_0cd00199f6.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
+<a href="/examples/2009/04/08/inline-multiscale-image-replacement/ia/">View Demo</a> | <a href="http://informationarchitects.jp/web-trend-map-4-final-beta/">View Original Page</a>
 
 </blockquote>
 
 <blockquote class="info" markdown="1">
 ## Photo Sharing: Flickr
-<a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/flickr/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3408/3419715614_95204d3df9.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
-<a href="http://gasi.ch/examples/2009/04/08/inline-multiscale-image-replacement/flickr/">View Demo</a> | <a href="http://www.flickr.com/photos/oliveralex/524852348/">View Original Page</a>
+<a href="/examples/2009/04/08/inline-multiscale-image-replacement/flickr/" title="Inline Multiscale Image Replacement"><img src="http://farm4.static.flickr.com/3408/3419715614_95204d3df9.jpg" width="500" height="500" alt="Inline Multiscale Image Replacement" /></a>
+<a href="/examples/2009/04/08/inline-multiscale-image-replacement/flickr/">View Demo</a> | <a href="http://www.flickr.com/photos/oliveralex/524852348/">View Original Page</a>
 
 <p class="footnote"><em>Disclaimer: Due to conflicts, the original JavaScript that was included in the page was removed for this demo.</em></p>
 </blockquote>

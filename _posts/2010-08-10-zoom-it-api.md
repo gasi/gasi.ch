@@ -64,8 +64,8 @@ I'd like to point out that the <a href="http://openzoom.org/zoomit-as3-sdk/">Zoo
 <h2>Demo</h2>
 <p class="footnote">Browse the front pages of the <a href="http://nytimes.com">New York Times</a>, between August 9 and August 15, depending on your time zone. The widget utilizes the <a href="http://api.zoom.it">Zoom.it API</a> to dynamically create the corresponding multiscale image of the front page and renders it using the OpenZoom SDK.</p>
 
-<a href="http://gasi.ch/examples/zoom-it-api/" title="Zoom.it NY Times Demo by Daniel Gasienica, on Flickr"><img style="border: 2px solid #999999" src="http://farm5.static.flickr.com/4102/4877662142_f21494697c.jpg" width="500" height="300" alt="Zoom.it NY Times Demo" /></a>
-<a href="http://gasi.ch/examples/zoom-it-api/">View Demo</a> | <a href="http://gasi.ch/examples/zoom-it-api/source/">View Source</a>
+<a href="/examples/zoom-it-api/" title="Zoom.it NY Times Demo by Daniel Gasienica, on Flickr"><img style="border: 2px solid #999999" src="http://farm5.static.flickr.com/4102/4877662142_f21494697c.jpg" width="500" height="300" alt="Zoom.it NY Times Demo" /></a>
+<a href="/examples/zoom-it-api/">View Demo</a> | <a href="/examples/zoom-it-api/source/">View Source</a>
 </blockquote>
 
 <h3>Acknowledgements</h3>

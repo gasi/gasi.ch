@@ -194,7 +194,7 @@ quickSort( unsortedList )
 
 <blockquote class="info">
 <h2>Source</h2>
-<a href="http://gasi.ch/examples/2008/04/02/functional-actionscript-part-3/source/">View Source</a> | <a href="http://gasi.ch/examples/2008/04/02/functional-actionscript-part-3/source/FunctionalActionScript3.zip">Download Source (ZIP, 3KB)</a>
+<a href="/examples/2008/04/02/functional-actionscript-part-3/source/">View Source</a> | <a href="/examples/2008/04/02/functional-actionscript-part-3/source/FunctionalActionScript3.zip">Download Source (ZIP, 3KB)</a>
 </blockquote>
 
 <h2>Epilogue</h2>

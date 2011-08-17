@@ -12,9 +12,9 @@ To zoom, use your mouse wheel or the arrow keys on your Keyboard, especially if 
 To rotate the object, press and hold the <code>Alt</code> key while scrolling.
 Panning works with drag and drop or, again, with the arrow keys on your keyboard.
 
-<a href="http://gasi.ch/examples/2008/02/05/zooming-broken/"><img src="http://gasi.ch/examples/2008/02/05/zooming-broken/zooming-broken.png" width="460" height="320" alt="Example: Zooming Broken" title="alt="Example: Zooming Broken""></a>
+<a href="http://gasi.ch//examples/2008/02/05/zooming-broken/"><img src="/examples/2008/02/05/zooming-broken/zooming-broken.png" width="460" height="320" alt="Example: Zooming Broken" title="alt="Example: Zooming Broken""></a>
 
-<a href="http://gasi.ch/examples/2008/02/05/zooming-broken/">View Example</a>
+<a href="/examples/2008/02/05/zooming-broken/">View Example</a>
 </blockquote>
 
 Basically, any transformation that you apply to a <code>DisplayObject</code> has its origin at the object&#x27;s registration point. The registration point of an object is typically the upper left corner and cannot be changed directly in ActionScript.
@@ -46,15 +46,15 @@ Enough theory, let&#x27;s see how it&#x27;s done.
 <blockquote class="info">
 <h2>Example: Zooming Done Right</h2>
 
-<a href="http://gasi.ch/examples/2008/02/05/zooming/"><img src="http://gasi.ch/examples/2008/02/05/zooming/zooming.png" width="460" height="320" alt="Example: Zooming"></a>
+<a href="/examples/2008/02/05/zooming/"><img src="/examples/2008/02/05/zooming/zooming.png" width="460" height="320" alt="Example: Zooming"></a>
 
-<a href="http://gasi.ch/examples/2008/02/05/zooming/">View Example</a> | <a href="http://gasi.ch/examples/2008/02/05/zooming/source/">View Source</a> | <a href="http://gasi.ch/examples/2008/02/05/zooming/source/Zooming.zip">Download Source (ZIP, 5KB)</a>
+<a href="/examples/2008/02/05/zooming/">View Example</a> | <a href="/examples/2008/02/05/zooming/source/">View Source</a> | <a href="/examples/2008/02/05/zooming/source/Zooming.zip">Download Source (ZIP, 5KB)</a>
 </blockquote>
 
 
 <blockquote class="info">
 <h2>Code Walk-Trough</h2>
-Let us go step by step through the code of the example class called <code>ZoomCanvas</code> that you&#x27;ll find in the <a href="http://gasi.ch/examples/2008/02/05/zooming/source/" title="Example: Zooming Source Code">source</a> of the example above.
+Let us go step by step through the code of the example class called <code>ZoomCanvas</code> that you&#x27;ll find in the <a href="/examples/2008/02/05/zooming/source/" title="Example: Zooming Source Code">source</a> of the example above.
 
 Let&#x27;s say you have an object you want to scale at a certain point.
 First, you get its transformation <code>Matrix</code>:

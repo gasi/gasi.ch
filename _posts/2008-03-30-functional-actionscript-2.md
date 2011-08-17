@@ -224,7 +224,7 @@ Isn't the expressivess of this code just beautiful?
 Like what you saw? Have look at it, download it, and play with it!
 <blockquote class="info">
 <h2>Source</h2>
-<a href="http://gasi.ch/examples/2008/03/31/functional-actionscript-part-2/source/">View Source</a> | <a href="http://gasi.ch/examples/2008/03/31/functional-actionscript-part-2/source/FunctionalActionScript2.zip">Download Source (ZIP, 3KB)</a>
+<a href="/examples/2008/03/31/functional-actionscript-part-2/source/">View Source</a> | <a href="/examples/2008/03/31/functional-actionscript-part-2/source/FunctionalActionScript2.zip">Download Source (ZIP, 3KB)</a>
 </blockquote>
 
 Thank you for your attention and stay tuned for Part III of <em>Functional ActionScript</em>&hellip;
