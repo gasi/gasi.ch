@@ -8,5 +8,6 @@ mv examples blog/examples
 mv favicon.ico blog/favicon.ico
 mv images blog/images
 mv index.html blog/index.html
+mv feed.xml blog/feed.xml
 mv stylesheets blog/stylesheets
 cd -
