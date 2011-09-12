@@ -11,5 +11,33 @@ layout: default
                title="Permanent Link: {{ page.title }}">{{ page.title }}</a>
         </h1>
         <div class="entry">{{ content }}</div>
+
+        <div class="sharing">
+            <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+            <fb:like
+                id="facebook-button"
+                href="http://www.gasi.ch{{ page.url }}"
+                layout="button_count"
+                width="90px"
+                style="top:-3px"></fb:like>
+
+            <a id="twitter-button"
+               class="twitter-share-button"
+               data-url="http://gasi.ch{{ page.url }}"
+               data-text="{{ page.title }}"
+               data-via="gasi"
+               data-related="gasi:Daniel Gasienica"
+               href="http://twitter.com/share">Tweet</a>
+            <script async type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+            <g:plusone size="medium"></g:plusone>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
     </div>
 </div>
