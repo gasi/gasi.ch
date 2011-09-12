@@ -11,3 +11,6 @@ mv index.html blog/index.html
 mv feed.xml blog/feed.xml
 mv styles blog/styles
 cd -
+
+rm -rf ../public/blog
+mv _site/blog ../public/blog
