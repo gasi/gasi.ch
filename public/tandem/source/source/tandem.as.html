@@ -1,0 +1,77 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>tandem.as</title>
+<link rel="stylesheet" type="text/css" href="../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptComment">////////////////////////////////////////////////////////////////////////////////
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem. explore your world.
+</span><span class="ActionScriptComment">//  Copyright (c) 2008 Daniel Gasienica (daniel@gasienica.ch)
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem is free software: you can redistribute it and/or modify
+</span><span class="ActionScriptComment">//  it under the terms of the GNU Affero General Public License as published by
+</span><span class="ActionScriptComment">//  the Free Software Foundation, either version 3 of the License, or
+</span><span class="ActionScriptComment">//  (at your option) any later version.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem is distributed in the hope that it will be useful,
+</span><span class="ActionScriptComment">//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+</span><span class="ActionScriptComment">//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+</span><span class="ActionScriptComment">//  GNU Affero General Public License for more details.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  You should have received a copy of the GNU Affero General Public License
+</span><span class="ActionScriptComment">//  along with tandem. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">////////////////////////////////////////////////////////////////////////////////
+</span><span class="ActionScriptpackage">package</span>
+<span class="ActionScriptBracket/Brace">{</span>
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">com</span>.<span class="ActionScriptDefault_Text">adobe</span>.<span class="ActionScriptDefault_Text">viewsource</span>.<span class="ActionScriptDefault_Text">ViewSource</span>;
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Sprite</span>;
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">org</span>.<span class="ActionScriptDefault_Text">hasseg</span>.<span class="ActionScriptDefault_Text">externalMouseWheel</span>.<span class="ActionScriptDefault_Text">ExternalMouseWheelSupport</span>;
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">tandem</span>.<span class="ActionScriptDefault_Text">core</span>.<span class="ActionScriptDefault_Text">Application</span>;
+
+<span class="ActionScriptASDoc">/**
+* Bootstrapper
+*/</span>
+<span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptDefault_Text">SWF</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">width</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">&quot;900&quot;</span>, <span class="ActionScriptDefault_Text">height</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">&quot;600&quot;</span>, <span class="ActionScriptDefault_Text">frameRate</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">&quot;60&quot;</span>, <span class="ActionScriptDefault_Text">backgroundColor</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">&quot;#222222&quot;</span><span class="ActionScriptBracket/Brace">)]</span>
+<span class="ActionScriptReserved">public</span> <span class="ActionScriptclass">class</span> <span class="ActionScriptDefault_Text">tandem</span> <span class="ActionScriptReserved">extends</span> <span class="ActionScriptDefault_Text">Sprite</span>
+<span class="ActionScriptBracket/Brace">{</span>    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Constructor
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>        
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">tandem</span><span class="ActionScriptBracket/Brace">()</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptComment">// enable Mac OS X mouse wheel support
+</span>        <span class="ActionScriptDefault_Text">ExternalMouseWheelSupport</span>.<span class="ActionScriptDefault_Text">getInstance</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">stage</span> <span class="ActionScriptBracket/Brace">)</span>
+
+        <span class="ActionScriptComment">// instantiate tandem
+</span>        <span class="ActionScriptDefault_Text">application</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Application</span><span class="ActionScriptBracket/Brace">()</span>
+        
+        <span class="ActionScriptComment">// enable view source
+</span>        <span class="ActionScriptDefault_Text">ViewSource</span>.<span class="ActionScriptDefault_Text">addMenuItem</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">application</span>, <span class="ActionScriptString">&quot;source/index.html&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+
+        <span class="ActionScriptComment">// go, go, go!
+</span>        <span class="ActionScriptDefault_Text">addChild</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">application</span> <span class="ActionScriptBracket/Brace">)</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Children
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------    
+</span>    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">application</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Application</span>
+<span class="ActionScriptBracket/Brace">}</span>
+    
+<span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>

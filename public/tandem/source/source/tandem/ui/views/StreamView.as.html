@@ -1,0 +1,254 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>StreamView.as</title>
+<link rel="stylesheet" type="text/css" href="../../../../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptComment">////////////////////////////////////////////////////////////////////////////////
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem. explore your world.
+</span><span class="ActionScriptComment">//  Copyright (c) 2007–2008 Daniel Gasienica (daniel@gasienica.ch)
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem is free software: you can redistribute it and/or modify
+</span><span class="ActionScriptComment">//  it under the terms of the GNU Affero General Public License as published by
+</span><span class="ActionScriptComment">//  the Free Software Foundation, either version 3 of the License, or
+</span><span class="ActionScriptComment">//  (at your option) any later version.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem is distributed in the hope that it will be useful,
+</span><span class="ActionScriptComment">//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+</span><span class="ActionScriptComment">//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+</span><span class="ActionScriptComment">//  GNU Affero General Public License for more details.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  You should have received a copy of the GNU Affero General Public License
+</span><span class="ActionScriptComment">//  along with tandem. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">////////////////////////////////////////////////////////////////////////////////
+</span><span class="ActionScriptpackage">package</span> <span class="ActionScriptDefault_Text">tandem</span>.<span class="ActionScriptDefault_Text">ui</span>.<span class="ActionScriptDefault_Text">views</span>
+<span class="ActionScriptBracket/Brace">{</span>
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">br</span>.<span class="ActionScriptDefault_Text">com</span>.<span class="ActionScriptDefault_Text">stimuli</span>.<span class="ActionScriptDefault_Text">loading</span>.<span class="ActionScriptDefault_Text">BulkLoader</span>;
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">caurina</span>.<span class="ActionScriptDefault_Text">transitions</span>.<span class="ActionScriptDefault_Text">Tweener</span>;
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Graphics</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Shape</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Sprite</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">events</span>.<span class="ActionScriptDefault_Text">Event</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">events</span>.<span class="ActionScriptDefault_Text">TimerEvent</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">geom</span>.<span class="ActionScriptDefault_Text">Rectangle</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">utils</span>.<span class="ActionScriptDefault_Text">Timer</span>;
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">tandem</span>.<span class="ActionScriptDefault_Text">core</span>.<span class="ActionScriptDefault_Text">zooming</span>.<span class="ActionScriptDefault_Text">IZoomModel</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">tandem</span>.<span class="ActionScriptDefault_Text">core</span>.<span class="ActionScriptDefault_Text">zooming</span>.<span class="ActionScriptDefault_Text">IZoomable</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">tandem</span>.<span class="ActionScriptDefault_Text">core</span>.<span class="ActionScriptDefault_Text">zooming</span>.<span class="ActionScriptDefault_Text">ZoomModelEvent</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">tandem</span>.<span class="ActionScriptDefault_Text">ui</span>.<span class="ActionScriptDefault_Text">views</span>.<span class="ActionScriptDefault_Text">renderers</span>.<span class="ActionScriptDefault_Text">PhotoRenderer</span>;
+
+<span class="ActionScriptReserved">public</span> <span class="ActionScriptclass">class</span> <span class="ActionScriptDefault_Text">StreamView</span> <span class="ActionScriptReserved">extends</span> <span class="ActionScriptDefault_Text">Sprite</span> <span class="ActionScriptReserved">implements</span> <span class="ActionScriptDefault_Text">IZoomable</span>
+<span class="ActionScriptBracket/Brace">{</span>
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Constructor
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptASDoc">/**
+    * Constructor.
+    */</span>
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">StreamView</span><span class="ActionScriptBracket/Brace">()</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptDefault_Text">createLoader</span><span class="ActionScriptBracket/Brace">()</span>
+        <span class="ActionScriptDefault_Text">createTimer</span><span class="ActionScriptBracket/Brace">()</span>
+        <span class="ActionScriptDefault_Text">createBackground</span><span class="ActionScriptBracket/Brace">()</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Class constants
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptReserved">static</span> <span class="ActionScriptReserved">const</span> <span class="ActionScriptDefault_Text">RENDER_DELAY</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 180
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptReserved">static</span> <span class="ActionScriptReserved">const</span> <span class="ActionScriptDefault_Text">ZOOM_IN_THRESHOLD</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 3
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptReserved">static</span> <span class="ActionScriptReserved">const</span> <span class="ActionScriptDefault_Text">ZOOM_OUT_THRESHOLD</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 3.6
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Variables
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">numRows</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 11
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">numColumns</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 100
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">spacing</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 200
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">padding</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> 1500
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">loader</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">BulkLoader</span>
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">renderers</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptComment">/* of PhotoRenderer */</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">[]</span>
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">timer</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Timer</span>
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">background</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Shape</span>
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Properties
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>
+    <span class="ActionScriptComment">//----------------------------------
+</span>    <span class="ActionScriptComment">//  model
+</span>    <span class="ActionScriptComment">//----------------------------------
+</span>    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">_model</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">IZoomModel</span>
+    
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptReserved">get</span> <span class="ActionScriptDefault_Text">model</span><span class="ActionScriptBracket/Brace">()</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">IZoomModel</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">_model</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptReserved">set</span> <span class="ActionScriptDefault_Text">model</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">value</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">IZoomModel</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptDefault_Text">_model</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">value</span>
+        <span class="ActionScriptDefault_Text">_model</span>.<span class="ActionScriptDefault_Text">addEventListener</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">ZoomModelEvent</span>.<span class="ActionScriptDefault_Text">CHANGE</span>, <span class="ActionScriptDefault_Text">model_changeHandler</span> <span class="ActionScriptBracket/Brace">)</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Methods
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">addItem</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">item</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>        
+        <span class="ActionScriptDefault_Text">addRenderer</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">item</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptDefault_Text">model_changeHandler</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptReserved">null</span> <span class="ActionScriptBracket/Brace">)</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Event Handlers
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">model_changeHandler</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">event</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">ZoomModelEvent</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptDefault_Text">timer</span>.<span class="ActionScriptDefault_Text">reset</span><span class="ActionScriptBracket/Brace">()</span>
+        <span class="ActionScriptDefault_Text">timer</span>.<span class="ActionScriptDefault_Text">start</span><span class="ActionScriptBracket/Brace">()</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">timer_completeHandler</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">event</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">TimerEvent</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">vp</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Rectangle</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">model</span>.<span class="ActionScriptDefault_Text">viewport</span>
+        
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">factorX</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span>  <span class="ActionScriptDefault_Text">width</span> <span class="ActionScriptOperator">/</span> <span class="ActionScriptDefault_Text">scaleX</span>
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">factorY</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span>  <span class="ActionScriptDefault_Text">height</span> <span class="ActionScriptOperator">/</span> <span class="ActionScriptDefault_Text">scaleY</span>
+        
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">window</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Rectangle</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Rectangle</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">vp</span>.<span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">factorX</span>, <span class="ActionScriptDefault_Text">vp</span>.<span class="ActionScriptDefault_Text">y</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">factorY</span>,
+                                    <span class="ActionScriptDefault_Text">vp</span>.<span class="ActionScriptDefault_Text">width</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">factorX</span>, <span class="ActionScriptDefault_Text">vp</span>.<span class="ActionScriptDefault_Text">height</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">factorY</span> <span class="ActionScriptBracket/Brace">)</span>
+        
+        <span class="ActionScriptComment">// TODO:
+</span>        <span class="ActionScriptComment">// This is really inefficient =(
+</span>        <span class="ActionScriptComment">// Implement some smart data structure (QuadTree) to quickly find all
+</span>        <span class="ActionScriptComment">// visible renderers for dynamically loading a memory friendly resolution. 
+</span>        
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">numRenderers</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">uint</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">renderers</span>.<span class="ActionScriptDefault_Text">length</span>
+        
+        <span class="ActionScriptReserved">for</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">i</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">numRenderers</span> <span class="ActionScriptOperator">-</span> 1; <span class="ActionScriptDefault_Text">i</span> <span class="ActionScriptOperator">&gt;=</span> 0; <span class="ActionScriptDefault_Text">i</span><span class="ActionScriptOperator">--</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">renderer</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">renderers</span><span class="ActionScriptBracket/Brace">[</span> <span class="ActionScriptDefault_Text">i</span> <span class="ActionScriptBracket/Brace">]</span>
+            
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">bounds</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Rectangle</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">getBounds</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptReserved">this</span> <span class="ActionScriptBracket/Brace">)</span>
+                
+            <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">window</span>.<span class="ActionScriptDefault_Text">containsRect</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">bounds</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">||</span> <span class="ActionScriptDefault_Text">bounds</span>.<span class="ActionScriptDefault_Text">containsRect</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">window</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+                <span class="ActionScriptOperator">&amp;&amp;</span> <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">data</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptBracket/Brace">{</span>
+               <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">model</span>.<span class="ActionScriptDefault_Text">zoom</span> <span class="ActionScriptOperator">&gt;</span> <span class="ActionScriptDefault_Text">ZOOM_IN_THRESHOLD</span> <span class="ActionScriptBracket/Brace">)</span>
+               <span class="ActionScriptBracket/Brace">{</span>
+                   <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">displayQuality</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span>.<span class="ActionScriptDefault_Text">MEDIUM</span>                   
+               <span class="ActionScriptBracket/Brace">}</span>
+               <span class="ActionScriptReserved">else</span> <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">model</span>.<span class="ActionScriptDefault_Text">zoom</span> <span class="ActionScriptOperator">&lt;</span> <span class="ActionScriptDefault_Text">ZOOM_OUT_THRESHOLD</span> <span class="ActionScriptBracket/Brace">)</span>
+               <span class="ActionScriptBracket/Brace">{</span>
+                   <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">displayQuality</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span>.<span class="ActionScriptDefault_Text">LOW</span>                   
+               <span class="ActionScriptBracket/Brace">}</span>
+            <span class="ActionScriptBracket/Brace">}</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+    <span class="ActionScriptBracket/Brace">}</span>    
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Methods: Internal
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">addRenderer</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">data</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">renderer</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span><span class="ActionScriptBracket/Brace">()</span>
+            <span class="ActionScriptDefault_Text">renderers</span>.<span class="ActionScriptDefault_Text">push</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">renderer</span> <span class="ActionScriptBracket/Brace">)</span>
+        
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">index</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">renderers</span>.<span class="ActionScriptDefault_Text">length</span> <span class="ActionScriptOperator">-</span> 1
+        
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">row</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">uint</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">index</span> <span class="ActionScriptOperator">%</span> <span class="ActionScriptDefault_Text">numRows</span>
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">column</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">uint</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">Math</span>.<span class="ActionScriptDefault_Text">floor</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">index</span> <span class="ActionScriptOperator">/</span> <span class="ActionScriptDefault_Text">numRows</span> <span class="ActionScriptBracket/Brace">)</span>
+        
+            <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">padding</span> <span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">column</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span>.<span class="ActionScriptDefault_Text">DEFAULT_WIDTH</span> <span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">spacing</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">y</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">padding</span> <span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">row</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span>.<span class="ActionScriptDefault_Text">DEFAULT_HEIGHT</span> <span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">spacing</span> <span class="ActionScriptBracket/Brace">)</span>
+            
+            <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">data</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">data</span>
+            <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">loader</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">loader</span>
+            
+            <span class="ActionScriptDefault_Text">renderer</span>.<span class="ActionScriptDefault_Text">alpha</span> <span class="ActionScriptOperator">=</span> 0
+            <span class="ActionScriptDefault_Text">addChild</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">renderer</span> <span class="ActionScriptBracket/Brace">)</span>
+            
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">newWidth</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span>  <span class="ActionScriptDefault_Text">Math</span>.<span class="ActionScriptDefault_Text">min</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">column</span> <span class="ActionScriptOperator">+</span> 1, <span class="ActionScriptDefault_Text">numColumns</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span>.<span class="ActionScriptDefault_Text">DEFAULT_WIDTH</span>  <span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">spacing</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">+</span> 2 <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">padding</span>
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">newHeight</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">Math</span>.<span class="ActionScriptDefault_Text">max</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">row</span>, <span class="ActionScriptDefault_Text">numRows</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">PhotoRenderer</span>.<span class="ActionScriptDefault_Text">DEFAULT_HEIGHT</span> <span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">spacing</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">+</span> 2 <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">padding</span>
+            
+            <span class="ActionScriptDefault_Text">resizeBackground</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">newWidth</span>, <span class="ActionScriptDefault_Text">newHeight</span> <span class="ActionScriptBracket/Brace">)</span>
+            
+            <span class="ActionScriptDefault_Text">Tweener</span>.<span class="ActionScriptDefault_Text">addTween</span><span class="ActionScriptBracket/Brace">(</span>
+                                <span class="ActionScriptDefault_Text">renderer</span>,
+                                <span class="ActionScriptBracket/Brace">{</span>
+                                    <span class="ActionScriptDefault_Text">alpha</span><span class="ActionScriptOperator">:</span> 1,
+                                    <span class="ActionScriptDefault_Text">time</span><span class="ActionScriptOperator">:</span> 2,
+                                    <span class="ActionScriptDefault_Text">delay</span><span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">index</span> <span class="ActionScriptOperator">/</span> 100 
+                                <span class="ActionScriptBracket/Brace">}</span>
+                            <span class="ActionScriptBracket/Brace">)</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">createBackground</span><span class="ActionScriptBracket/Brace">()</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptDefault_Text">background</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Shape</span><span class="ActionScriptBracket/Brace">()</span>
+        <span class="ActionScriptDefault_Text">resizeBackground</span><span class="ActionScriptBracket/Brace">(</span> 100, 100 <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptDefault_Text">addChild</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">background</span> <span class="ActionScriptBracket/Brace">)</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">resizeBackground</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">width</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span>, <span class="ActionScriptDefault_Text">height</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">g</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Graphics</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">background</span>.<span class="ActionScriptDefault_Text">graphics</span>
+        
+            <span class="ActionScriptDefault_Text">g</span>.<span class="ActionScriptDefault_Text">clear</span><span class="ActionScriptBracket/Brace">()</span>
+            <span class="ActionScriptDefault_Text">g</span>.<span class="ActionScriptDefault_Text">beginFill</span><span class="ActionScriptBracket/Brace">(</span> 0<span class="ActionScriptDefault_Text">x333333</span>, 0 <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptDefault_Text">g</span>.<span class="ActionScriptDefault_Text">drawRect</span><span class="ActionScriptBracket/Brace">(</span> 0, 0, <span class="ActionScriptDefault_Text">width</span>, <span class="ActionScriptDefault_Text">height</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptDefault_Text">g</span>.<span class="ActionScriptDefault_Text">endFill</span><span class="ActionScriptBracket/Brace">()</span>
+            
+       <span class="ActionScriptDefault_Text">dispatchEvent</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Event</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;resize&quot;</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>            
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">createTimer</span><span class="ActionScriptBracket/Brace">()</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>   
+        <span class="ActionScriptDefault_Text">timer</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Timer</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">RENDER_DELAY</span>, 1 <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptDefault_Text">timer</span>.<span class="ActionScriptDefault_Text">addEventListener</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">TimerEvent</span>.<span class="ActionScriptDefault_Text">TIMER_COMPLETE</span>, <span class="ActionScriptDefault_Text">timer_completeHandler</span> <span class="ActionScriptBracket/Brace">)</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">createLoader</span><span class="ActionScriptBracket/Brace">()</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+    <span class="ActionScriptBracket/Brace">{</span>   
+        <span class="ActionScriptDefault_Text">loader</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">BulkLoader</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;photoLoader&quot;</span> <span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">Math</span>.<span class="ActionScriptDefault_Text">random</span><span class="ActionScriptBracket/Brace">()</span>.<span class="ActionScriptDefault_Text">toString</span><span class="ActionScriptBracket/Brace">()</span> <span class="ActionScriptBracket/Brace">)</span>
+        
+        <span class="ActionScriptComment">// TODO
+</span>        <span class="ActionScriptDefault_Text">loader</span>.<span class="ActionScriptDefault_Text">logLevel</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">BulkLoader</span>.<span class="ActionScriptDefault_Text">LOG_ERRORS</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+<span class="ActionScriptBracket/Brace">}</span>
+
+<span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>

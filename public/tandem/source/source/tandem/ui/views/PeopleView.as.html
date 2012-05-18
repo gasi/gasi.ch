@@ -1,0 +1,74 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>PeopleView.as</title>
+<link rel="stylesheet" type="text/css" href="../../../../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptComment">////////////////////////////////////////////////////////////////////////////////
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem. explore your world.
+</span><span class="ActionScriptComment">//  Copyright (c) 2007–2008 Daniel Gasienica (daniel@gasienica.ch)
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem is free software: you can redistribute it and/or modify
+</span><span class="ActionScriptComment">//  it under the terms of the GNU Affero General Public License as published by
+</span><span class="ActionScriptComment">//  the Free Software Foundation, either version 3 of the License, or
+</span><span class="ActionScriptComment">//  (at your option) any later version.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  tandem is distributed in the hope that it will be useful,
+</span><span class="ActionScriptComment">//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+</span><span class="ActionScriptComment">//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+</span><span class="ActionScriptComment">//  GNU Affero General Public License for more details.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">//  You should have received a copy of the GNU Affero General Public License
+</span><span class="ActionScriptComment">//  along with tandem. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+</span><span class="ActionScriptComment">//
+</span><span class="ActionScriptComment">////////////////////////////////////////////////////////////////////////////////
+</span><span class="ActionScriptpackage">package</span> <span class="ActionScriptDefault_Text">tandem</span>.<span class="ActionScriptDefault_Text">ui</span>.<span class="ActionScriptDefault_Text">views</span>
+<span class="ActionScriptBracket/Brace">{</span>
+
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">GradientType</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Loader</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Sprite</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">geom</span>.<span class="ActionScriptDefault_Text">Matrix</span>;
+<span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">net</span>.<span class="ActionScriptDefault_Text">URLRequest</span>;
+
+<span class="ActionScriptReserved">public</span> <span class="ActionScriptclass">class</span> <span class="ActionScriptDefault_Text">PeopleView</span> <span class="ActionScriptReserved">extends</span> <span class="ActionScriptDefault_Text">Sprite</span>
+<span class="ActionScriptBracket/Brace">{</span>  
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Constructor
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptASDoc">/**
+    * Constructor.
+    */</span>
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">PeopleView</span><span class="ActionScriptBracket/Brace">()</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">matrix</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Matrix</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Matrix</span><span class="ActionScriptBracket/Brace">()</span>
+            <span class="ActionScriptDefault_Text">matrix</span>.<span class="ActionScriptDefault_Text">createGradientBox</span><span class="ActionScriptBracket/Brace">(</span> 1000, 200, <span class="ActionScriptDefault_Text">Math</span>.<span class="ActionScriptDefault_Text">PI</span> <span class="ActionScriptOperator">/</span> 4 <span class="ActionScriptBracket/Brace">)</span>
+            
+        <span class="ActionScriptDefault_Text">graphics</span>.<span class="ActionScriptDefault_Text">beginGradientFill</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">GradientType</span>.<span class="ActionScriptDefault_Text">LINEAR</span>, <span class="ActionScriptBracket/Brace">[</span> 0<span class="ActionScriptDefault_Text">x444444</span>, 0<span class="ActionScriptDefault_Text">xCCCCCC</span> <span class="ActionScriptBracket/Brace">]</span>,
+                                    <span class="ActionScriptBracket/Brace">[</span> 1, 1 <span class="ActionScriptBracket/Brace">]</span>, <span class="ActionScriptBracket/Brace">[</span> 0, 255 <span class="ActionScriptBracket/Brace">]</span>, <span class="ActionScriptDefault_Text">matrix</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptDefault_Text">graphics</span>.<span class="ActionScriptDefault_Text">drawRect</span><span class="ActionScriptBracket/Brace">(</span> 0, 0, 2592, 3872 <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptDefault_Text">graphics</span>.<span class="ActionScriptDefault_Text">endFill</span><span class="ActionScriptBracket/Brace">()</span>
+        
+        <span class="ActionScriptDefault_Text">loader</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Loader</span><span class="ActionScriptBracket/Brace">()</span>
+        <span class="ActionScriptDefault_Text">loader</span>.<span class="ActionScriptDefault_Text">load</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">URLRequest</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;http://farm2.static.flickr.com/1275/544443647_cf854369de_o.jpg&quot;</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptDefault_Text">addChild</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">loader</span> <span class="ActionScriptBracket/Brace">)</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+    
+    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//  Children
+</span>    <span class="ActionScriptComment">//
+</span>    <span class="ActionScriptComment">//--------------------------------------------------------------------------
+</span>    
+    <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">loader</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Loader</span>
+    
+<span class="ActionScriptBracket/Brace">}</span>
+    
+<span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>
