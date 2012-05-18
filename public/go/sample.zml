@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--
+  - Zooming Markup Language
+  - Copyright (c) Zoomorama 2008.
+  - All rights reserved.
+  -->
+<?xml-stylesheet href="sample.css" type="text/css"?>
+
+<!DOCTYPE zml [
+  <!ENTITY % stuffDTD SYSTEM "../sample.dtd" > %stuffDTD;
+]>
+
+<zml xmlns="http://www.zoomorama.com/ns/ZML/1.0"
+     width="15000" 
+     height="15000"
+     defaultWaypoint="start">
+  
+  <!-- Waypoints -->
+  <waypoints>
+    <waypoint id="start" x="0" y="0" z="1"/>
+  </waypoints>
+
+  
+  <!-- Layers -->  
+  <layer>
+    <image
+      src="http://farm4.static.flickr.com/3169/2585499840_f5311d6bf4.jpg"
+      width="500"
+      height="375"
+      left="0"
+      top="0"
+      alt="Au Marché"
+      />
+    <image
+      src="http://farm4.static.flickr.com/3144/2616583160_54e382b350_b.jpg"
+      width="1024"
+      height="683"
+      alt=""
+      bottom="0"
+      right="0"
+      />
+    <image
+      src="http://farm4.static.flickr.com/3066/2585395780_8f3fc8cfe1.jpg"
+      width="500"
+      height="375"
+      alt=""
+      right="0"
+      top="0"
+      />
+   <image
+      src="http://farm4.static.flickr.com/3173/2585480662_b3cfcd284b.jpg"
+      width="500"
+      height="375"
+      alt=""
+      bottom="0"
+      left="0"
+      />  
+   <image
+      src="http://farm4.static.flickr.com/3263/2578241631_c77b58d7cd_b.jpg"
+      width="1024"
+      height="686"
+      centerx="0"
+      centery="0"
+      />
+  
+  <!-- First row -->
+  <image
+    left="520"
+    centery="-310"
+    width="800"
+    height="600"
+    src="http://zoomodev.com:8080/zoomomail/d8b2365e7a75ab963450afd060a939e1/c095f3b0289f43b04397168881a5327b/Vietnam951695Sept95200795038329799684.zif" 
+    />
+  <image
+    left="1340"
+    centery="-310"
+    width="800"
+    height="600"
+    src="http://zoomodev.com:8080/zoomomail/d8b2365e7a75ab963450afd060a939e1/c095f3b0289f43b04397168881a5327b/Vietnam951695Sept95200795038229791684.zif" 
+    />
+  <image
+    left="2160"
+    centery="-310"
+    width="800"
+    height="600"
+    src="http://zoomodev.com:8080/zoomomail/d8b2365e7a75ab963450afd060a939e1/c095f3b0289f43b04397168881a5327b/Vietnam951695Sept95200795038829839684.zif" 
+    />
+  <image
+    left="3640"
+    centery="-310"
+    width="800"
+    height="600"
+    src="http://zoomodev.com:8080/zoomomail/d8b2365e7a75ab963450afd060a939e1/c095f3b0289f43b04397168881a5327b/Vietnam951695Sept95200795038429807684.zif" 
+    />
+  <image
+    left="5280"
+    centery="-310"
+    width="800"
+    height="600"
+    src="http://zoomodev.com:8080/zoomomail/d8b2365e7a75ab963450afd060a939e1/c095f3b0289f43b04397168881a5327b/Vietnam951695Sept95200795038529815684.zif" 
+    />
+    
+  <image
+    centerx="2592"
+    centery="1944"
+    width="2592"
+    height="1944"
+    src="http://zoomodev.com:8080/zoomomail/3faf8c1b7bb8a88d4f06d3c042770025/4435b5430da778a1311a50970ce1e7e8/Photo372006325845476.zif" 
+    />
+  <image
+    centerx="0"
+    bottom="800"
+    width="2592"
+    height="1944"
+    src="http://zoomodev.com:8080/zoomomail/3faf8c1b7bb8a88d4f06d3c042770025/4435b5430da778a1311a50970ce1e7e8/Photo372002425824276.zif" 
+    />
+  <image
+    top="2000"
+    centerx="0"
+    width="3182"
+    height="3952"
+    src="http://zoomodev.com:8080/zoomomail/3faf8c1b7bb8a88d4f06d3c042770025/4435b5430da778a1311a50970ce1e7e8/RF349822673271.zif" 
+    />
+  <image
+    right="800"
+    centery="0"
+    width="2676"
+    height="4042"
+    src="http://zoomodev.com:8080/zoomomail/3faf8c1b7bb8a88d4f06d3c042770025/4435b5430da778a1311a50970ce1e7e8/RF288422659471.zif" 
+    />
+  </layer>
+  
+  <layer attachment="fixed">
+    <image
+      src="http://www.zoomorama.com/img/new/zr_logo.png"
+      width="&logoWidth;"
+      height="&logoHeight;"
+      top="12"
+      left="12"
+      />
+  </layer>
+</zml>
