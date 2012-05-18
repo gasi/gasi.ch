@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Wurstwaren]]></de>
+			<en><![CDATA[Sausages]]></en>
+			<fr><![CDATA[Charcuterie/Salaison]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[<b>Für Vacuum oder MAP</b><br>Konsumentenfreundliche Packsysteme (auch easy-opening/PEEL) mit massgeschneiderten Barrierewerten erlauben max Haltbarkeit am POS.]]></de>
+			<en><![CDATA[<b>Pour sous vide ou sous atmospère contrôlée</b><br>Les systèmes d'emballage (y compris les films pelables), comfortables pour les consommateurs, avec valeurs de barrière sur mesure, permettent le maximum de DLC au point de vente.]]></en>
+			<fr><![CDATA[<b>Vacuum and MAP</b><br>Consumer-friendly packaging systems (including easy opening/PEEL) with barrier properties to your specifications allow maximum shelf-life in the supermarket/at POS (point of sale).]]></fr>
+		</texts>
+		<images>
+			<image path="wurstwaren_1.jpg" />
+			<image path="wurstwaren_2.jpg" />
+			<image path="wurstwaren_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

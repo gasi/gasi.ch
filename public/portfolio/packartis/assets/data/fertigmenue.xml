@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Fertigmenu]]></de>
+			<en><![CDATA[Ready meals]]></en>
+			<fr><![CDATA[Plat préparés]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Ihre Rezepte und Geschmacksrichtungen werden mit unseren Packsystemen erhalten.<br>Zudem unterstützen wir Sie mit verkaufsfördernden Druckrealisierungen.]]></de>
+			<en><![CDATA[Use our packaging systems to protect your flavours and recipes;<br>boost your sales with attractive printing designs.]]></en>
+			<fr><![CDATA[Vos recettes et goûts sont conservés par nos systèmes d'emballage<br>Et nous vous assistons avec des réalisations d'imrpession qui favorisent la commercialisation.]]></fr>
+		</texts>
+		<images>
+			<image path="fertigmenue_1.jpg" />
+			<image path="fertigmenue_2.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

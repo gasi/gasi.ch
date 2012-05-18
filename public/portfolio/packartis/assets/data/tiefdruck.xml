@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Tiefdruck]]></de>
+			<en><![CDATA[Rotogravure print]]></en>
+			<fr><![CDATA[Héliogravure]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Für hochwertige Photoreproduktionen oder grosse Druckaufträge. Die Zusammenarbeit mit den besten Zylinderherstellern in Verbindung mit unseren Tiefdruckanlagen stellt die Realisation aller Ihrer Kreationen sicher.<br><br>Feinste Halbtöne und Spezialeffekte unterstützen Sie in der Schaffung verkaufsfördernder Packungen.]]></de>
+			<en><![CDATA[For high-quality photo reproductions and large jobs. All your creations benefit from the combination of our rotogravure printing press and cooperation with the best cylinder manufacturers.<br><br>Use the most delicate half-tones and special effects to create attractive packaging.]]></en>
+			<fr><![CDATA[Pour les reproductions photo de grande qualité ou les commandes d’impression importantes. Notre collaboration avec les meilleurs graveurs/fabricants de cylindres, associée à nos installations d’héliogravure, garantit la réalisation de toutes vos créations.<br><br>Les demi-tons les plus fins et les effets spéciaux vous aident à créer des emballages attrayants et vendeurs.]]></fr>
+		</texts>
+		<images>
+			<image path="tiefdruck_2.jpg" />
+			<image path="tiefdruck_1.jpg" />
+			<image path="tiefdruck_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

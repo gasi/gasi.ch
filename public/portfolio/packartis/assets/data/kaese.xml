@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Käse]]></de>
+			<en><![CDATA[Cheese]]></en>
+			<fr><![CDATA[Fromage]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Ob Supermarktpackung oder Reifepackung<br>Mit unseren speziellen Schichtkombinationen gibt es massgeschneiderte Lösungen für ein wertvolles Nahrungsmittel.]]></de>
+			<en><![CDATA[For curing or consumer-size packaging<br>Combine different layers of special film in a customized solution for this valuable dairy product.]]></en>
+			<fr><![CDATA[Emballage pour libre-service ou pour affinage<br>Avec nos combinaisons de couches spécifiques, il y a des solutions sur mesure pour un aliment délicat.]]></fr>
+		</texts>
+		<images>
+			<image path="kaese_1.jpg" />
+			<image path="kaese_2.jpg" />
+			<image path="kaese_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

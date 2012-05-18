@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Gemüse und Salate]]></de>
+			<en><![CDATA[Salads/Vegetables]]></en>
+			<fr><![CDATA[Salade/Légumes]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Den Nährstoffabbau zu verhindern ist die Funktion unserer Folien, die auch Pasteurisation oder Sterilisation zwecks längerer Haltbarkeit mitmachen.]]></de>
+			<en><![CDATA[Our films prevent the degradation of valuable nutrients, and resist pasteurization and sterilization for longer shelf-life.]]></en>
+			<fr><![CDATA[Eviter la réduction des substances alimentaires est la fonction de nos complexes qui permettent	aussi la pasteurisation ou stérilisation pour améliorer la conservation.]]></fr>
+		</texts>
+		<images>
+			<image path="gemuese_1.jpg" />
+			<image path="gemuese_2.jpg" />
+			<image path="gemuese_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Fleisch]]></de>
+			<en><![CDATA[Meat]]></en>
+			<fr><![CDATA[Viande]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Die gezielte Anwendung von Hoch- und Mittelbarrierefolien erlaubt eine optimale Reifung und verhindert das Aussaften der wertvollen Stücke.]]></de>
+			<en><![CDATA[Specific use of high and medium barrier films allows optimal curing and prevents weight loss in your prime cuts.]]></en>
+			<fr><![CDATA[L'application ciblée des complexes à moyenne et haute barrière permet un affinage optimale et limite une exsudationtrop importante des morceaux de viandes.]]></fr>
+		</texts>
+		<images>
+			<image path="fleisch_1.jpg" />
+			<image path="fleisch_2.jpg" />
+			<image path="fleisch_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

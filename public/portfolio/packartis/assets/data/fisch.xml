@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Fisch]]></de>
+			<en><![CDATA[Fish]]></en>
+			<fr><![CDATA[Poisson]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Ob geräuchert, mariniert oder tiefgekühlt, ob unter Vacuum oder MAP, in Schalen oder Beuteln<br>Unsere Erfahrung im Fischmarkt, verbunden mit unseren technischen Möglichkeiten, sorgt für besten Schutz vor Verderb.]]></de>
+			<en><![CDATA[Smoked, marinaded or frozen Vacuum and MAP, in trays or pouches<br>Years of experience in the fishing industry, combined with our technical competence, ensure optimum protection.]]></en>
+			<fr><![CDATA[Fumé, mariné ou surgelé, sous vide ou sous atmosphère contrôlée, en barquette ou sachets<br>Notre expérience dans le marché de poisson, en liaison avec nos possiblités techniques, veillent à la protection de vos produits.]]></fr>
+		</texts>
+		<images>
+			<image path="fisch_1.jpg" />
+			<image path="fisch_2.jpg" />
+			<image path="fisch_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

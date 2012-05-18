@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Geflügel]]></de>
+			<en><![CDATA[Poultry]]></en>
+			<fr><![CDATA[Volaille]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Ihre weitentwickelten Produkte benötigen auch hochentwickelte Barrierefolien, damit attraktive Präsentationen und Haltbarkeit zu Ihren interessanten Geschäften werden.]]></de>
+			<en><![CDATA[Be more successful: use state-of-the-art barrier films to present your highly developed products attractively and to extend their shelf-life.]]></en>
+			<fr><![CDATA[Vos produits hautement développés demandent des complexes barrières de haute technologie pour que la présentation attractive et la DLC optimale vous permettent d'obtenir le maximum de succès.]]></fr>
+		</texts>
+		<images>
+			<image path="gefluegel_1.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

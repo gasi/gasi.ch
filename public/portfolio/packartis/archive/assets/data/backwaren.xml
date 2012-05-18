@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Teig- und Backwaren]]></de>
+			<en><![CDATA[Pasta and baked goods]]></en>
+			<fr><![CDATA[Pain et Pâtes]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Die Sauerstoff- und Wasserdampfbarrieren unserer Mehrschichtfolien ermöglichen Ihnen frische Ware im Supermarkt/am Verkaufspunkt (POS) – dazu kommen attraktive Drucke.]]></de>
+			<en><![CDATA[Multilayer films with oxygen and water-vapor barriers guarantee freshness in the supermarket/at POS (point of sale). Attractive printing designs.]]></en>
+			<fr><![CDATA[Barrières Oxygène et vapeur d'eau par nos complexes multi-couches, combinées avec les impressions attractives, vous donnent l'aspect fraicheur sur le point de vente.]]></fr>
+		</texts>
+		<images>
+			<image path="backwaren_1.jpg" />
+			<image path="backwaren_2.jpg" />
+			<image path="backwaren_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

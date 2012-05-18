@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Fleischwaren]]></de>
+			<en><![CDATA[Processed meat]]></en>
+			<fr><![CDATA[Produits carnés]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[<b>Für Vacuum und MAP (Modified Atmosphere Pack)</b><br>Unser breites Foliensortiment präsentiert Ihre Produkte verkaufsfördernd und schont deren Natürlichkeit.]]></de>
+			<en><![CDATA[<b>Vacuum and MAP (modified atmosphere pack)</b><br>Choose from our broad range of films for attractive presentation and to preserve the natural, fresh look of your products.]]></en>
+			<fr><![CDATA[<b>Pour sous vide ou sous atmospère contrôlée</b><br>Notre vaste programme de complexe présente vos produits d'une manière agréable pour la vente et protège leur naturel.]]></fr>
+		</texts>
+		<images>
+			<image path="fleischwaren_1.jpg" />
+			<image path="fleischwaren_2.jpg" />
+			<image path="fleischwaren_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

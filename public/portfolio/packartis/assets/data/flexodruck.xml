@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packartis>
+	<applications>
+		<titles>
+			<de><![CDATA[Flexodruck]]></de>
+			<en><![CDATA[Flexo print]]></en>
+			<fr><![CDATA[Impression flexo]]></fr>
+		</titles>
+		<texts>
+			<de><![CDATA[Ob mit raffinierten Farbkombinationen oder feinen Halbtonarbeiten (Photocolor): der enorm weiterentwickelte Flexodruck eignet sich für kleinere und mittlere Druckaufträge.<br>Die schnelle Abwicklung von Erstaufträgen wird durch unsere eigene computerunterstützte Druckvorbereitung beschleunigt.]]></de>
+			<en><![CDATA[For sophisticated colour combinations and delicate half-tone prints (Photocolor): flexo print has evolved greatly and is the perfect solution for small and medium-size jobs.<br>Computer-aided printing preparation ensures speedy processing of first orders.]]></en>
+			<fr><![CDATA[Qu’il s’agisse de combinaisons de couleurs raffinées ou de travaux en demi-tons très fins (Photocolor): l’impression flexo très perfectionnée convient aux commandes d’impression petites et moyennes.<br>Le déroulement rapide des premières commandes est accéléré par notre propre préparation d’impression assistée par ordinateur.]]></fr>
+		</texts>
+		<images>
+			<image path="flexodruck_1.jpg" />
+			<image path="flexodruck_2.jpg" />
+			<image path="flexodruck_3.jpg" />
+		</images>
+	</applications>
+</packartis>
+
+

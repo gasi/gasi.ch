@@ -1,0 +1,44 @@
+﻿/*
+
+
+        PACKARTIS AG
+        ..................................
+
+
+        developed by:
+
+        Daniel Gasienica
+        Pfaffenacherstrasse 18
+        CH-8142 Uitikon Waldegg
+
+        Phone: 0041 (0)1 492'26'29
+        eMail: info@gasi.ch
+
+        http://www.gasi.ch/
+
+        ..................................
+
+
+*/
+
+html, body
+{
+	margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+body, table, tr, td {
+                font-family: verdana, arial, helvetica, sans-serif;
+                font-size: 10px;
+                color: #ffffff;
+                background-color: #cccccc;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                overflow: auto;
+
+           }
