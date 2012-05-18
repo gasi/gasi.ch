@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dotcloud create gasi
+dotcloud alias add gasi.www www.gasi.ch
+dotcloud alias add gasi.www arbeitswoche.gasi.ch
+dotcloud alias add gasi.www tandem.gasi.ch
