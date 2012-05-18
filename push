@@ -1,3 +1,0 @@
-#!/bin/bash
-
-dotcloud push gasi.www public/ && dotcloud restart gasi.www
