@@ -1,0 +1,109 @@
+body {
+    background: #fff;
+    color: #333;
+    font: 16px/1.8 Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML 5 compatibility */
+article, aside, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+/* Hyperlinks */
+
+a {
+    color: #c10;
+}
+
+a:visited {
+    color: #a10;
+}
+
+#container {
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+}
+
+header {
+    clear: both;
+    margin: .8em 0;
+}
+
+.logo {
+    color: #e10;
+    display: inline;
+    font: bold 2em/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.025em;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    margin: 0 auto;
+}
+
+#profile {
+    clear: both;
+}
+
+#profile .image {
+    float: left;
+    margin-right: 2em;
+}
+
+#info {
+    float: left;
+}
+
+#profile .name {
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 100%;
+}
+
+#profile .byline {
+    font: italic .96em Georgia, serif;
+    line-height: 0;
+}
+
+#things {
+    clear: left;
+    float: left;
+    padding: 0;
+}
+
+.section-title {
+    clear: left;
+    color: #999;
+    margin: .8em 0 .2em 0;
+}
+
+#things .thing {
+    border: 2px solid #eee;
+    float: left;
+    margin: 2px;
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+}
+
+#things .thing > div {
+    display: table;
+    width: 160px;
+    height: 160px;
+}
+
+#things .thing > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer {
+    clear: both;
+    font: italic 16px/1.8 Georgia, serif;
+    text-align: right;
+}
