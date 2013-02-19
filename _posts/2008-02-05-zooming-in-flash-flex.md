@@ -12,7 +12,9 @@ To zoom, use your mouse wheel or the arrow keys on your Keyboard, especially if 
 To rotate the object, press and hold the <code>Alt</code> key while scrolling.
 Panning works with drag and drop or, again, with the arrow keys on your keyboard.
 
-<a href="/blog/examples/2008/02/05/zooming-broken/"><img src="/blog/examples/2008/02/05/zooming-broken/zooming-broken.png" width="460" height="320" alt="Example: Zooming Broken" title="alt="Example: Zooming Broken""></a>
+<a href="/blog/examples/2008/02/05/zooming-broken/">
+  <img src="/blog/examples/2008/02/05/zooming-broken/zooming-broken.png" width="460" height="320" alt="Example: Zooming Broken" title="" alt="Example: Zooming Broken">
+</a>
 
 <a href="/blog/examples/2008/02/05/zooming-broken/">View Example</a>
 </blockquote>
