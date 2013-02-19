@@ -62,7 +62,7 @@
             <h5>Archives</h5>
             <ul>
             {% for post in site.posts %}
-                <li><a href="{{ post.url }}">{{ post.title | strip_html }}</a></li>
+                <li><a href="{{ post.url }}/">{{ post.title | strip_html }}</a></li>
             {% endfor %}
             </ul>
         </div>
