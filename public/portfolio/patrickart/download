@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wget -x -nH -i files.txt
