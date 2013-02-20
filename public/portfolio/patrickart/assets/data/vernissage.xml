@@ -5,7 +5,8 @@
 		<image file="g1.jpg" width="667" color="0x444444" />
 	<spacer />
 		<image file="g5.jpg" width="375" color="0x444444" />
-	<!-- <spacer /> <movie file="ge.jpg" width="360" mWidth="720" mFile="plg_einladung.swf" color="0x444444" /> -->
+	<spacer />
+		<movie file="ge.jpg" width="360" mWidth="720" mFile="plg_einladung.swf" color="0x444444" />
 	<spacer />
 		<image file="g6.jpg" width="667" color="0x444444" />
 	<spacer />
