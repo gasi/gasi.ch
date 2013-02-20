@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plg>
+	<images defaultHeight="500" defaultColor="0x000000" defaultAlpha="100" defaultRatio="2" spacerHeight="250" spacerWidth="6" spacerColor="0x333333" spacerAlpha="100">
+	<spacer width="100" />
+		<image file="g1.jpg" width="667" color="0x444444" />
+	<spacer />
+		<image file="g5.jpg" width="375" color="0x444444" />
+	<!-- <spacer /> <movie file="ge.jpg" width="360" mWidth="720" mFile="plg_einladung.swf" color="0x444444" /> -->
+	<spacer />
+		<image file="g6.jpg" width="667" color="0x444444" />
+	<spacer />
+		<image file="g3.jpg" width="667" color="0x444444" />
+	<spacer />
+		<image file="g2.jpg" width="667" color="0x444444" />
+	<spacer width="100" />
+	</bilder>
+</plg>

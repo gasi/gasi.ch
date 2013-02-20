@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plg>
+	<images defaultHeight="500" defaultColor="0x000000" defaultAlpha="100" defaultRatio="2" spacerHeight="250" spacerWidth="6" spacerColor="0x333333" spacerAlpha="100">
+	<spacer width="100" />
+		<movie file="prt1.jpg" width="200" mWidth="400" mFile="plg_presse_t1.swf" color="0x444444" />
+	<spacer />
+		<movie file="prt2.jpg" width="200" mWidth="400" mFile="plg_presse_t2.swf" color="0x444444" />
+	<spacer />
+		<movie file="prt3.jpg" width="200" mWidth="400" mFile="plg_presse_t3.swf" color="0x444444" />
+	<spacer />
+		<movie file="prt4.jpg" width="200" mWidth="400" mFile="plg_presse_t4.swf" color="0x444444" />
+	<spacer width="100" />
+	</bilder>
+</plg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plg>
+	<images defaultHeight="500" defaultColor="0x000000" defaultAlpha="100" defaultRatio="2" spacerHeight="250" spacerWidth="6" spacerColor="0x333333" spacerAlpha="100">
+	<spacer width="100" />
+		<image file="cheguevara.jpg" width="416" color="0x9FA19D" alt="Che Guevara" dWidth="88" dHeight="75" />
+	<spacer />
+		<image file="daemmerungsaentis.jpg" width="701" color="0xAB9B97" alt="Dämmerung Säntis" dWidth="50" dHeight="70" />
+	<spacer />
+		<image file="serengeti.jpg" width="988" color="0x5F5B54" alt="Serengeti" dWidth="83" dHeight="184" />
+	<spacer />
+		<image file="pattisreif.jpg" width="1124" color="0xC17053" alt="Patti's Reif" dWidth="90" dHeight="200" />
+	<spacer />	
+		<image file="9.jpg" width="676" color="0x8290B4" alt="Wintermeer" dWidth="50" dHeight="70" />
+	<spacer />
+		<image file="6.jpg" width="410" color="0x969E97" alt="Abstrakte Landschaft" dWidth="58" dHeight="48" />
+	<spacer />	
+		<image file="13.jpg" width="564" color="0x3A5258" alt="Küste" dWidth="90" dHeight="100" />
+	<spacer />	
+		<image file="1.jpg" width="331" color="0x4B4C42" alt="Pony II " dWidth="90" dHeight="120" />
+	<spacer width="100" />
+	</bilder>
+</plg>
