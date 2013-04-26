@@ -1,6 +1,6 @@
 #!/bin/bash
 
 dotcloud create gasi
-dotcloud alias add gasi.www www.gasi.ch
-dotcloud alias add gasi.www arbeitswoche.gasi.ch
-dotcloud alias add gasi.www tandem.gasi.ch
+dotcloud alias add gasilive.www www.gasi.ch
+dotcloud alias add gasilive.www arbeitswoche.gasi.ch
+dotcloud alias add gasilive.www tandem.gasi.ch
