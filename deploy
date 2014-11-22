@@ -1,3 +1,3 @@
 #!/bin/bash
 
-dotcloud push gasilive public/ && dotcloud restart gasilive.www
+dotcloud push --application gasilive --clean public/ # && dotcloud restart gasilive.www
