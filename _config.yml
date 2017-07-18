@@ -1,8 +1,8 @@
 baseurl: /
 permalink: /blog/:title
 
-exclude: build, README.md, nginx.conf
+exclude: ['build', 'README.md', 'nginx.conf']
 
 # markdown: rdiscount
 markdown: kramdown
-pygments: true
+highlighter: rouge
