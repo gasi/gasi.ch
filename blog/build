@@ -1,0 +1,16 @@
+#!/bin/bash
+
+rm -rf _site
+jekyll
+
+cd _site/
+mv examples blog/examples
+mv favicon.ico blog/favicon.ico
+mv images blog/images
+mv index.html blog/index.html
+mv feed.xml blog/feed.xml
+mv styles blog/styles
+cd -
+
+rm -rf ../public/blog
+mv _site/blog ../public/blog

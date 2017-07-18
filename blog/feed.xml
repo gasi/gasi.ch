@@ -1,0 +1,28 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <id>http://www.gasi.ch/blog/</id>
+    <link href="http://www.gasi.ch/blog/" />
+    <link href="http://gasi.ch/blog/feed.xml" rel="self" />
+    <title>RTFM / Daniel Gasienica</title>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+
+    <author>
+        <name>Daniel Gasienica</name>
+        <email>daniel@gasienica.ch</email>
+    </author>
+
+    {% for post in site.posts %}
+    <entry>
+        <id>http://www.gasi.ch{{ post.id }}</id>
+        <link href="http://www.gasi.ch{{ post.id }}" />
+        <title>{{ post.title | strip_html | xml_escape }}</title>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <content type="html">{{ post.content | xml_escape }}</content>
+    </entry>
+    {% endfor %}
+
+</feed>

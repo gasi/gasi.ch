@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>{{ page.title | strip_html }} &ndash; RTFM / Daniel Gasienica</title>
+
+    <meta name="author" content="Daniel Gasienica" />
+    <meta name="description" content="Daniel Gasienica’s personal blog."/>
+
+    <meta name="generator" content="Jekyll"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/blog/styles/screen.css"/>
+    <link rel="stylesheet" href="/blog/styles/syntax.css"/>
+
+    <!-- Atom feed -->
+    <link rel="alternate" type="application/atom+xml" title="RTFM / Daniel Gasienica" href="/blog/feed/"/>
+
+    <!-- Tracker -->
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2390888-1']);
+        _gaq.push(['_setDomainName', '.gasi.ch']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="header">
+            <div id="logo">
+                <h1><a href="/blog/" title="Return to homepage">RTFM<span class="light"> / Daniel Gasienica</span></a></h1>
+            </div>
+            <div id="pages">
+                <ul>
+                    <li><a href="/blog/">Home</a></li>
+                    <li><a href="/blog/feed/">Feed</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="single-page">
+        {{ content }}
+        </div>
+
+        <div id="sidebar">
+            <hr class="notop" />
+            <h5>About</h5>
+            <p class="about">
+                Welcome. I’m Daniel Gasienica and you’re on my personal blog.<br/>
+                You can reach me at <a href="mailto:daniel@gasienica.ch">daniel@gasienica.ch</a> or
+                <a href="http://twitter.com/gasi">@gasi</a>.
+            </p>
+            <hr class="notop" />
+            <h5>Archives</h5>
+            <ul>
+            {% for post in site.posts %}
+                <li><a href="{{ post.url }}/">{{ post.title | strip_html }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div id="footer">
+            <div id="footer-copyright"><p>RTFM / &copy; 2006&ndash;<script>document.write(new Date().getFullYear().toString())</script> <a href="mailto:daniel@gasienica.ch">Daniel Gasienica</a>. All Rights Reversed.</p></div>
+        </div>
+    </div>
+</body>
+</html>
