@@ -1,7 +1,7 @@
-RTFM – Daniel Gasienica’s Blog
-==============================
+# RTFM – Daniel Gasienica’s Blog
 
-Development
------------
+## Development
 
-    jekyll --auto --server
+```bash
+jekyll serve --watch
+```
