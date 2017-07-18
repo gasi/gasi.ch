@@ -1,0 +1,157 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>FunctionalActionScript2.as</title>
+<link rel="stylesheet" type="text/css" href="../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptComment">/*
+
+    Example: Functional ActionScript — Part II
+
+    Author:
+    Daniel Gasienica
+    daniel@gasienica.ch
+    http://gasi.ch/
+
+
+    Originally published on
+    http://gasi.ch/blog/functional-actionscript-part-2/
+
+    Released under the
+    Creative Commons Attribution-Share Alike License
+    http://creativecommons.org/licenses/by-sa/3.0/
+
+*/</span>
+<span class="ActionScriptpackage">package</span>
+<span class="ActionScriptBracket/Brace">{</span>
+    <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">display</span>.<span class="ActionScriptDefault_Text">Sprite</span>;
+
+
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptclass">class</span> <span class="ActionScriptDefault_Text">FunctionalActionScript2</span> <span class="ActionScriptReserved">extends</span> <span class="ActionScriptDefault_Text">Sprite</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">list</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">[</span> 1, 2, 3, 4, 5, 6, 7, 8, 9 <span class="ActionScriptBracket/Brace">]</span>
+
+
+        <span class="ActionScriptComment">// Constructor
+</span>        <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">FunctionalActionScript2</span><span class="ActionScriptBracket/Brace">()</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptComment">// every
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;--- every ------------------------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;Are all numbers even?:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">every</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">even</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+
+            <span class="ActionScriptComment">// some
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;\n--- some -------------------------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;Are some numbers odd?:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">some</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">odd</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+
+            <span class="ActionScriptComment">// filter
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;\n--- filter -----------------------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>              <span class="ActionScriptString">&quot;Odd numbers:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">filter</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">odd</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>             <span class="ActionScriptString">&quot;Even numbers:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">filter</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">even</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+
+            <span class="ActionScriptComment">// map
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;\n--- map --------------------------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>                  <span class="ActionScriptString">&quot;Squares:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">map</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">square</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>             <span class="ActionScriptString">&quot;Square roots:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">map</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">squareRoot</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+
+            <span class="ActionScriptComment">// forEach
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;\n--- forEach ---------------------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;Say «Hello» to all numbers!&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;---------------------------------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+                   <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">forEach</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">sayHello</span> <span class="ActionScriptBracket/Brace">)</span>
+
+            <span class="ActionScriptComment">// higher order functions
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;\n--- higher order functions ------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>                   <span class="ActionScriptString">&quot;Double:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">map</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">double</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>                   <span class="ActionScriptString">&quot;Triple:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">map</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">triple</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span>                <span class="ActionScriptString">&quot;Quadruple:&quot;</span>, <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">map</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">multiply</span><span class="ActionScriptBracket/Brace">(</span> 4 <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+
+
+            <span class="ActionScriptComment">// rendez-vous
+</span>            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;\n--- rendez-vous ------------&quot;</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">some</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">odd</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptBracket/Brace">{</span>
+                <span class="ActionScriptDefault_Text">list</span>.<span class="ActionScriptDefault_Text">filter</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">even</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+                       .<span class="ActionScriptDefault_Text">map</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">square</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptBracket/Brace">)</span>
+                          .<span class="ActionScriptDefault_Text">forEach</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">sayHello</span> <span class="ActionScriptBracket/Brace">)</span>
+            <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptBracket/Brace">}</span>
+
+
+        <span class="ActionScriptComment">// test functions for every, some &amp; filter
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">even</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Boolean</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">%</span> 2 <span class="ActionScriptOperator">==</span> 0
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">odd</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Boolean</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span> <span class="ActionScriptOperator">!</span><span class="ActionScriptDefault_Text">even</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptComment">// functions for map
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">square</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">x</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">squareRoot</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">Math</span>.<span class="ActionScriptDefault_Text">sqrt</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+
+        <span class="ActionScriptComment">// function for forEach
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">sayHello</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">element</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptOperator">*</span>,
+                                   <span class="ActionScriptDefault_Text">index</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span>,
+                                   <span class="ActionScriptDefault_Text">array</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptReserved">void</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScripttrace">trace</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptString">&quot;Hello, Number&quot;</span>, <span class="ActionScriptDefault_Text">element</span> <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptComment">// at this point it looks ok…
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">double</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">*</span> 2
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptComment">// …but at this point, it begins to smell.
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">triple</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">*</span> 3
+        <span class="ActionScriptBracket/Brace">}</span>
+
+        <span class="ActionScriptComment">// better: higher order equivalent
+</span>        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">multiply</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">multiplicator</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Function</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span> <span class="ActionScriptfunction">function</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Number</span> <span class="ActionScriptBracket/Brace">{</span> <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">*</span> <span class="ActionScriptDefault_Text">multiplicator</span> <span class="ActionScriptBracket/Brace">}</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+
+
+
+        <span class="ActionScriptComment">/*
+            a beautiful example of a higher order function that takes a function
+            as argument and then constructs and returns a new function:
+
+            wrapper to make a function&apos;s signature conform to that of
+            a valid callback which looks like this, e.g. for the filter function
+
+                function callback(item:*, index:int, array:Array):Boolean;
+
+            http://livedocs.adobe.com/flex/3/langref/Array.html#filter()
+        */</span>
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">wrap</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">f</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Function</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Function</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">return</span><span class="ActionScriptBracket/Brace">(</span>
+                    <span class="ActionScriptfunction">function</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptOperator">*</span>, <span class="ActionScriptDefault_Text">index</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">int</span>, <span class="ActionScriptDefault_Text">array</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">:</span> <span class="ActionScriptOperator">*</span>
+                    <span class="ActionScriptBracket/Brace">{</span>
+                        <span class="ActionScriptReserved">return</span> <span class="ActionScriptDefault_Text">f</span><span class="ActionScriptBracket/Brace">(</span> <span class="ActionScriptDefault_Text">x</span> <span class="ActionScriptBracket/Brace">)</span>
+                    <span class="ActionScriptBracket/Brace">}</span>
+                <span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">}</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+<span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>

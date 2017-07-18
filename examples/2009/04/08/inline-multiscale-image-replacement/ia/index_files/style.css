@@ -1,0 +1,1017 @@
+/* 	Title:     iA Styles for Screen Media
+	Author:    InformationArchitects.jp
+	Updated:   October 30th, 2008 */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td, img, hr, embed, object {
+	margin: 0;
+	padding: 0;
+	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+fieldset, img {
+	border: 0;
+	}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal;
+	}
+ol, ul, li {
+	list-style: none;
+	}
+caption, th {
+	text-align: left;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+	}
+q:before, q:after {
+	content: '';
+	}
+abbr, acronym {
+	border: 0;
+	}
+img {
+	display: block;
+	}
+
+
+/* -------------------------------------- */
+
+html {
+	min-height: 100%;
+	margin-bottom: 1px;
+	}
+hr {
+	border: none 0;
+	border-top: 1px dotted #ccc;
+	height: 1px;
+	clear: both;
+	margin-top: 1.438em;
+	}
+	hr.notop {
+		margin-top: 0;
+		}
+	#contentSidebar hr {
+		margin-top: 0.875em;
+		}
+#mainContainer {
+	width: 59.375em;
+	margin:  0 auto;
+	padding: 0 0 3em 0;
+	position: relative;
+	}
+br.clear {
+	clear: both;
+	display: block;
+	height: 1.125em;
+	}
+a:hover {
+	background-position: 0 0;
+	}
+
+
+/* -------------------------------------- */
+
+body {
+	font-size: 100%;
+	font-family: Georgia, serif;
+	color: #333;
+	border-top: 0.5em solid #666667;
+	background-color: #fff;
+	}
+html>body {
+	font-size: 16px;
+	}
+p {
+	line-height: 1.5em;
+	font-size: 1em;
+	}
+a {
+	font-weight: normal;
+	text-decoration: none;
+	}
+
+a:link {
+	color: #c00;
+	}
+a:visited {
+	color: #666;
+	}
+a:hover, a:active {
+	color: #333;
+	}
+.post h1 a {
+	color: #333;
+	}
+#issueFeature h1 a, #contentHeader h2 a, #contentIssue h4 a, #recentComments h4 a, #popular h4 a {
+	color: #000;
+	}
+#issueFeature h1 a:hover, #contentHeader h2 a:hover, #contentIssue h4 a:hover, #recentComments h4 a:hover, #popular h4 a:hover, #contentSidebar h5 a:visited, #contentIssue h5 a:hover {
+	color: #c00;
+	}
+#contentIssue h5 a {
+	color: #999;
+	}
+
+strong {
+	font-weight: bold;
+	}
+em {
+	font-style: italic;
+	}
+
+.highlight {
+	color: #c00;
+	}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+	}
+div.post h1 {
+	font-size: 1.5em;
+	line-height: 1em;
+	padding: 0.5em 0;
+	}
+h2 {
+	font-size: 1.5em;
+	line-height: 2em;
+	}
+div.entry h2 {
+	font-size: 1.25em;
+	line-height: 1.2em;
+	margin-bottom: 0.6em;
+	}
+h3 {
+	line-height: 1.5em;
+	}
+h4 {
+	font-size: 1em;
+	line-height: 1.125em;
+	padding-bottom: 0.375em;
+	margin-top: 1.5em;
+	}
+h5 {
+	font: 0.875em/1.714em Georgia, serif;
+	color: #999;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	}
+#h5left .light, #h5right .light {
+	color: #ccc;
+	}
+#h5left {
+	width: 5em;
+	float: left;
+	text-align: left;
+	}
+#h5center {
+	float: left;
+	text-align: center;
+	width: 11em;
+	}
+#h5right {
+	width: 4em;
+	float: right;
+	text-align: right;
+	}
+h5 span {
+	text-transform: none;
+	font-variant: normal;
+	font-size: 80%;
+	}
+div.entry h3 {
+	font-size: 1.125em;
+	font-style: italic;
+	line-height: 1.333em;
+	clear: both;
+	}
+	div.entry h3.linetop {
+		padding-top: 1em;
+		border-top: 1px dotted #ccc;
+		}
+div.entry h4, div.entry cite {
+	font-size: 0.813em;
+	line-height: 1.846em;
+	color: #333;
+	}
+div.entry cite {
+	display: block;
+	clear: both;
+	text-align: right;
+	}
+
+#topBar {
+	position: relative;
+	height: 2.5em;
+	overflow: hidden;
+	}
+	#topBar form {
+		position: absolute;
+		top: 0.313em;
+		right: 0;
+		width: 14.688em;
+		height: 1.875em;
+		line-height: 1.875em;
+		}
+	*:first-child+html #topBar form { /*IE7*/
+		top: 0.5em;
+		}
+	* html #topBar form { /*IE6*/
+		top: 0.5em;
+		}
+	#searchI {
+		width: 9.938em;
+		float: left;
+		}
+	#searchI input {
+		width: 100%;
+		}
+	#searchB {
+		width: 4.375em;
+		float: right;
+		text-align: right;
+		}
+	#adminLink {
+		position: absolute;
+		top: 0;
+		right: 16em;
+		height: 2.5em;
+		text-align: right;
+		}
+		#adminLink a {
+			display: block;
+			height: 2.857em;
+			line-height: 2.857em;
+			font-size: 0.875em;
+			color: #999;
+			font-variant: small-caps;
+			text-transform: lowercase;
+			}
+		#adminLink a:visited {
+			color: #c00;
+			}
+		#adminLink a:hover {
+			color: #333;
+			}
+	#lS {
+		position: absolute;
+		top: 0;
+		left: 7.5em;
+		height: 2.5em;
+		}
+	#lS.lSH {
+		left: 20em;
+		}
+		#lS div {
+			float: left;
+			line-height: 2.857em;
+			font-size: 0.875em;
+			height: 2.857em;
+			color: #999;
+			font-variant: small-caps;
+			text-transform: lowercase;
+			}
+		#lS a:visited {
+			color: #c00;
+			}
+		#lS  a:hover {
+			color: #333;
+			}
+		#jpnLink {
+			margin-top: 0.571em;
+			width: 3.429em;
+			height: 1.714em;
+			cursor: pointer;
+			display: inline;
+			}
+
+#contentLogo {
+	width: 18em;
+	float: left;
+	padding: 0;
+	position: relative;
+	}
+	#contentLogo img {
+		width: 181px;
+		height: 75px;
+		border: 0;
+		position: absolute;
+		left: 0;
+		top: 2.5em;
+		}
+#contentHeader {
+	float: right;
+	width: 39.375em;
+	clear: both;
+	border-top: 1px dotted #ccc;
+	}
+#headerFeature p {
+	color: #999;
+	height: 3em;
+	}
+#headerFeature h5 {
+	border-top: 1px dotted #ccc;
+	clear: both;
+	}
+#headerFeature ul li a {
+	font-size: 0.813em;
+	line-height: 1.385em;
+	}
+#headerFeature ul {
+	margin: 0 0 1.125em 0;
+	}
+#headerFeature p {
+	margin-bottom: 1.125em;
+	}
+
+#headerG {
+	clear: both;
+	border-top: 1px dotted #ccc;
+	margin-top: 1.5em;
+	}
+
+#headerL, #headerR {
+	width: 48%;
+	margin: 0 0 1.5em 0;
+	}
+	#headerL {
+		float: left;
+		}
+	#headerL p {
+		font-size: 0.813em;
+		line-height: 1.385em;
+		font-style: italic;
+		}
+	#headerR {
+		float: right;
+		}
+	#headerR li {
+		font-size: 0.813em;
+		line-height: 1.385em;
+		color: #999;
+		}
+
+#contentBottom {
+	clear: both;
+	border-top: 1px dotted #ccc;
+	}
+
+#contentSidebar {
+	width: 18em;
+	float: left;
+	margin: 0 0 1.5em 0;
+	}
+#contentSidebar img {
+	margin-top: 0.75em;
+	width: 288px;
+	}
+#sidebarArchives {
+	}
+	#sidebarArchives table {
+		font-size: 0.813em;
+		line-height: 1.385em;
+		font-weight: bold;
+		}
+	#sidebarArchives table td.archive {
+		text-align: right;
+		vertical-align: top;
+		padding-right: 1em;
+		width: 4em;
+		}
+	#sidebarArchives table tr.issueYears td {
+		padding-top: 1.385em;
+		}
+	#sidebarArchives h5 {
+		margin-bottom: 0.5em;
+		}
+
+#sidebarCategories {
+	}
+	#sidebarCategories table {
+		font-size: 0.813em;
+		line-height: 1.385em;
+		font-weight: bold;
+		}
+	#sidebarCategories table td.catArchiv {
+		text-align: right;
+		vertical-align: top;
+		padding-right: 1em;
+		width: 4em;
+		}
+	#sidebarCategories h5 {
+		margin-bottom: 0.5em;
+		}
+
+#contentIssue {
+	width: 39.375em;
+	float: right;
+	margin-bottom: 4.5em;
+	}
+	#issueFeature {
+		clear: both;
+		}
+	.issueIssue, .issueRight {
+		width: 48%;
+		}
+	.issueIssue {
+		float: left;
+		}
+	.issueRight {
+		float: right;
+		}
+	.issueIssue p, .issueRight p {
+		font-size: 0.813em;
+		line-height: 1.385em;
+		}
+
+#popular {
+	clear: both;
+	margin-bottom: 1.5em;
+	overflow: hidden;
+	width: 100%;
+	}
+#popular h5 {
+	border-top: 1px dotted #ccc;
+	margin-top: 1.5em;
+	}
+#popular .popBox {
+	clear: both;
+	}
+#popular .popL, #popular .popR {
+	width: 48%;
+	}
+#popular .popBox p {
+	font-size: 0.813em;
+	line-height: 1.385em;
+	float: right;
+	width: 70%;
+	}
+#popular .popBox img {
+	float: left;
+	font-size: 0.813em;
+	line-height: 1.385em;
+	}
+#popular .popL {
+	float: left;
+	}
+#popular .popR {
+	float: right;
+	}
+
+#footerLinks {
+	clear: both;
+	border-top: 1px dotted #ccc;
+	}
+#footerLinks li {
+	font-size: 0.813em;
+	line-height: 1.846em;
+	float: left;
+	margin-right: 2em;
+	}
+#footerLinks li a {
+	display: block;
+	}
+
+#footerNewsletter {
+	font-size: 0.813em;
+	clear: both;
+	border-top: 1px dotted #ccc;
+	height: 4em;
+	position: relative;
+	}
+#footerNewsletter .wpmlwidget {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 1.846em;
+	margin-top: -0.769em;
+	display: inline;
+	}
+	#footerNewsletter fieldset {
+		float: left;
+		}
+	#footerNewsletter div {
+		float: left;
+		margin-right: 1em;
+		}
+	#footerNewsletter input {
+		float: left;
+		margin-right: 1em;
+		}
+#footerCopyright {
+	border-top: 1px dotted #ccc;
+	}
+#footerCopyright p {
+	text-align: right;
+	font-size: 0.625em;
+	line-height: 2.4em;
+	color: #ccc;
+	}
+
+#searchP {
+	float: left;
+	width: 43.5em;
+	}
+#searchP h5 {
+	border-top: 1px dotted #ccc;
+	margin-left: 8.571em;
+	}
+#searchP h2 {
+	margin-left: 5em;
+	margin-bottom: 1.5em;
+	}
+#searchP .searchD {
+	float: left;
+	width: 7.692em;
+	font-size: 0.813em;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	color: #666;
+	text-align: right;
+	line-height: 1.846em;
+	}
+#searchP h3 {
+	float: right;
+	width: 36em;
+	}
+	#searchP span {
+		font-size: 0.75em;
+		font-family: Arial, sans-serif;
+		}
+#searchP p {
+	float: right;
+	width: 36em;
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 1.5em;
+	margin-bottom: 1.5em;
+	}
+	#searchP p.nb {
+		border: 0;
+		}
+#searchP form {
+	float: right;
+	width: 36em;
+	margin-bottom: 6em;
+	}
+#pageNavigation {
+	height: 1.5em;
+	line-height: 1.5em;
+	float: right;
+	width: 36em;
+	margin-bottom: 6em;
+	}
+	.pNavLeft {
+		float: left;
+		}
+	.pNavRight {
+		float: right;
+		text-align: right;
+		}
+
+#s2c {
+	margin-top: 0.75em;
+	float: left;
+	width: 24em;
+	height: 1.5em;
+	line-height: 1.5em;
+	}
+	#s2c input {
+		margin-right: 0.5em;
+		float: left;
+		}
+	#s2c label {
+		float: left;
+		font-size: 0.875em;
+		line-height: 1.714em;
+		}
+#sButton {
+	margin-top: 0.75em;
+	float: right;
+	text-align: right;
+	}
+#comment {
+	width: 100%;
+	}
+
+.commentlist .cB {
+	clear: both;
+	border-bottom: 1px dotted #ccc;
+	padding-top: 0.5em;
+	float: right;
+	width: 40em;
+	}
+	.commentlist .last {
+		border-bottom: 0;
+		}
+	.commentlist .cAuthor {
+		background-color: #fafafa;
+		}
+.commentlist img.cmd-avatar {
+	float: left;
+	margin-top: 0.313em;
+	margin-left: 1em;
+	display: inline; /*IE6*/
+	}
+
+.commentlist .cC {
+	float: right;
+	width: 31.25em;
+	margin-right: 4.75em; /**/
+	overflow: hidden;
+	display: inline; /*IE6*/
+	}
+	.commentlist .cC cite {
+		font-variant: small-caps;
+		text-transform: lowercase;
+		font-size: 0.875em;
+		line-height: 1.5em;
+		}
+	.commentlist .cC p {
+		font-size: 0.875em;
+		line-height: 1.5em;
+		margin-bottom: 0.75em;
+		}
+	.commentlist .cC blockquote {
+		font-size: 0.875em;
+		line-height: 1.5em;
+		margin-bottom: 0.75em;
+		padding-left: 1.5em;
+		}
+	.commentlist .cC p p {
+		font-size: 1.273em;
+		line-height: 1.5em;
+		}
+	.commentlist .cC ol, .commentlist .cC ul {
+		font-size: 0.875em;
+		line-height: 1.5em;
+		padding-left: 1.5em;
+		}
+	.commentlist .cC li p {
+		font-size: inherit;
+		}
+	.commentlist .cC li {
+		margin-bottom: 0.75em;
+		}
+	.commentlist .cC ul li {
+		list-style: outside disc;
+		}
+	.commentlist .cC ol li {
+		list-style: outside decimal;
+		}
+
+div.commentLabel {
+	float: left;
+	text-align: right;
+	width: 6.5em;
+	height: 4.5em;
+	}
+	div.commentLabel label {
+		display: block;
+		font-size: 0.813em;
+		height: 1.846em;
+		line-height: 1.846em;
+		margin: 0;
+		}
+
+div.commentFields {
+	float: right;
+	width: 36em;
+	height: 4.5em;
+	margin-bottom: 0.75em;
+	}
+	div.commentFields em {
+		font-size: 0.813em;
+		line-height: 1.714em;
+		color: #999;
+		padding-left: 0.25em;
+		}
+	div.commentFields p {
+		clear: both;
+		margin: 0;
+		height: 1.5em;
+		line-height: 1.5em;
+		}
+div.commentRight {
+	float: right;
+	width: 36em;
+	}
+
+#openid_enabled_link, .openid_link,  #openid_url, #commentform #openid_url {
+	background: url(images/openid.gif) center left no-repeat;
+	padding-left: 1.5em;
+	}
+#singleForm #commentform h5 {
+	border-top: 0;
+	}
+
+#issueCovers li {
+	margin-right: 3em;
+	}
+#issueCovers li img {
+	width: 5em;
+	margin-right: 1em;
+	float: left;
+	}
+#issueCovers caption {
+	font-weight: bold;
+	}
+#issueCovers p.coverCaption {
+	font-size: 16px;
+	}
+
+p.archivePostInfo {
+	font-size: 0.813em;
+	line-height: 1.846em;
+	margin-top: 1.846em;
+	color: #333;
+	}
+div.postDateArchives {
+	font-size: 0.813em;
+	line-height: 1.846em;
+	color: #666;
+	text-align: right;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	width: 11em;
+	margin-left: -12em;
+	margin-top: 1.846em;
+	float: left;
+	position: relative;
+	}
+
+#singlePage,
+#page {
+	width: 36em;
+	float: left;
+	padding-left: 7.5em;
+	}
+#singleComments {
+	width: 43.5em;
+	float: left;
+	margin-bottom: 0;
+	}
+	#singlePage {
+		margin-bottom: 0;
+		}
+	#singleComments h5 {
+		border-top: 1px dotted #ccc;
+		width: 41.143em;
+		float: right;
+		}
+	#singleComments h2 {
+		width: 24em;
+		float: right;
+		clear: both;
+		}
+	#singleComments .noC {
+		width: 31.25em;
+		margin: 0 0 2em 7.5em;
+		}
+	#singleForm {
+		width: 43.5em;
+		float: left;
+		margin-bottom: 6em;
+		}
+		#singleForm h5 {
+			border-top: 1px dotted #ccc;
+			clear: both;
+			width: 41.143em;
+			float: right;
+			margin-top: 3em;
+			}
+		#singleForm h2 {
+			width: 24em;
+			float: right;
+			}
+	#pageSubfooter {
+		border-top: 1px dotted #ccc;
+		clear: both;
+		width: 36em;
+		margin: 0 0 6em 7.5em;
+		}
+
+#singlePage h3 {
+	margin-top: 1.5em;
+	}
+#singleLogo {
+	position: absolute;
+	top: 4em;
+	left: 0;
+	}
+#singleLogo img {
+	width: 100px;
+	height: 55px;
+	border: 0;
+	}
+#singleAd {	
+	width: 14.7em;
+	float: right;
+	border-top: 1px dotted #ccc;
+	margin-bottom: 1.5em;
+	}
+	#singleAd form {
+		float: right;
+		width: 7em;
+		}
+	#singleAd #readMore {
+		float: left;
+		width: 7em;
+		}
+	#singleAd h5 {
+		border-top: 1px dotted #ccc;
+		clear: both;
+		}
+
+#singleTrackback {
+	width: 14.7em;
+	float: right;
+	}
+	#singleTrackback h5 {
+		border-top: 1px dotted #ccc;
+		}
+	#singleTrackback h3 {
+		margin: 0.938em 0 1em 0;
+		}
+	#singleTrackback p {
+		font-variant: small-caps;
+		text-transform: lowercase;
+		font-size: 0.875em;
+		line-height: 1.5em;
+		}
+
+#singleNavigation {
+	height: 5.625em;
+	}
+	#singleNavigation h5 {
+		border-top: 0;
+		}
+	#singleNavigation p {
+		margin-left: -0.825em;
+		color: #999;
+		}
+	* html #singleNavigation p { /*IE6*/
+		height: 1px;
+		position: relative;
+		}
+
+#singleIssue {
+	margin-bottom: 4.5em;
+	}
+#singleIssue h5 {
+	border-top: 1px dotted #ccc;
+	clear: both;
+	}
+#singleIssue .arkGroup {
+	margin-bottom: 3em;
+	}
+	#singleIssue .arkGroup h5 {
+		clear: both;
+		}
+	#singleIssue .arkGroup img {
+		float: left;
+		margin: 0 1em 1em 0;
+		}
+
+div.post {
+	width: 31.25em;
+	}
+div.entry .icaption {
+	color: #666;
+	font-style: italic;
+	font-size: 0.813em;
+	line-height: 1.385em;
+	display: block;
+	}
+div.entry p {
+	margin-bottom: 1.125em;
+	}
+	div.entry p.update {
+		padding: 1.125em 2em;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+		background-color: #fafafa;
+		}
+	div.entry p.alert {
+		padding: 1.125em 1.125em 1.125em 2em;
+		border-bottom: 2px solid #c00;	
+		border-top: 2px solid #c00;
+		background: #ebb url(images/alerticon.gif) center no-repeat;
+		background-position: 0.5em 50%;
+		}
+div.entry ul li {
+	list-style-position: outside;
+	list-style-image: url(images/arrow.gif);
+	margin-bottom: 1.125em;
+	}
+div.entry ul, div.entry ol {
+	margin-bottom: 1.125em;
+	}
+div.entry ol li, div.entry ul li {
+	line-height: 1.5em;
+	}
+div.entry ol li {
+	list-style: decimal;
+	list-style-position: outside;
+	}
+div.entry blockquote {
+	padding-left: 2em;
+	margin-bottom: 1.125em;
+	line-height: 1.5em;
+	font-size: 1em;
+	width: 27.25em;
+	}
+div.entry p img {
+	margin: 1.125em 3.5em 1.125em -2.5em;
+	border: 0;
+	clear: right;
+	position: relative;
+	}
+	div.entry p img.nofloat {
+		margin-left: 0;
+		}
+p.postInfo {
+	font-size: 0.813em;
+	line-height: 1.846em;
+	color: #333;
+	}
+p.trackback {
+	font-variant: small-caps;
+	text-transform: lowercase;
+	}
+#authorPostinfo {
+	font-variant: small-caps;
+	}
+
+#openid_enabled_link,
+.openid_link,
+#openid_url,
+#commentform #openid_url {
+	background: url(images/openid.gif) center left no-repeat;
+	padding-left: 18px;
+	}
+
+/* Contact and About */
+
+#contact p, #contact img {
+	clear: both;
+	}
+#contact img {
+	border: 1px solid #ccc;
+	padding: 1px;
+	}
+#contactLeft {
+	float: left;
+	width: 13.5em;
+	margin: 1.5em 0;
+	}
+#contactRight {
+	float: right;
+	width: 16.5em;
+	margin: 1.5em 0;
+	}
+#contact div {
+	line-height: 1.5em;
+	}
+img.photo {
+	margin-bottom: 1.5em;
+	border: 1px solid #ccc;
+	padding: 1px;
+	}
+div.authorPostinfo {
+	font-size: 0.813em;
+	line-height: 1.846em;
+	font-variant: small-caps;
+	}
+
+
+#twit1, #twit2 {
+	width: 48%;
+	margin-top: 1.5em;
+	border-top: 1px dotted #ccc;
+	}
+	#twit1 {
+		float: left;
+		}
+	#twit2 {
+		float: right;
+		}
+#twit1 li, #twit2 li {
+	font-size: 0.8125em;
+	line-height: 1.385em;
+	margin-bottom: 0.692em;
+	}
+#twit1 p, #twit2 p {
+	font-size: 0.8125em;
+	line-height: 1.385em;
+	font-style: italic;
+	}
+#twit1 span, #twit2 span {
+	color: #999;
+	}
+#twit1 h5, #twit2 h5 {
+	margin-bottom: 1.5em;
+	}

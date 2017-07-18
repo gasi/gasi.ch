@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>Source of zoomit-nytimes-demo</title>
+	<nodes>
+		<node label="lib">
+			<node label="openzoom.swc" url="source/lib/openzoom.swc"/>
+			<node label="tweener.swc" url="source/lib/tweener.swc"/>
+			<node label="zoomit.swc" url="source/lib/zoomit.swc"/>
+		</node>
+		<node label="src">
+			<node icon="mxmlAppIcon" selected="true" label="OpenZoomItNYTimesViewer.mxml" url="source/OpenZoomItNYTimesViewer.mxml.html"/>
+		</node>
+	</nodes>
+	<zipfile label="Download source (ZIP, 201K)" url="zoomit-nytimes-demo.zip">
+	</zipfile>
+	<sdklink label="Download Flex SDK" url="http://www.adobe.com/go/flex4_sdk_download">
+	</sdklink>
+</index>

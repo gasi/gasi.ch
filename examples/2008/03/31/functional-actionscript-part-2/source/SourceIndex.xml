@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+    <title>Source of FunctionalActionScript2</title>
+    <nodes>
+        <node label="src" icon="classpathIcon" expanded="true">
+            <node selected="true" label="FunctionalActionScript2.as" icon="mxmlAppIcon" url="source/FunctionalActionScript2.as.html"/>
+        </node>
+    </nodes>
+</index>
