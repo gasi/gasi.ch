@@ -1,7 +1,7 @@
 baseurl: /
 permalink: /blog/:title
 
-exclude: ['build', 'README.md', 'nginx.conf']
+exclude: ['build', 'README.md', 'nginx.conf', 'Gemfile', 'Gemfile.lock']
 
 # markdown: rdiscount
 markdown: kramdown
