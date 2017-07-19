@@ -1,0 +1,25 @@
+# Tandem
+#if ($host ~* "tandem.gasi.ch") {
+#    rewrite ^/(.*)$ http://www.gasi.ch/tandem/$1 permanent;
+#    break;
+#}
+#
+## Arbeitswoche
+#if ($host ~* "arbeitswoche.gasi.ch") {
+#    rewrite ^/(.*)$ http://www.gasi.ch/portfolio/arbeitswoche/$1 permanent;
+#    break;
+#}
+
+# Feed
+/blog/feed/ http://feeds.feedburner.com/gasi/rtfm       302
+
+# Tandem
+/photos/    http://gasi.ch/tandem/  301
+
+# Go
+/go/aircamp/    /blog/adobe-air-camp-switzerland-was-a-blast/ 302
+/go/maturaarbeit/   /publications/maturaarbeit/architecting-rich-internet-applications-paper-daniel-gasienica.pdf 302
+/go/photography/    http://www.flickr.com/photos/gasi/  302
+/go/traveling/  http://www.flickr.com/photos/gasi/collections/72157603772676880/    302
+/go/visionen/   http://www.vis.ethz.ch/en/visionen/archive/2008/3   302
+/go/web-apis/   /publications/web-apis-daniel-gasienica.pdf   302
