@@ -111,11 +111,14 @@ address {
 }
 
 #footer {
+    background-color: #fff;
+    bottom: 0;
     color: #999;
-    clear: both;
-    float: left;
-    width: 100%;
-    padding-left: 18px;
+    position: fixed;
+}
+
+#footer p {
+    margin: 18px;
 }
 
 span.deleted {
