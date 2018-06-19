@@ -9,6 +9,6 @@ _site
 project.sublime-workspace
 
 # npm
-/node_modules/
+node_modules
 package.json
 yarn.lock
