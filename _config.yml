@@ -6,6 +6,5 @@ permalink: /blog/:title
 exclude: ['build', 'README.md', 'nginx.conf', 'Gemfile', 'Gemfile.lock']
 include: ['_redirects']
 
-# markdown: rdiscount
 markdown: kramdown
 highlighter: rouge
