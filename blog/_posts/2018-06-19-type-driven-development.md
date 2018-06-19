@@ -10,7 +10,7 @@ The following series is about how developing software driven by types and a func
 >
 > Want to jump straight in? Here’s a list of published posts:
 >
-> -   [Type-Driven Development: Null][blog-tdd-1]
+> -   [Type-Driven Development: Null — The Billion Dollar Mistake][blog-tdd-1]
 
 ## You
 
@@ -66,7 +66,7 @@ PureScript is a purely functional, strongly-typed language that compiles to Java
 
 Follow the [Getting Started with PureScript][purescript-getting-started] instructions for setting up your environment. You can learn the basics of the language by reading the excellent [PureScript by Example] by [Phil Freeman][twitter-paf31], its creator.
 
-Once you are ready, dive into part one: [Type-Driven Development: Null][blog-tdd-1].
+Once you are ready, dive into part one: [Type-Driven Development: Null — The Billion Dollar Mistake][blog-tdd-1].
 
 <a name="references"/>
 ### References
