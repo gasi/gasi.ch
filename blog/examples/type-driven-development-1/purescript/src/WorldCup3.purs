@@ -9,8 +9,9 @@ import Data.Array as Array
 import Data.Maybe (Maybe(..))
 
 type Team = { country :: String, numWorldCupTitles :: Int }
-
+-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 teams :: Array Team
+-- ^^^^^^^^^^^^^^^^
 teams = [
   { country: "Brazil", numWorldCupTitles: 5 },
   { country: "Germany", numWorldCupTitles: 4 },
@@ -23,6 +24,7 @@ teams = [
 ]
 
 main :: forall eff. Eff (console :: CONSOLE | eff) Unit
+-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 main = do
   let maybeSwitzerland = Array.find (\team ->
                            team.country == "Switzerland") teams
