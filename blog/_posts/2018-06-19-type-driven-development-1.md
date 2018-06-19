@@ -8,6 +8,7 @@ date: '2018-06-19 09:01:00 -0400'
 
 Your app has unexpected runtime errors due to `null` (or `undefined`.)
 
+<!-- prettier-ignore-start -->
 > ### Background
 >
 > [Tony Hoare] famously called `null` references his [Billion Dollar Mistake][infoq-tony-hoare-null]. In addition to `null`, in JavaScript we have `undefined` as in the dreaded
@@ -15,8 +16,8 @@ Your app has unexpected runtime errors due to `null` (or `undefined`.)
 > ```
 > 'undefined' is not a function
 > ```
->
 > {:.error}
+<!-- prettier-ignore-end -->
 
 PureScript doesn’t have runtime errors due to `null` references. Let’s see why that is. But first, here’s a brief example of the problem in JavaScript:
 
@@ -28,6 +29,7 @@ When we try to `find` an element in an array that doesn’t exist we get `undefi
 {% highlight javascript linenos %}
 {% include include_listing filename="examples/type-driven-development-1/js/WorldCup1.js" %}
 {% endhighlight %}
+
 </blockquote>
 
 Unfortunately, we won’t know that until we run that particular line of code, either manually or by writing a test first.
@@ -47,6 +49,7 @@ The following PureScript program does the exact same thing as the JavaScript abo
 
 Before we can run a PureScript program, it first gets checked by the compiler. The compiler will refuse to compile the program and return the following error:
 
+<!-- prettier-ignore-start -->
 ```
 Could not match type
 
@@ -56,6 +59,9 @@ with type
 
   Maybe
 ```
+{:.error}
+<!-- prettier-ignore-end -->
+
 </blockquote>
 
 Above, `Record`—think of it as `Object` in JavaScript—refers to one of our array entries. We tried to access `numWorldCupTitles` from `Record` but `Array.find` returned `Maybe Record`. That’s because under the hood, PureScript’s `Array.find` has the following type (slightly simplified):
@@ -71,12 +77,14 @@ We can ignore the beginning and just focus on the bit after the last arrow. That
 
 The equivalent in TypeScript would be:
 
+<!-- prettier-ignore-start -->
 ```typescript
-type find<A> = (
-    predicate: (element: A) => boolean
-) => (array: Array<A>) => Maybe<A>;
-// ^^^^^^^^
+type find<A> = (predicate: (element: A) => boolean)
+            => (array: Array<A>)
+            => Maybe<A>;
+            // ^^^^^^^^
 ```
+<!-- prettier-ignore-end -->
 
 ### What is `Maybe`?
 
@@ -119,6 +127,7 @@ By adding a `case` expression, we can independently handle `Just` and `Nothing`:
 {% highlight haskell linenos start_line=20 %}
 {% include include_listing filename="examples/type-driven-development-1/purescript/src/WorldCup2.purs" start=20 %}
 {% endhighlight %}
+
 </blockquote>
 
 ## Conclusion
@@ -147,6 +156,7 @@ Note the explicitly added type signatures for top-level definitions on lines 11,
 {% highlight haskell linenos %}
 {% include include_listing filename="examples/type-driven-development-1/purescript/src/WorldCup3.purs" %}
 {% endhighlight %}
+
 </blockquote>
 
 [infoq-tony-hoare-null]: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
