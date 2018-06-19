@@ -12,3 +12,7 @@ project.sublime-workspace
 node_modules
 package.json
 yarn.lock
+
+# PureScript
+.psc-package
+.purs-repl
