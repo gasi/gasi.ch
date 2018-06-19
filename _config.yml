@@ -1,3 +1,5 @@
+livereload: true
+
 baseurl: /
 permalink: /blog/:title
 
