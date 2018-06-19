@@ -4,3 +4,15 @@
 # Jekyll
 _site
 .jekyll-metadata
+
+# Sublime Text
+project.sublime-workspace
+
+# npm
+node_modules
+package.json
+yarn.lock
+
+# PureScript
+.psc-package
+.purs-repl

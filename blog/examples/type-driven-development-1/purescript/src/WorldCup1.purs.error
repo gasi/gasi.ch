@@ -1,0 +1,24 @@
+module WorldCup1 where
+
+import Prelude
+
+import Control.Monad.Eff.Console as Console
+import Data.Array as Array
+
+
+teams = [
+  { country: "Brazil", numWorldCupTitles: 5 },
+  { country: "Germany", numWorldCupTitles: 4 },
+  { country: "Italy", numWorldCupTitles: 4 },
+  { country: "Uruguay", numWorldCupTitles: 2 },
+  { country: "Argentina", numWorldCupTitles: 2 },
+  { country: "England", numWorldCupTitles: 1 },
+  { country: "Spain", numWorldCupTitles: 1 },
+  { country: "France", numWorldCupTitles: 1 }
+]
+
+main = do
+  let switzerland = Array.find (\team ->
+                      team.country == "Switzerland") teams
+  Console.log ("Switzerland: " <>
+    show switzerland.numWorldCupTitles)
