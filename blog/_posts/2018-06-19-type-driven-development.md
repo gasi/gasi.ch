@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Type-Driven Development: Prelude'
-date: '2018-06-20 09:00:00 -0400'
+date: '2018-06-19 09:00:00 -0400'
 ---
 
 The following series is about how developing software driven by types and a functional programming language can help you avoid unnecessary errors, lets you think about and express your ideas more clearly, and create designs that can evolve to meet growing needs.

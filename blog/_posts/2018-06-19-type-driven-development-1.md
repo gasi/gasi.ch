@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Type-Driven Development: Null'
-date: '2018-06-20 09:01:00 -0400'
+date: '2018-06-19 09:01:00 -0400'
 ---
 
 ## Problem
