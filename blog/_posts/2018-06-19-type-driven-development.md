@@ -6,6 +6,12 @@ date: '2018-06-19 09:00:00 -0400'
 
 The following series is about how developing software driven by types and a functional programming language can help you avoid unnecessary errors, lets you think about and express your ideas more clearly, and create designs that can evolve to meet growing needs.
 
+> ### tl;dr
+>
+> Want to jump straight in? Here’s a list of published posts:
+>
+> -   [Type-Driven Development: Null][blog-tdd-1]
+
 ## You
 
 Are you a web developer using JavaScript—maybe even [TypeScript] or [Flow]—and feel like you still too often run into problems with…
