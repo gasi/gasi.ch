@@ -91,7 +91,7 @@ hr.notop {
 hr.post {
   margin-bottom: 0.6em;
 }
-hr.entry {
+.entry hr {
   margin: 0.6em 0 0.6em;
 }
 #contentSidebar hr {
