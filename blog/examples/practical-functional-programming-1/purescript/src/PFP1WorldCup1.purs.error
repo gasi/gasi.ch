@@ -1,0 +1,24 @@
+module PFP1WorldCup1 where
+
+import Prelude
+
+import Control.Monad.Eff.Console as Console
+import Data.Array as Array
+
+
+teams = [
+  { numWorldCupTitles: 5, country: "Brazil" },
+  { numWorldCupTitles: 4, country: "Germany" },
+  { numWorldCupTitles: 4, country: "Italy" },
+  { numWorldCupTitles: 2, country: "Uruguay" },
+  { numWorldCupTitles: 2, country: "Argentina" },
+  { numWorldCupTitles: 1, country: "England" },
+  { numWorldCupTitles: 1, country: "Spain" },
+  { numWorldCupTitles: 1, country: "France" }
+]
+
+main = do
+  let switzerland = Array.find (\team ->
+                      team.country == "Switzerland") teams
+  Console.log ("Switzerland: " <>
+    show switzerland.numWorldCupTitles)

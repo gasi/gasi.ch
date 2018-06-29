@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gem 'jekyll', '~> 3.8.3'
+gem 'jekyll', :git => 'https://github.com/gasi/jekyll.git', :branch => 'rouge-start_line'

@@ -1,0 +1,7 @@
+{% capture content %}{% include {{include.filename}} %}{% endcapture %}
+
+{% assign lines = content | newline_to_br | split: '<br />' %}
+
+{% capture start_line %}{{include.start | minus: 1}}{% endcapture %}
+{% capture count %}{{include.end | default: 1000 | minus: {{start_line}}}}{% endcapture %}
+{% for line in lines offset:{{start_line}} limit:{{count}} %}{{ line }}{% endfor %}
