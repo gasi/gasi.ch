@@ -3,7 +3,17 @@ livereload: true
 baseurl: /
 permalink: /blog/:title
 
-exclude: ['build', 'README.md', 'nginx.conf', 'Gemfile', 'Gemfile.lock', 'node_modules']
+exclude:
+  - 'blog/examples/practical-functional-programming-1/purescript/output'
+  - 'blog/examples/practical-functional-programming-2/purescript/output'
+  - 'build'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'nginx.conf'
+  - 'node_modules'
+  - 'package.json'
+  - 'README.md'
+
 include: ['_redirects']
 
 markdown: kramdown
