@@ -2,17 +2,17 @@
 layout: default
 title: RTFM / Daniel Gasienica
 ---
+{% assign post = site.posts[2] %}
 <div id="single-article">
   <hr class="notop" />
-  <h5>{{ site.posts[2].date | date: '%B %e, %Y' }}</h5>
+  <h5>{{ post.date | date: '%B %e, %Y' }}</h5>
   <div class="post">
     <h1>
     <a
-      href="{{ site.posts[2].url }}"
+      href="{{ post.url }}"
       rel="bookmark"
-      title="Permanent Link: {{ site.posts[2].title }}">{{ site.posts[2].title }}
-    </a>
+      title="Permanent Link: {{ post.title }}">{{ post.title }}</a>
     </h1>
-    <div class="entry">{{ site.posts[2].content }}</div>
+    <div class="entry">{{ post.content }}</div>
   </div>
 </div>
