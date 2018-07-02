@@ -3,6 +3,9 @@ layout: default
 title: RTFM / Daniel Gasienica
 ---
 {% assign post = site.posts[2] %}
+<script>
+  ga('send', 'pageview', '{{ post.url }}');
+</script>
 <div id="single-article">
   <hr class="notop" />
   <h5>{{ post.date | date: '%B %e, %Y' }}</h5>

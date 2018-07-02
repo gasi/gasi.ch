@@ -5,6 +5,19 @@
     <title>Daniel Gasienica</title>
     <meta name="description" content="Personal website of Daniel Gasienica"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-2390888-1', 'auto', {'legacyCookieDomain': '.gasi.ch'});
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
     <style type="text/css">
       body {
         background-color: #fff;
@@ -143,17 +156,6 @@
         text-decoration: underline;
       }
     </style>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-2390888-1']);
-      _gaq.push(['_setDomainName', '.gasi.ch']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
   <body>
     <div id="container">
@@ -206,32 +208,35 @@
             </li>
           </ul>
           <hr/>
-          <h2>Publications</h2>
           <h3>Functional Programming</h3>
           <ul>
-            <li><a href="/publications/functional-programming-fun-profit-daniel-gasienica.pdf" onclick="pageTracker._trackPageview('/publications/functional-programming-fun-profit-daniel-gasienica.pdf');">Functional Programming for<br/>Fun &amp; Profit</a></li>
-            <li><a href="/publications/functional-programming-fun-profit-daniel-gasienica-notes.pdf" onclick="pageTracker._trackPageview('/publications/functional-programming-fun-profit-daniel-gasienica-notes.pdf');">Functional Programming for<br/>Fun &amp; Profit (Notes)</a></li>
+            <li><a href="/blog/practical-functional-programming">Practical Functional Programming: Prelude</a></li>
+            <li><a href="/blog/practical-functional-programming-1">PFP: The Billion Dollar Mistake</a></li>
+            <li><a href="/blog/practical-functional-programming-2">PFP: Sorting Things Out</a></li>
+          </ul>
+          <hr/>
+          <ul>
+            <li><a href="/publications/functional-programming-fun-profit-daniel-gasienica.pdf" onclick="ga('send', 'pageview', '/publications/functional-programming-fun-profit-daniel-gasienica.pdf');">Functional Programming for Fun &amp; Profit</a></li>
+            <li><a href="/publications/functional-programming-fun-profit-daniel-gasienica-notes.pdf" onclick="ga('send', 'pageview', '/publications/functional-programming-fun-profit-daniel-gasienica-notes.pdf');">Functional Programming for Fun &amp; Profit (Notes)</a></li>
           </ul>
           <h3>React.js</h3>
           <ul>
-            <li><a href="/publications/reactjs-daniel-gasienica.pdf" onclick="pageTracker._trackPageview('/publications/reactjs-daniel-gasienica.pdf');">React.js &ndash; A Brief Introduction</a></li>
-            <li><a href="/publications/reactjs-daniel-gasienica-notes.pdf" onclick="pageTracker._trackPageview('/publications/reactjs-daniel-gasienica-notes.pdf');">React.js &ndash; A Brief Introduction (Notes)</a></li>
+            <li><a href="/publications/reactjs-daniel-gasienica.pdf" onclick="ga('send', 'pageview', '/publications/reactjs-daniel-gasienica.pdf');">React.js &ndash; A Brief Introduction</a></li>
+            <li><a href="/publications/reactjs-daniel-gasienica-notes.pdf" onclick="ga('send', 'pageview', '/publications/reactjs-daniel-gasienica-notes.pdf');">React.js &ndash; A Brief Introduction (Notes)</a></li>
           </ul>
           <h3>Web APIs, Mashups &amp; REST</h3>
           <ul>
-            <li><a href="/publications/web-apis-daniel-gasienica.pdf" onclick="pageTracker._trackPageview('/publications/web-apis-daniel-gasienica.pdf');">Web APIs &ndash; A Brief Introduction</a></li>
+            <li><a href="/publications/web-apis-daniel-gasienica.pdf" onclick="ga('send', 'pageview', '/publications/web-apis-daniel-gasienica.pdf');">Web APIs &ndash; A Brief Introduction</a></li>
           </ul>
           <hr/>
           <h3>Software Engineering Seminar</h3>
           <ul>
-            <li><a href="/publications/sound-and-extensible-renaming-for-java-daniel-gasienica.pdf" onclick="pageTracker._trackPageview('/publications/sound-and-extensible-renaming-for-java-daniel-gasienica.pdf');">Sound and Extensible Renaming for Java</a></li>
+            <li><a href="/publications/sound-and-extensible-renaming-for-java-daniel-gasienica.pdf" onclick="ga('send', 'pageview', '/publications/sound-and-extensible-renaming-for-java-daniel-gasienica.pdf');">Sound and Extensible Renaming for Java</a></li>
           </ul>
           <hr/>
           <h3>Maturaarbeit: Architecting Rich Internet Applications</h3>
           <ul>
-            <li><a href="/publications/maturaarbeit/architecting-rich-internet-applications-paper-daniel-gasienica.pdf">Paper</a></li>
-            <li><a href="/publications/maturaarbeit/architecting-rich-internet-applications-presentation-daniel-gasienica.ppt">Presentation</a></li>
-            <li><a href="/publications/maturaarbeit/architecting-rich-internet-applications-poster-daniel-gasienica.pdf">Poster</a></li>
+            <li><a href="/publications/maturaarbeit/architecting-rich-internet-applications-paper-daniel-gasienica.pdf">Paper</a> | <a href="/publications/maturaarbeit/architecting-rich-internet-applications-presentation-daniel-gasienica.ppt">Presentation</a> | <a href="/publications/maturaarbeit/architecting-rich-internet-applications-poster-daniel-gasienica.pdf">Poster</a></li>
             <li><a href="/publications/maturaarbeit/architecture-phyre.png">Application Architecture: Phyre</a></li>
             <li><a href="/publications/maturaarbeit/entity-relationship-model-phyre.png">Entity-Relationship-Model: Phyre</a></li>
           </ul>
@@ -239,7 +244,7 @@
           <hr/>
           <h3>Maturazeitung MNG 4g</h3>
           <ul>
-            <li><a href="/publications/maturazeitung/maturazeitung-mng-4g-follkommen-tadellos.pdf" onclick="pageTracker._trackPageview('/publications/maturazeitung/maturazeitung-mng-4g-follkommen-tadellos.pdf');">Follkommen und Tadellos</a></li>
+            <li><a href="/publications/maturazeitung/maturazeitung-mng-4g-follkommen-tadellos.pdf" onclick="ga('send', 'pageview', '/publications/maturazeitung/maturazeitung-mng-4g-follkommen-tadellos.pdf');">Follkommen und Tadellos</a></li>
           </ul>
           -->
         </div>
